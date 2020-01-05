@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29519.87
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Inter-Office Document Tracking System", "Inter-Office Document Tracking System\Inter-Office Document Tracking System.vbproj", "{7DD8A14B-819B-46B3-927A-984CCC42BA3A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7DD8A14B-819B-46B3-927A-984CCC42BA3A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7DD8A14B-819B-46B3-927A-984CCC42BA3A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7DD8A14B-819B-46B3-927A-984CCC42BA3A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7DD8A14B-819B-46B3-927A-984CCC42BA3A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {AC206C44-CB65-4FBB-8269-531D7A1A3AB7}
+	EndGlobalSection
+EndGlobal
