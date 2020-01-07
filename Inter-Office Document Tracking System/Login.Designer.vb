@@ -23,28 +23,37 @@ Partial Class Login
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.Sign_in = New System.Windows.Forms.Button()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.Password = New System.Windows.Forms.TextBox()
+        Me.Username = New System.Windows.Forms.TextBox()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.Button1 = New System.Windows.Forms.Button()
         Me.Panel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
         Me.SuspendLayout()
         '
         'Panel1
         '
-        Me.Panel1.Controls.Add(Me.Button1)
+        Me.Panel1.Controls.Add(Me.Sign_in)
         Me.Panel1.Controls.Add(Me.Label2)
         Me.Panel1.Controls.Add(Me.Label1)
-        Me.Panel1.Controls.Add(Me.TextBox2)
-        Me.Panel1.Controls.Add(Me.TextBox1)
+        Me.Panel1.Controls.Add(Me.Password)
+        Me.Panel1.Controls.Add(Me.Username)
         Me.Panel1.Location = New System.Drawing.Point(12, 12)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(525, 317)
         Me.Panel1.TabIndex = 4
+        '
+        'Sign_in
+        '
+        Me.Sign_in.Location = New System.Drawing.Point(197, 242)
+        Me.Sign_in.Name = "Sign_in"
+        Me.Sign_in.Size = New System.Drawing.Size(94, 41)
+        Me.Sign_in.TabIndex = 8
+        Me.Sign_in.Text = "Sign in"
+        Me.Sign_in.UseVisualStyleBackColor = True
         '
         'Label2
         '
@@ -66,21 +75,21 @@ Partial Class Login
         Me.Label1.TabIndex = 6
         Me.Label1.Text = "Username"
         '
-        'TextBox2
+        'Password
         '
-        Me.TextBox2.Location = New System.Drawing.Point(158, 190)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(198, 22)
-        Me.TextBox2.TabIndex = 5
-        Me.TextBox2.Text = "Password"
+        Me.Password.Location = New System.Drawing.Point(158, 190)
+        Me.Password.Name = "Password"
+        Me.Password.Size = New System.Drawing.Size(198, 22)
+        Me.Password.TabIndex = 5
+        Me.Password.Text = "Password"
         '
-        'TextBox1
+        'Username
         '
-        Me.TextBox1.Location = New System.Drawing.Point(158, 119)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(198, 22)
-        Me.TextBox1.TabIndex = 4
-        Me.TextBox1.Text = "Username"
+        Me.Username.Location = New System.Drawing.Point(158, 119)
+        Me.Username.Name = "Username"
+        Me.Username.Size = New System.Drawing.Size(198, 22)
+        Me.Username.TabIndex = 4
+        Me.Username.Text = "Username"
         '
         'Panel2
         '
@@ -99,15 +108,6 @@ Partial Class Login
         Me.Label3.Size = New System.Drawing.Size(456, 29)
         Me.Label3.TabIndex = 8
         Me.Label3.Text = "Inter-Office Document Tracking System"
-        '
-        'Button1
-        '
-        Me.Button1.Location = New System.Drawing.Point(197, 242)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(94, 41)
-        Me.Button1.TabIndex = 8
-        Me.Button1.Text = "Sign in"
-        Me.Button1.UseVisualStyleBackColor = True
         '
         'Login
         '
@@ -129,9 +129,9 @@ Partial Class Login
     Friend WithEvents Panel1 As Panel
     Friend WithEvents Label2 As Label
     Friend WithEvents Label1 As Label
-    Friend WithEvents TextBox2 As TextBox
-    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents Password As TextBox
+    Friend WithEvents Username As TextBox
     Friend WithEvents Panel2 As Panel
     Friend WithEvents Label3 As Label
-    Friend WithEvents Button1 As Button
+    Friend WithEvents Sign_in As Button
 End Class
