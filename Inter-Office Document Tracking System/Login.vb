@@ -21,6 +21,9 @@ Public Class Login
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Sign_in.Click
 
+        Dim Homepage As New Dashboard
+        Dim Addpage As New AddDocument
+
         Dim command As New MySqlCommand("SELECT `username`,`password` FROM `user_login` WHERE `username` = @username AND `password` = @password", connection)
 
         command.Parameters.Add("@username", MySqlDbType.VarChar).Value = Username.Text
@@ -37,10 +40,26 @@ Public Class Login
 
         Else
 
-            MessageBox.Show("You are Logged in")
+            connection.Open()
+
+            Dim command2 As New MySqlCommand("SELECT `office` FROM `user` WHERE `username` = @username ", connection)
+            Dim reader As MySqlDataReader
+            command2.Parameters.Add("@username", MySqlDbType.VarChar).Value = Username.Text
 
 
-        End If
+            reader = command2.ExecuteReader()
+            reader.Read()
+            If reader.HasRows Then
+                Homepage.Office = reader("office").ToString()
+            End If
+
+
+
+
+            Homepage.Show()
+                Me.Hide()
+
+            End If
 
     End Sub
 
