@@ -37,6 +37,8 @@ Partial Class AddDocument
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.Datebox = New System.Windows.Forms.Label()
         Me.Officebox = New System.Windows.Forms.Label()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.Button2 = New System.Windows.Forms.Button()
         Me.Panel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
         Me.SuspendLayout()
@@ -44,6 +46,8 @@ Partial Class AddDocument
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.SystemColors.ActiveCaption
+        Me.Panel1.Controls.Add(Me.Button2)
+        Me.Panel1.Controls.Add(Me.Button1)
         Me.Panel1.Controls.Add(Me.Officebox)
         Me.Panel1.Controls.Add(Me.Datebox)
         Me.Panel1.Controls.Add(Me.TextBox3)
@@ -63,7 +67,6 @@ Partial Class AddDocument
         '
         Me.TextBox3.Location = New System.Drawing.Point(220, 497)
         Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.ReadOnly = True
         Me.TextBox3.Size = New System.Drawing.Size(591, 22)
         Me.TextBox3.TabIndex = 9
         '
@@ -176,6 +179,24 @@ Partial Class AddDocument
         Me.Officebox.TabIndex = 11
         Me.Officebox.Text = "Offices"
         '
+        'Button1
+        '
+        Me.Button1.Location = New System.Drawing.Point(570, 596)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(75, 23)
+        Me.Button1.TabIndex = 12
+        Me.Button1.Text = "Add"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
+        'Button2
+        '
+        Me.Button2.Location = New System.Drawing.Point(651, 596)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(75, 23)
+        Me.Button2.TabIndex = 13
+        Me.Button2.Text = "Cancel"
+        Me.Button2.UseVisualStyleBackColor = True
+        '
         'AddDocument
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
@@ -207,4 +228,6 @@ Partial Class AddDocument
     Friend WithEvents Timer1 As Timer
     Friend WithEvents Officebox As Label
     Friend WithEvents Datebox As Label
+    Friend WithEvents Button2 As Button
+    Friend WithEvents Button1 As Button
 End Class
