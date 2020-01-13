@@ -73,7 +73,7 @@ Public Class AddDocument
 
             connection.Open()
             command.ExecuteNonQuery()
-
+            connection.Close()
 
         Else
 
