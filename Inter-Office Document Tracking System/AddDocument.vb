@@ -31,24 +31,7 @@ Public Class AddDocument
 
     End Sub
 
-    Private Sub Datebox_Click(sender As Object, e As EventArgs) Handles Datebox.Click
 
-
-
-
-    End Sub
-
-    Private Sub Officebox_Click(sender As Object, e As EventArgs) Handles Officebox.Click
-
-    End Sub
-
-    Private Sub Panel1_Paint(sender As Object, e As PaintEventArgs) Handles Panel1.Paint
-
-    End Sub
-
-    Private Sub ComboBox1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboBox1.SelectedIndexChanged
-
-    End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         Dim result As DialogResult = MessageBox.Show("Confirm update?",
