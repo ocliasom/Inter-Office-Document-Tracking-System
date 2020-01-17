@@ -83,4 +83,15 @@ Public Class AddDocument
     Private Sub TextBox3_TextChanged(sender As Object, e As EventArgs) Handles TextBox3.TextChanged
 
     End Sub
+
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+        Dim result As DialogResult = MessageBox.Show("Cancel update?",
+                              "Cancel",
+                              MessageBoxButtons.YesNo)
+        If (result = DialogResult.Yes) Then
+
+            Dashboard.Show()
+            Me.Hide()
+        End If
+    End Sub
 End Class
