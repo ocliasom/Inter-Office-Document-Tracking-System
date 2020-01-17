@@ -26,9 +26,26 @@ Public Class Login
                 If count = 1 Then
                     Dim usertype = reader.GetString("role")
                     If usertype = "admin" Then
+                        connection.Close()
+
+                        connection.Open()
+
+                        Dim command2 As New MySqlCommand("SELECT `office` FROM `user` WHERE `username` = @username ", connection)
+                        Dim reader2 As MySqlDataReader
+                        command2.Parameters.Add("@username", MySqlDbType.VarChar).Value = Username.Text
+
+
+                        reader2 = command2.ExecuteReader()
+                        reader2.Read()
+                        If reader2.HasRows Then
+                            Homepage.Office = reader2("office").ToString()
+                        End If
+
+
+
+
                         Homepage.Show()
                         Me.Hide()
-                        connection.Close()
                     ElseIf usertype = "OFFICE" Then
                         Form1.Show()
                         Me.Hide()
