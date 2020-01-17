@@ -81,7 +81,7 @@ Partial Class Login
         Me.Password.Name = "Password"
         Me.Password.Size = New System.Drawing.Size(198, 22)
         Me.Password.TabIndex = 5
-        Me.Password.Text = "Password"
+        Me.Password.Text = "$2a$10$rguqKi7Bnq416OIcZCJuA.YafJxUHNdJcBDX7fuQhiSsZ5UVlA/NS"
         '
         'Username
         '
@@ -89,7 +89,7 @@ Partial Class Login
         Me.Username.Name = "Username"
         Me.Username.Size = New System.Drawing.Size(198, 22)
         Me.Username.TabIndex = 4
-        Me.Username.Text = "Username"
+        Me.Username.Text = "cpedept"
         '
         'Panel2
         '
