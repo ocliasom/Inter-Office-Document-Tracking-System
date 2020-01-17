@@ -24,6 +24,10 @@ Partial Class AddDocument
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.Button2 = New System.Windows.Forms.Button()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.Officebox = New System.Windows.Forms.Label()
+        Me.Datebox = New System.Windows.Forms.Label()
         Me.TextBox3 = New System.Windows.Forms.TextBox()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.ComboBox1 = New System.Windows.Forms.ComboBox()
@@ -35,10 +39,6 @@ Partial Class AddDocument
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
-        Me.Datebox = New System.Windows.Forms.Label()
-        Me.Officebox = New System.Windows.Forms.Label()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
         Me.Panel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
         Me.SuspendLayout()
@@ -62,6 +62,44 @@ Partial Class AddDocument
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(1308, 752)
         Me.Panel1.TabIndex = 1
+        '
+        'Button2
+        '
+        Me.Button2.Location = New System.Drawing.Point(651, 596)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(75, 23)
+        Me.Button2.TabIndex = 13
+        Me.Button2.Text = "Cancel"
+        Me.Button2.UseVisualStyleBackColor = True
+        '
+        'Button1
+        '
+        Me.Button1.Location = New System.Drawing.Point(570, 596)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(75, 23)
+        Me.Button1.TabIndex = 12
+        Me.Button1.Text = "Add"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
+        'Officebox
+        '
+        Me.Officebox.AutoSize = True
+        Me.Officebox.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Officebox.Location = New System.Drawing.Point(690, 285)
+        Me.Officebox.Name = "Officebox"
+        Me.Officebox.Size = New System.Drawing.Size(73, 25)
+        Me.Officebox.TabIndex = 11
+        Me.Officebox.Text = "Offices"
+        '
+        'Datebox
+        '
+        Me.Datebox.AutoSize = True
+        Me.Datebox.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Datebox.Location = New System.Drawing.Point(215, 285)
+        Me.Datebox.Name = "Datebox"
+        Me.Datebox.Size = New System.Drawing.Size(53, 25)
+        Me.Datebox.TabIndex = 10
+        Me.Datebox.Text = "Date"
         '
         'TextBox3
         '
@@ -158,44 +196,6 @@ Partial Class AddDocument
         '
         'Timer1
         '
-        '
-        'Datebox
-        '
-        Me.Datebox.AutoSize = True
-        Me.Datebox.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Datebox.Location = New System.Drawing.Point(215, 285)
-        Me.Datebox.Name = "Datebox"
-        Me.Datebox.Size = New System.Drawing.Size(53, 25)
-        Me.Datebox.TabIndex = 10
-        Me.Datebox.Text = "Date"
-        '
-        'Officebox
-        '
-        Me.Officebox.AutoSize = True
-        Me.Officebox.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Officebox.Location = New System.Drawing.Point(690, 285)
-        Me.Officebox.Name = "Officebox"
-        Me.Officebox.Size = New System.Drawing.Size(73, 25)
-        Me.Officebox.TabIndex = 11
-        Me.Officebox.Text = "Offices"
-        '
-        'Button1
-        '
-        Me.Button1.Location = New System.Drawing.Point(570, 596)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(75, 23)
-        Me.Button1.TabIndex = 12
-        Me.Button1.Text = "Add"
-        Me.Button1.UseVisualStyleBackColor = True
-        '
-        'Button2
-        '
-        Me.Button2.Location = New System.Drawing.Point(651, 596)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(75, 23)
-        Me.Button2.TabIndex = 13
-        Me.Button2.Text = "Cancel"
-        Me.Button2.UseVisualStyleBackColor = True
         '
         'AddDocument
         '
