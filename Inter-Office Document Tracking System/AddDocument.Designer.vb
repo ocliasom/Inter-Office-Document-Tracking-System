@@ -24,6 +24,10 @@ Partial Class AddDocument
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.Button2 = New System.Windows.Forms.Button()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.Officebox = New System.Windows.Forms.Label()
+        Me.Datebox = New System.Windows.Forms.Label()
         Me.TextBox3 = New System.Windows.Forms.TextBox()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.ComboBox1 = New System.Windows.Forms.ComboBox()
@@ -35,10 +39,10 @@ Partial Class AddDocument
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
-        Me.Datebox = New System.Windows.Forms.Label()
-        Me.Officebox = New System.Windows.Forms.Label()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
+        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.Label8 = New System.Windows.Forms.Label()
+        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.Label9 = New System.Windows.Forms.Label()
         Me.Panel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
         Me.SuspendLayout()
@@ -46,6 +50,10 @@ Partial Class AddDocument
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.SystemColors.ActiveCaption
+        Me.Panel1.Controls.Add(Me.TextBox2)
+        Me.Panel1.Controls.Add(Me.Label9)
+        Me.Panel1.Controls.Add(Me.TextBox1)
+        Me.Panel1.Controls.Add(Me.Label8)
         Me.Panel1.Controls.Add(Me.Button2)
         Me.Panel1.Controls.Add(Me.Button1)
         Me.Panel1.Controls.Add(Me.Officebox)
@@ -63,11 +71,49 @@ Partial Class AddDocument
         Me.Panel1.Size = New System.Drawing.Size(1308, 752)
         Me.Panel1.TabIndex = 1
         '
+        'Button2
+        '
+        Me.Button2.Location = New System.Drawing.Point(645, 684)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(75, 23)
+        Me.Button2.TabIndex = 13
+        Me.Button2.Text = "Cancel"
+        Me.Button2.UseVisualStyleBackColor = True
+        '
+        'Button1
+        '
+        Me.Button1.Location = New System.Drawing.Point(564, 684)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(75, 23)
+        Me.Button1.TabIndex = 12
+        Me.Button1.Text = "Add"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
+        'Officebox
+        '
+        Me.Officebox.AutoSize = True
+        Me.Officebox.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Officebox.Location = New System.Drawing.Point(690, 285)
+        Me.Officebox.Name = "Officebox"
+        Me.Officebox.Size = New System.Drawing.Size(73, 25)
+        Me.Officebox.TabIndex = 11
+        Me.Officebox.Text = "Offices"
+        '
+        'Datebox
+        '
+        Me.Datebox.AutoSize = True
+        Me.Datebox.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Datebox.Location = New System.Drawing.Point(215, 285)
+        Me.Datebox.Name = "Datebox"
+        Me.Datebox.Size = New System.Drawing.Size(53, 25)
+        Me.Datebox.TabIndex = 10
+        Me.Datebox.Text = "Date"
+        '
         'TextBox3
         '
         Me.TextBox3.Location = New System.Drawing.Point(220, 497)
         Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(591, 22)
+        Me.TextBox3.Size = New System.Drawing.Size(240, 22)
         Me.TextBox3.TabIndex = 9
         '
         'Label7
@@ -76,9 +122,9 @@ Partial Class AddDocument
         Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label7.Location = New System.Drawing.Point(215, 458)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(109, 25)
+        Me.Label7.Size = New System.Drawing.Size(145, 25)
         Me.Label7.TabIndex = 8
-        Me.Label7.Text = "Description"
+        Me.Label7.Text = "E-mail Address"
         '
         'ComboBox1
         '
@@ -159,43 +205,39 @@ Partial Class AddDocument
         'Timer1
         '
         '
-        'Datebox
+        'TextBox1
         '
-        Me.Datebox.AutoSize = True
-        Me.Datebox.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Datebox.Location = New System.Drawing.Point(215, 285)
-        Me.Datebox.Name = "Datebox"
-        Me.Datebox.Size = New System.Drawing.Size(53, 25)
-        Me.Datebox.TabIndex = 10
-        Me.Datebox.Text = "Date"
+        Me.TextBox1.Location = New System.Drawing.Point(220, 586)
+        Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.Size = New System.Drawing.Size(591, 22)
+        Me.TextBox1.TabIndex = 15
         '
-        'Officebox
+        'Label8
         '
-        Me.Officebox.AutoSize = True
-        Me.Officebox.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Officebox.Location = New System.Drawing.Point(690, 285)
-        Me.Officebox.Name = "Officebox"
-        Me.Officebox.Size = New System.Drawing.Size(73, 25)
-        Me.Officebox.TabIndex = 11
-        Me.Officebox.Text = "Offices"
+        Me.Label8.AutoSize = True
+        Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label8.Location = New System.Drawing.Point(215, 547)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(109, 25)
+        Me.Label8.TabIndex = 14
+        Me.Label8.Text = "Description"
         '
-        'Button1
+        'TextBox2
         '
-        Me.Button1.Location = New System.Drawing.Point(570, 596)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(75, 23)
-        Me.Button1.TabIndex = 12
-        Me.Button1.Text = "Add"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.TextBox2.Location = New System.Drawing.Point(695, 497)
+        Me.TextBox2.Name = "TextBox2"
+        Me.TextBox2.Size = New System.Drawing.Size(233, 22)
+        Me.TextBox2.TabIndex = 17
         '
-        'Button2
+        'Label9
         '
-        Me.Button2.Location = New System.Drawing.Point(651, 596)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(75, 23)
-        Me.Button2.TabIndex = 13
-        Me.Button2.Text = "Cancel"
-        Me.Button2.UseVisualStyleBackColor = True
+        Me.Label9.AutoSize = True
+        Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label9.Location = New System.Drawing.Point(690, 458)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(143, 25)
+        Me.Label9.TabIndex = 16
+        Me.Label9.Text = "Phone Number"
         '
         'AddDocument
         '
@@ -230,4 +272,8 @@ Partial Class AddDocument
     Friend WithEvents Datebox As Label
     Friend WithEvents Button2 As Button
     Friend WithEvents Button1 As Button
+    Friend WithEvents TextBox2 As TextBox
+    Friend WithEvents Label9 As Label
+    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents Label8 As Label
 End Class
