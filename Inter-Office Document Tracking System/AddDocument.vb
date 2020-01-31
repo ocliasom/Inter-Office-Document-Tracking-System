@@ -48,11 +48,6 @@ Public Class AddDocument
     'API END     '###########################################################################
     '########################################################################################
 
-
-<<<<<<< Updated upstream
-
-=======
->>>>>>> Stashed changes
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         Dim result As DialogResult = MessageBox.Show("Confirm update?",
                               "Title",
@@ -86,8 +81,15 @@ Public Class AddDocument
 
         End If
     End Sub
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+        Dim result As DialogResult = MessageBox.Show("Cancel update?",
+                              "Cancel",
+                              MessageBoxButtons.YesNo)
+        If (result = DialogResult.Yes) Then
 
-    Private Sub TextBox3_TextChanged(sender As Object, e As EventArgs) Handles TextBox3.TextChanged
+            Dashboard.Show()
+            Me.Hide()
+        End If
 
     End Sub
 End Class
