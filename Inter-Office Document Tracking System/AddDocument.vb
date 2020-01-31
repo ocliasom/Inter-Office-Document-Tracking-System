@@ -69,8 +69,9 @@ Public Class AddDocument
             connection.Open()
             command.ExecuteNonQuery()
             connection.Close()
+            Dim cell As String = TextBox1.Text
 
-            Dim results = itexmo("09368334992", "Document Received Successfully!", "TR-INTER334992_FE7KH")
+            Dim results = itexmo(cell, "Document Received Successfully!", "TR-INTER334992_FE7KH")
             If results = 0 Then
                 MsgBox("Message Sent!")
             Else
@@ -92,4 +93,5 @@ Public Class AddDocument
         End If
 
     End Sub
+
 End Class
