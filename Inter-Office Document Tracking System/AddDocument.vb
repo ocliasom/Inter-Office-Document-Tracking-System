@@ -55,7 +55,7 @@ Public Class AddDocument
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        Dim result As DialogResult = MessageBox.Show("Confirm update?",
+        Dim result As DialogResult = MessageBox.Show("Add Document?",
                               "Title",
                               MessageBoxButtons.YesNo)
 
@@ -64,7 +64,7 @@ Public Class AddDocument
                 Dim Addpage As New AddDocument
 
 
-                Dim command As New MySqlCommand("INSERT INTO `document` (current_office,date_received,description,doctype,source_office,status) values(@office,@date,@description,@doctype,@source,@status)", connection)
+                Dim command As New MySqlCommand("INSERT INTO `document` (current_office,date_received,description,doctype,source_office,status,email_address) values(@office,@date,@description,@doctype,@source,@status,@email)", connection)
 
                 command.Parameters.AddWithValue("@office", Officebox.Text)
                 command.Parameters.AddWithValue("@date", Datebox.Text)
@@ -72,6 +72,7 @@ Public Class AddDocument
                 command.Parameters.AddWithValue("@doctype", ComboBox1.SelectedValue)
                 command.Parameters.AddWithValue("@source", Officebox.Text)
                 command.Parameters.AddWithValue("@status", "pending")
+                command.Parameters.AddWithValue("@email", TextBox3.Text)
 
                 connection.Open()
                 command.ExecuteNonQuery()
@@ -86,11 +87,11 @@ Public Class AddDocument
                 Smtp_server.Host = "smtp.gmail.com"
                 e_mail = New MailMessage
                 e_mail.From = New MailAddress("PUP@gmail.com")
-                e_mail.To.Add("iammavon@gmail.com")
+                e_mail.To.Add(TextBox3.Text)
                 e_mail.Subject = "Document Update"
                 e_mail.Body = "Your document has been added"
                 Smtp_server.Send(e_mail)
-                MessageBox.Show("Mail Sent")
+                MessageBox.Show("Document has been added")
 
 
 
