@@ -24,7 +24,14 @@
     Private Sub TrackButton_Click(sender As Object, e As EventArgs) Handles TrackButton.Click
         Dim TrackPage As New TrackDocument
 
-        TrackDocument.Show()
+        TrackPage.Show()
+        Me.Dispose()
+    End Sub
+
+    Private Sub PendingButton_Click(sender As Object, e As EventArgs) Handles PendingButton.Click
+        Dim PendingPage As New PendingDocument
+
+        PendingPage.Show()
         Me.Dispose()
     End Sub
 End Class

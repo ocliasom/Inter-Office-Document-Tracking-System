@@ -1,22 +1,13 @@
 ﻿Imports MySql.Data.MySqlClient
 
-Public Class TrackDocument
+Public Class PendingDocument
 
     Dim connection As New MySqlConnection("datasource=localhost;port=3306;username=root;password=;database=iods")
     Dim cmd As MySqlCommand
     Dim Homepage As New Dashboard
     Dim Adminpage As New AdminDashboard
+    Private Sub PendingPage_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
-
-
-
-
-
-    Private Sub TableLayoutPanel1_Paint(sender As Object, e As PaintEventArgs)
-
-    End Sub
-
-    Private Sub TrackDocument_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
         Dim adapter As New MySqlDataAdapter
         Dim table As New DataTable
@@ -25,7 +16,7 @@ Public Class TrackDocument
         Try
             connection.Open()
             Dim Query As String
-            Query = "select trackingnum, doctype, current_office, date_received, status from `document`"
+            Query = "select trackingnum, doctype, date_received, source_office, description from `document`"
             cmd = New MySqlCommand(Query, connection)
             adapter.SelectCommand = cmd
             adapter.Fill(table)
@@ -40,6 +31,7 @@ Public Class TrackDocument
         Finally
             connection.Dispose()
         End Try
+
     End Sub
 
     Private Sub DataGridView1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellContentClick
@@ -50,7 +42,6 @@ Public Class TrackDocument
        e.RowIndex >= 0 Then
             MsgBox(DataGridView1.Rows(e.RowIndex).Cells(0).Value)
         End If
-
 
     End Sub
 End Class
