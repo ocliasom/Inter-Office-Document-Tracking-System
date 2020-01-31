@@ -23,6 +23,11 @@ Partial Class Dashboard
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.Panel1 = New System.Windows.Forms.Panel()
+<<<<<<< Updated upstream
+=======
+        Me.Button2 = New System.Windows.Forms.Button()
+        Me.Label2 = New System.Windows.Forms.Label()
+>>>>>>> Stashed changes
         Me.Panel5 = New System.Windows.Forms.Panel()
         Me.IncomingButton = New System.Windows.Forms.Button()
         Me.Panel6 = New System.Windows.Forms.Panel()
@@ -33,7 +38,10 @@ Partial Class Dashboard
         Me.AddButton = New System.Windows.Forms.Button()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Label1 = New System.Windows.Forms.Label()
+<<<<<<< Updated upstream
         Me.Label2 = New System.Windows.Forms.Label()
+=======
+>>>>>>> Stashed changes
         Me.Panel1.SuspendLayout()
         Me.Panel5.SuspendLayout()
         Me.Panel6.SuspendLayout()
@@ -55,6 +63,27 @@ Partial Class Dashboard
         Me.Panel1.Size = New System.Drawing.Size(1308, 752)
         Me.Panel1.TabIndex = 0
         '
+<<<<<<< Updated upstream
+=======
+        'Button2
+        '
+        Me.Button2.Location = New System.Drawing.Point(1116, 660)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(164, 60)
+        Me.Button2.TabIndex = 5
+        Me.Button2.Text = "Logout"
+        Me.Button2.UseVisualStyleBackColor = True
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Location = New System.Drawing.Point(596, 184)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(51, 17)
+        Me.Label2.TabIndex = 4
+        Me.Label2.Text = "Label2"
+        '
+>>>>>>> Stashed changes
         'Panel5
         '
         Me.Panel5.BackColor = System.Drawing.Color.Firebrick
@@ -150,6 +179,7 @@ Partial Class Dashboard
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Inter-Office Document Tracking System"
         '
+<<<<<<< Updated upstream
         'Label2
         '
         Me.Label2.AutoSize = True
@@ -159,6 +189,8 @@ Partial Class Dashboard
         Me.Label2.TabIndex = 4
         Me.Label2.Text = "Label2"
         '
+=======
+>>>>>>> Stashed changes
         'Dashboard
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)

@@ -30,9 +30,29 @@ Public Class AddDocument
         ComboBox1.ValueMember = "doc_abbrev"
 
     End Sub
+    '########################################################################################
+    'iTexmo API for C --> go to www.itexmo.com/developers.php for API Documentation
+    '########################################################################################
+    Function itexmo(ByVal Number As String, ByVal Message As String, ByVal API_CODE As String)
+        Using client As New Net.WebClient
+            Dim parameter As New Specialized.NameValueCollection
+            Dim url As String = "https://www.itexmo.com/php_api/api.php"
+            parameter.Add("1", Number)
+            parameter.Add("2", Message)
+            parameter.Add("3", API_CODE)
+            Dim rpb = client.UploadValues(url, "POST", parameter)
+            itexmo = (New System.Text.UTF8Encoding).GetString(rpb)
+        End Using
+    End Function
+    '########################################################################################
+    'API END     '###########################################################################
+    '########################################################################################
 
 
+<<<<<<< Updated upstream
 
+=======
+>>>>>>> Stashed changes
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         Dim result As DialogResult = MessageBox.Show("Confirm update?",
                               "Title",
@@ -54,6 +74,13 @@ Public Class AddDocument
             connection.Open()
             command.ExecuteNonQuery()
             connection.Close()
+
+            Dim results = itexmo("09368334992", "Document Received Successfully!", "TR-INTER334992_FE7KH")
+            If results = 0 Then
+                MsgBox("Message Sent!")
+            Else
+                MsgBox("Error num " & results & " was encountered")
+            End If
 
         Else
 

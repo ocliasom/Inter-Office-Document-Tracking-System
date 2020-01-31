@@ -20,4 +20,19 @@
     Private Sub Label2_Click(sender As Object, e As EventArgs) Handles Label2.Click
 
     End Sub
+<<<<<<< Updated upstream
+=======
+
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+        Dim result As DialogResult = MessageBox.Show("Are you sure?",
+                              "Logout",
+                              MessageBoxButtons.YesNo)
+        If (result = DialogResult.Yes) Then
+            Login.Show()
+            Me.Hide()
+        End If
+
+    End Sub
+
+>>>>>>> Stashed changes
 End Class
