@@ -10,7 +10,7 @@
     End Sub
 
     Private Sub Dashboard_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Dim AddPage As New AddDocument
+
 
         Label2.Text = Office
 

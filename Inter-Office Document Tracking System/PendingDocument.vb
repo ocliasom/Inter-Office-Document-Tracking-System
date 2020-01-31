@@ -5,7 +5,8 @@ Public Class PendingDocument
     Dim connection As New MySqlConnection("datasource=localhost;port=3306;username=root;password=;database=iods")
     Dim cmd As MySqlCommand
     Dim Homepage As New Dashboard
-    Dim Adminpage As New AdminDashboard
+    Dim ForwardPage As New ForwardDocument
+    Dim ReleasePage As New ReleaseDocument
     Private Sub PendingPage_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
 
@@ -38,9 +39,19 @@ Public Class PendingDocument
         Dim senderGrid = DirectCast(sender, DataGridView)
 
 
-        If TypeOf senderGrid.Columns(e.ColumnIndex) Is DataGridViewButtonColumn AndAlso
+        If e.ColumnIndex = 5 AndAlso
        e.RowIndex >= 0 Then
-            MsgBox(DataGridView1.Rows(e.RowIndex).Cells(0).Value)
+
+            ForwardPage.tracknum = DataGridView1.Rows(e.RowIndex).Cells(0).Value
+            ForwardPage.Show()
+            Me.Dispose()
+
+        ElseIf e.ColumnIndex = 6 AndAlso
+       e.RowIndex >= 0 Then
+
+            ReleasePage.tracknum = DataGridView1.Rows(e.RowIndex).Cells(0).Value
+            ReleasePage.Show()
+            Me.Dispose()
         End If
 
     End Sub

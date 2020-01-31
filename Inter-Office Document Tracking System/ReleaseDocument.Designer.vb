@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class PendingDocument
+Partial Class ReleaseDocument
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -23,18 +23,16 @@ Partial Class PendingDocument
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.tracking = New System.Windows.Forms.Label()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.Panel2 = New System.Windows.Forms.Panel()
-        Me.Test = New System.Windows.Forms.Label()
         Me.CTS = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Type = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DateReceived = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.SourceOffice = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Description = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Forward = New System.Windows.Forms.DataGridViewButtonColumn()
-        Me.Release = New System.Windows.Forms.DataGridViewButtonColumn()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Panel1.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel2.SuspendLayout()
@@ -43,13 +41,21 @@ Partial Class PendingDocument
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.SystemColors.ActiveCaption
-        Me.Panel1.Controls.Add(Me.Test)
+        Me.Panel1.Controls.Add(Me.tracking)
         Me.Panel1.Controls.Add(Me.DataGridView1)
         Me.Panel1.Controls.Add(Me.Label2)
-        Me.Panel1.Location = New System.Drawing.Point(17, 15)
+        Me.Panel1.Location = New System.Drawing.Point(12, 12)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(1201, 597)
-        Me.Panel1.TabIndex = 4
+        Me.Panel1.Size = New System.Drawing.Size(1309, 752)
+        Me.Panel1.TabIndex = 8
+        '
+        'tracking
+        '
+        Me.tracking.AutoSize = True
+        Me.tracking.Location = New System.Drawing.Point(790, 153)
+        Me.tracking.Name = "tracking"
+        Me.tracking.Size = New System.Drawing.Size(0, 17)
+        Me.tracking.TabIndex = 3
         '
         'DataGridView1
         '
@@ -59,9 +65,8 @@ Partial Class PendingDocument
         Me.DataGridView1.AllowUserToResizeRows = False
         Me.DataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.DataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells
-        Me.DataGridView1.BackgroundColor = System.Drawing.SystemColors.ActiveCaption
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.CTS, Me.Type, Me.DateReceived, Me.SourceOffice, Me.Description, Me.Forward, Me.Release})
+        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.CTS, Me.Type, Me.DateReceived, Me.SourceOffice, Me.Description})
         Me.DataGridView1.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically
         Me.DataGridView1.Location = New System.Drawing.Point(23, 208)
         Me.DataGridView1.Name = "DataGridView1"
@@ -69,47 +74,8 @@ Partial Class PendingDocument
         Me.DataGridView1.RowHeadersVisible = False
         Me.DataGridView1.RowHeadersWidth = 51
         Me.DataGridView1.RowTemplate.Height = 24
-        Me.DataGridView1.Size = New System.Drawing.Size(1162, 354)
+        Me.DataGridView1.Size = New System.Drawing.Size(1282, 84)
         Me.DataGridView1.TabIndex = 2
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 32.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(12, 124)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(513, 63)
-        Me.Label2.TabIndex = 1
-        Me.Label2.Text = "Pending Documents"
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 32.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(3, 15)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(971, 63)
-        Me.Label1.TabIndex = 0
-        Me.Label1.Text = "Inter-Office Document Tracking System"
-        '
-        'Panel2
-        '
-        Me.Panel2.BackColor = System.Drawing.Color.Maroon
-        Me.Panel2.Controls.Add(Me.Label1)
-        Me.Panel2.Location = New System.Drawing.Point(17, 15)
-        Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(1201, 100)
-        Me.Panel2.TabIndex = 5
-        '
-        'Test
-        '
-        Me.Test.AutoSize = True
-        Me.Test.Font = New System.Drawing.Font("Microsoft Sans Serif", 32.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Test.Location = New System.Drawing.Point(564, 124)
-        Me.Test.Name = "Test"
-        Me.Test.Size = New System.Drawing.Size(513, 63)
-        Me.Test.TabIndex = 3
-        Me.Test.Text = "Pending Documents"
         '
         'CTS
         '
@@ -151,35 +117,44 @@ Partial Class PendingDocument
         Me.Description.Name = "Description"
         Me.Description.ReadOnly = True
         '
-        'Forward
+        'Label2
         '
-        Me.Forward.DataPropertyName = "trackingnum"
-        Me.Forward.HeaderText = "Forward"
-        Me.Forward.MinimumWidth = 6
-        Me.Forward.Name = "Forward"
-        Me.Forward.ReadOnly = True
-        Me.Forward.Text = "Forward"
-        Me.Forward.UseColumnTextForButtonValue = True
+        Me.Label2.AutoSize = True
+        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 32.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Location = New System.Drawing.Point(12, 124)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(529, 63)
+        Me.Label2.TabIndex = 1
+        Me.Label2.Text = "Releasing Document"
         '
-        'Release
+        'Label1
         '
-        Me.Release.DataPropertyName = "trackingnum"
-        Me.Release.HeaderText = "Release"
-        Me.Release.MinimumWidth = 6
-        Me.Release.Name = "Release"
-        Me.Release.ReadOnly = True
-        Me.Release.Text = "Release"
-        Me.Release.UseColumnTextForButtonValue = True
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 32.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Location = New System.Drawing.Point(2, 15)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(971, 63)
+        Me.Label1.TabIndex = 0
+        Me.Label1.Text = "Inter-Office Document Tracking System"
         '
-        'PendingDocument
+        'Panel2
+        '
+        Me.Panel2.BackColor = System.Drawing.Color.Maroon
+        Me.Panel2.Controls.Add(Me.Label1)
+        Me.Panel2.Location = New System.Drawing.Point(12, 12)
+        Me.Panel2.Name = "Panel2"
+        Me.Panel2.Size = New System.Drawing.Size(1309, 100)
+        Me.Panel2.TabIndex = 9
+        '
+        'ReleaseDocument
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1230, 624)
+        Me.ClientSize = New System.Drawing.Size(1332, 776)
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.Panel1)
-        Me.Name = "PendingDocument"
-        Me.Text = "PendingPage"
+        Me.Name = "ReleaseDocument"
+        Me.Text = "ReleaseDocument"
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
@@ -190,16 +165,14 @@ Partial Class PendingDocument
     End Sub
 
     Friend WithEvents Panel1 As Panel
+    Friend WithEvents tracking As Label
     Friend WithEvents DataGridView1 As DataGridView
-    Friend WithEvents Label2 As Label
-    Friend WithEvents Label1 As Label
-    Friend WithEvents Panel2 As Panel
-    Friend WithEvents Test As Label
     Friend WithEvents CTS As DataGridViewTextBoxColumn
     Friend WithEvents Type As DataGridViewTextBoxColumn
     Friend WithEvents DateReceived As DataGridViewTextBoxColumn
     Friend WithEvents SourceOffice As DataGridViewTextBoxColumn
     Friend WithEvents Description As DataGridViewTextBoxColumn
-    Friend WithEvents Forward As DataGridViewButtonColumn
-    Friend WithEvents Release As DataGridViewButtonColumn
+    Friend WithEvents Label2 As Label
+    Friend WithEvents Label1 As Label
+    Friend WithEvents Panel2 As Panel
 End Class
