@@ -34,7 +34,6 @@ Partial Class Dashboard
         Me.AddButton = New System.Windows.Forms.Button()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.Button2 = New System.Windows.Forms.Button()
         Me.Panel1.SuspendLayout()
         Me.Panel5.SuspendLayout()
         Me.Panel6.SuspendLayout()
@@ -46,7 +45,6 @@ Partial Class Dashboard
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.SystemColors.ActiveCaption
-        Me.Panel1.Controls.Add(Me.Button2)
         Me.Panel1.Controls.Add(Me.Label2)
         Me.Panel1.Controls.Add(Me.Panel5)
         Me.Panel1.Controls.Add(Me.Panel6)
@@ -161,15 +159,6 @@ Partial Class Dashboard
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Inter-Office Document Tracking System"
         '
-        'Button2
-        '
-        Me.Button2.Location = New System.Drawing.Point(1116, 660)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(164, 60)
-        Me.Button2.TabIndex = 6
-        Me.Button2.Text = "Logout"
-        Me.Button2.UseVisualStyleBackColor = True
-        '
         'Dashboard
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
@@ -203,5 +192,4 @@ Partial Class Dashboard
     Friend WithEvents TrackButton As Button
     Friend WithEvents AddButton As Button
     Friend WithEvents Label2 As Label
-    Friend WithEvents Button2 As Button
 End Class

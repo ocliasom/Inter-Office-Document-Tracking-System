@@ -6,11 +6,11 @@
 
         AddPage.Office = Label2.Text
         AddPage.Show()
-        Me.Hide()
+        Me.Dispose()
     End Sub
 
     Private Sub Dashboard_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Dim AddPage As New AddDocument
+
 
         Label2.Text = Office
 
@@ -27,5 +27,19 @@
             Me.Hide()
         End If
 
+    End Sub
+
+    Private Sub TrackButton_Click(sender As Object, e As EventArgs) Handles TrackButton.Click
+        Dim TrackPage As New TrackDocument
+
+        TrackPage.Show()
+        Me.Dispose()
+    End Sub
+
+    Private Sub PendingButton_Click(sender As Object, e As EventArgs) Handles PendingButton.Click
+        Dim PendingPage As New PendingDocument
+
+        PendingPage.Show()
+        Me.Dispose()
     End Sub
 End Class
