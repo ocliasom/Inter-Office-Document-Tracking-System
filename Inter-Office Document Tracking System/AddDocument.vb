@@ -35,24 +35,23 @@ Public Class AddDocument
 
     End Sub
 
-    Private Sub Datebox_Click(sender As Object, e As EventArgs) Handles Datebox.Click
-
-
-
-
-    End Sub
-
-    Private Sub Officebox_Click(sender As Object, e As EventArgs) Handles Officebox.Click
-
-    End Sub
-
-    Private Sub Panel1_Paint(sender As Object, e As PaintEventArgs) Handles Panel1.Paint
-
-    End Sub
-
-    Private Sub ComboBox1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboBox1.SelectedIndexChanged
-
-    End Sub
+    '########################################################################################
+    'iTexmo API for C --> go to www.itexmo.com/developers.php for API Documentation
+    '########################################################################################
+    Function itexmo(ByVal Number As String, ByVal Message As String, ByVal API_CODE As String)
+        Using client As New Net.WebClient
+            Dim parameter As New Specialized.NameValueCollection
+            Dim url As String = "https://www.itexmo.com/php_api/api.php"
+            parameter.Add("1", Number)
+            parameter.Add("2", Message)
+            parameter.Add("3", API_CODE)
+            Dim rpb = client.UploadValues(url, "POST", parameter)
+            itexmo = (New System.Text.UTF8Encoding).GetString(rpb)
+        End Using
+    End Function
+    '########################################################################################
+    'API END     '###########################################################################
+    '########################################################################################
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         Dim result As DialogResult = MessageBox.Show("Add Document?",
@@ -78,30 +77,53 @@ Public Class AddDocument
                 command.ExecuteNonQuery()
                 connection.Close()
 
-                Dim Smtp_server As New SmtpClient
-                Dim e_mail As New MailMessage
-                Smtp_server.UseDefaultCredentials = False
-                Smtp_server.Credentials = New Net.NetworkCredential("ocliasomavon@gmail.com", "Kiritetsuya1011")
-                Smtp_server.Port = 587
-                Smtp_server.EnableSsl = True
-                Smtp_server.Host = "smtp.gmail.com"
-                e_mail = New MailMessage
-                e_mail.From = New MailAddress("PUP@gmail.com")
-                e_mail.To.Add(TextBox3.Text)
-                e_mail.Subject = "Document Update"
-                e_mail.Body = "Your document has been added"
-                Smtp_server.Send(e_mail)
-                MessageBox.Show("Document has been added")
+                Dim cell As String = TextBox2.Text
+
+                Dim results = itexmo(cell, "Document Received Successfully!", "TR-INTER334992_FE7KH")
+                If results = 0 Then
+                    MsgBox("Message Sent!")
+                Else
+                    MsgBox("Error num " & results & " was encountered")
+                End If
+
+
+                'Dim Smtp_server As New SmtpClient
+                'Dim e_mail As New MailMessage
+                'Smtp_server.UseDefaultCredentials = False
+                'Smtp_server.Credentials = New Net.NetworkCredential("ocliasomavon@gmail.com", "Kiritetsuya1011")
+                'Smtp_server.Port = 587
+                'Smtp_server.EnableSsl = True
+                'Smtp_server.Host = "smtp.gmail.com"
+                'e_mail = New MailMessage
+                'e_mail.From = New MailAddress("PUP@gmail.com")
+                'e_mail.To.Add(TextBox3.Text)
+                'e_mail.Subject = "Document Update"
+                'e_mail.Body = "Your document has been added"
+                'Smtp_server.Send(e_mail)
+                'MessageBox.Show("Document has been added")
 
 
 
             Catch ex As Exception
                 MessageBox.Show(ex.Message)
             End Try
+
         End If
     End Sub
 
     Private Sub TextBox3_TextChanged(sender As Object, e As EventArgs) Handles TextBox3.TextChanged
 
+    End Sub
+
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+        Dim result As DialogResult = MessageBox.Show("Cancel update?",
+                             "Cancel",
+                             MessageBoxButtons.YesNo)
+        If (result = DialogResult.Yes) Then
+
+            Dashboard.Show()
+            Dashboard.Label2.Text = Office
+            Me.Hide()
+        End If
     End Sub
 End Class
