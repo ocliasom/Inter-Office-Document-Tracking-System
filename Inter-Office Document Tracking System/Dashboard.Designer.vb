@@ -166,7 +166,7 @@ Partial Class Dashboard
         Me.Button2.Location = New System.Drawing.Point(1116, 660)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(164, 60)
-        Me.Button2.TabIndex = 6
+        Me.Button2.TabIndex = 7
         Me.Button2.Text = "Logout"
         Me.Button2.UseVisualStyleBackColor = True
         '
