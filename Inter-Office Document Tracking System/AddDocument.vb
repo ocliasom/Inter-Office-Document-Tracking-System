@@ -102,6 +102,7 @@ Public Class AddDocument
                 'Smtp_server.Send(e_mail)
                 'MessageBox.Show("Document has been added")
 
+                'Yo Mavon, if nabasa mo ito, ginawa ko lang na comment muna yung email na part. highlight mo yung buong code sa email. CTRL + K then CTRL + U para mawala yung comment tag
 
 
             Catch ex As Exception
@@ -111,9 +112,7 @@ Public Class AddDocument
         End If
     End Sub
 
-    Private Sub TextBox3_TextChanged(sender As Object, e As EventArgs) Handles TextBox3.TextChanged
 
-    End Sub
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
         Dim result As DialogResult = MessageBox.Show("Cancel update?",
