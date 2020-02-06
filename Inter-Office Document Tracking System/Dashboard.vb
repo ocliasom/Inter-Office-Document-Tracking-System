@@ -17,11 +17,6 @@
 
     End Sub
 
-
-    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
-
-    End Sub
-
     Private Sub TrackButton_Click(sender As Object, e As EventArgs) Handles TrackButton.Click
         Dim TrackPage As New TrackDocument
 
@@ -34,5 +29,18 @@
 
         PendingPage.Show()
         Me.Dispose()
+    End Sub
+
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+        Dim result As DialogResult = MessageBox.Show("Are you sure?",
+                             "Logout",
+                             MessageBoxButtons.YesNo)
+        If (result = DialogResult.Yes) Then
+
+            Login.Show()
+            Login.Username.Text = ""
+            Login.Password.Text = ""
+            Me.Hide()
+        End If
     End Sub
 End Class

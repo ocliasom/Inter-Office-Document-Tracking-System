@@ -23,6 +23,7 @@ Partial Class Dashboard
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.Button2 = New System.Windows.Forms.Button()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Panel5 = New System.Windows.Forms.Panel()
         Me.IncomingButton = New System.Windows.Forms.Button()
@@ -34,7 +35,6 @@ Partial Class Dashboard
         Me.AddButton = New System.Windows.Forms.Button()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.Button2 = New System.Windows.Forms.Button()
         Me.Panel1.SuspendLayout()
         Me.Panel5.SuspendLayout()
         Me.Panel6.SuspendLayout()
@@ -56,6 +56,15 @@ Partial Class Dashboard
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(1308, 752)
         Me.Panel1.TabIndex = 0
+        '
+        'Button2
+        '
+        Me.Button2.Location = New System.Drawing.Point(1116, 660)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(164, 60)
+        Me.Button2.TabIndex = 7
+        Me.Button2.Text = "Logout"
+        Me.Button2.UseVisualStyleBackColor = True
         '
         'Label2
         '
@@ -160,15 +169,6 @@ Partial Class Dashboard
         Me.Label1.Size = New System.Drawing.Size(971, 63)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Inter-Office Document Tracking System"
-        '
-        'Button2
-        '
-        Me.Button2.Location = New System.Drawing.Point(1116, 660)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(164, 60)
-        Me.Button2.TabIndex = 7
-        Me.Button2.Text = "Logout"
-        Me.Button2.UseVisualStyleBackColor = True
         '
         'Dashboard
         '
