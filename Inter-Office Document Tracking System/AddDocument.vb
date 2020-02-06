@@ -4,9 +4,7 @@ Public Class AddDocument
 
     Dim connection As New MySqlConnection("datasource=localhost;port=3306;username=root;password=;database=iods")
     Public Property Office As String
-    Private Sub Label4_Click(sender As Object, e As EventArgs) Handles Label4.Click
 
-    End Sub
 
 
 

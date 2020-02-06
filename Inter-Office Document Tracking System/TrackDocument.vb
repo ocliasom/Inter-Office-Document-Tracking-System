@@ -7,8 +7,7 @@ Public Class TrackDocument
     Dim Homepage As New Dashboard
     Dim Adminpage As New AdminDashboard
 
-
-
+    Public Office As String
 
 
 
@@ -52,5 +51,11 @@ Public Class TrackDocument
         End If
 
 
+    End Sub
+
+    Private Sub Back_Click(sender As Object, e As EventArgs) Handles Back.Click
+        Dashboard.Show()
+        Dashboard.Label2.Text = Office
+        Me.Hide()
     End Sub
 End Class
