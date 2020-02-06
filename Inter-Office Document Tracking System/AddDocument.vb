@@ -89,6 +89,7 @@ Public Class AddDocument
         If (result = DialogResult.Yes) Then
 
             Dashboard.Show()
+            Dashboard.Label2.Text = Office
             Me.Hide()
         End If
 
