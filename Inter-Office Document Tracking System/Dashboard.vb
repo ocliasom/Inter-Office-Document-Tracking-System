@@ -6,29 +6,33 @@
 
         AddPage.Office = Label2.Text
         AddPage.Show()
-        Me.Hide()
+        Me.Dispose()
     End Sub
 
     Private Sub Dashboard_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Dim AddPage As New AddDocument
+
 
         Label2.Text = Office
 
 
     End Sub
 
-    Private Sub Label2_Click(sender As Object, e As EventArgs) Handles Label2.Click
+
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
 
     End Sub
 
-    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
-        Dim result As DialogResult = MessageBox.Show("Are you sure?",
-                              "Logout",
-                              MessageBoxButtons.YesNo)
-        If (result = DialogResult.Yes) Then
-            Login.Show()
-            Me.Hide()
-        End If
+    Private Sub TrackButton_Click(sender As Object, e As EventArgs) Handles TrackButton.Click
+        Dim TrackPage As New TrackDocument
 
+        TrackPage.Show()
+        Me.Dispose()
+    End Sub
+
+    Private Sub PendingButton_Click(sender As Object, e As EventArgs) Handles PendingButton.Click
+        Dim PendingPage As New PendingDocument
+
+        PendingPage.Show()
+        Me.Dispose()
     End Sub
 End Class

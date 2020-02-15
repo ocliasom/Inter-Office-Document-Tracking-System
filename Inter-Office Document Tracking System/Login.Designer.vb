@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class Login
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class Login
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Sign_in = New System.Windows.Forms.Button()
@@ -48,7 +48,7 @@ Partial Class Login
         '
         'Sign_in
         '
-        Me.Sign_in.Location = New System.Drawing.Point(197, 242)
+        Me.Sign_in.Location = New System.Drawing.Point(197, 264)
         Me.Sign_in.Name = "Sign_in"
         Me.Sign_in.Size = New System.Drawing.Size(94, 41)
         Me.Sign_in.TabIndex = 8
@@ -81,7 +81,7 @@ Partial Class Login
         Me.Password.Name = "Password"
         Me.Password.Size = New System.Drawing.Size(198, 22)
         Me.Password.TabIndex = 5
-        Me.Password.Text = "Password"
+        Me.Password.Text = "$2a$10$rguqKi7Bnq416OIcZCJuA.YafJxUHNdJcBDX7fuQhiSsZ5UVlA/NS"
         '
         'Username
         '
@@ -89,7 +89,7 @@ Partial Class Login
         Me.Username.Name = "Username"
         Me.Username.Size = New System.Drawing.Size(198, 22)
         Me.Username.TabIndex = 4
-        Me.Username.Text = "Username"
+        Me.Username.Text = "cpedept"
         '
         'Panel2
         '
