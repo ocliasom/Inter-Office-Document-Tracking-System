@@ -145,11 +145,11 @@ Partial Class AddDocument
         '
         'TextBox3
         '
-        Me.TextBox3.BackColor = System.Drawing.SystemColors.ControlLight
-        Me.TextBox3.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.TextBox3.BackColor = System.Drawing.Color.White
+        Me.TextBox3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.TextBox3.Location = New System.Drawing.Point(220, 497)
         Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(250, 15)
+        Me.TextBox3.Size = New System.Drawing.Size(250, 22)
         Me.TextBox3.TabIndex = 9
         '
         'Label7
@@ -164,7 +164,7 @@ Partial Class AddDocument
         '
         'ComboBox1
         '
-        Me.ComboBox1.BackColor = System.Drawing.Color.DimGray
+        Me.ComboBox1.BackColor = System.Drawing.Color.White
         Me.ComboBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.ComboBox1.FormattingEnabled = True
         Me.ComboBox1.Location = New System.Drawing.Point(220, 387)

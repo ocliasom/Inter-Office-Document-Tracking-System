@@ -36,6 +36,7 @@ Partial Class Login
         '
         'Panel1
         '
+        Me.Panel1.BackColor = System.Drawing.Color.DimGray
         Me.Panel1.Controls.Add(Me.Sign_in)
         Me.Panel1.Controls.Add(Me.Label2)
         Me.Panel1.Controls.Add(Me.Label1)
@@ -48,35 +49,44 @@ Partial Class Login
         '
         'Sign_in
         '
-        Me.Sign_in.Location = New System.Drawing.Point(197, 264)
+        Me.Sign_in.BackColor = System.Drawing.Color.Firebrick
+        Me.Sign_in.FlatAppearance.BorderColor = System.Drawing.Color.Firebrick
+        Me.Sign_in.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Sign_in.ForeColor = System.Drawing.Color.Gold
+        Me.Sign_in.Location = New System.Drawing.Point(208, 258)
         Me.Sign_in.Name = "Sign_in"
         Me.Sign_in.Size = New System.Drawing.Size(94, 41)
         Me.Sign_in.TabIndex = 8
         Me.Sign_in.Text = "Sign in"
-        Me.Sign_in.UseVisualStyleBackColor = True
+        Me.Sign_in.UseVisualStyleBackColor = False
         '
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(192, 158)
+        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.ForeColor = System.Drawing.Color.White
+        Me.Label2.Location = New System.Drawing.Point(153, 162)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(120, 29)
+        Me.Label2.Size = New System.Drawing.Size(98, 25)
         Me.Label2.TabIndex = 7
         Me.Label2.Text = "Password"
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(192, 87)
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.ForeColor = System.Drawing.Color.White
+        Me.Label1.Location = New System.Drawing.Point(153, 91)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(124, 29)
+        Me.Label1.Size = New System.Drawing.Size(102, 25)
         Me.Label1.TabIndex = 6
         Me.Label1.Text = "Username"
         '
         'Password
         '
+        Me.Password.BackColor = System.Drawing.Color.Gray
+        Me.Password.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Password.ForeColor = System.Drawing.Color.White
         Me.Password.Location = New System.Drawing.Point(158, 190)
         Me.Password.Name = "Password"
         Me.Password.Size = New System.Drawing.Size(198, 22)
@@ -85,6 +95,9 @@ Partial Class Login
         '
         'Username
         '
+        Me.Username.BackColor = System.Drawing.Color.Gray
+        Me.Username.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Username.ForeColor = System.Drawing.SystemColors.InactiveBorder
         Me.Username.Location = New System.Drawing.Point(158, 119)
         Me.Username.Name = "Username"
         Me.Username.Size = New System.Drawing.Size(198, 22)
@@ -93,6 +106,7 @@ Partial Class Login
         '
         'Panel2
         '
+        Me.Panel2.BackColor = System.Drawing.Color.Firebrick
         Me.Panel2.Controls.Add(Me.Label3)
         Me.Panel2.Location = New System.Drawing.Point(12, 12)
         Me.Panel2.Name = "Panel2"
@@ -103,6 +117,7 @@ Partial Class Login
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.ForeColor = System.Drawing.Color.Gold
         Me.Label3.Location = New System.Drawing.Point(38, 18)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(456, 29)
