@@ -23,39 +23,100 @@ Partial Class Dashboard
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.Panel5 = New System.Windows.Forms.Panel()
-        Me.IncomingButton = New System.Windows.Forms.Button()
-        Me.Panel6 = New System.Windows.Forms.Panel()
-        Me.PendingButton = New System.Windows.Forms.Button()
-        Me.Panel4 = New System.Windows.Forms.Panel()
-        Me.TrackButton = New System.Windows.Forms.Button()
-        Me.Panel3 = New System.Windows.Forms.Panel()
+        Me.Button3 = New System.Windows.Forms.Button()
+        Me.Button4 = New System.Windows.Forms.Button()
         Me.AddButton = New System.Windows.Forms.Button()
+        Me.Button5 = New System.Windows.Forms.Button()
+        Me.Button2 = New System.Windows.Forms.Button()
+        Me.Label2 = New System.Windows.Forms.Label()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.Button2 = New System.Windows.Forms.Button()
         Me.Panel1.SuspendLayout()
-        Me.Panel5.SuspendLayout()
-        Me.Panel6.SuspendLayout()
-        Me.Panel4.SuspendLayout()
-        Me.Panel3.SuspendLayout()
         Me.Panel2.SuspendLayout()
         Me.SuspendLayout()
         '
         'Panel1
         '
-        Me.Panel1.BackColor = System.Drawing.SystemColors.ActiveCaption
+        Me.Panel1.BackColor = System.Drawing.SystemColors.ControlLight
+        Me.Panel1.Controls.Add(Me.Button3)
+        Me.Panel1.Controls.Add(Me.Button4)
+        Me.Panel1.Controls.Add(Me.AddButton)
+        Me.Panel1.Controls.Add(Me.Button5)
         Me.Panel1.Controls.Add(Me.Button2)
         Me.Panel1.Controls.Add(Me.Label2)
-        Me.Panel1.Controls.Add(Me.Panel5)
-        Me.Panel1.Controls.Add(Me.Panel6)
-        Me.Panel1.Controls.Add(Me.Panel4)
-        Me.Panel1.Controls.Add(Me.Panel3)
         Me.Panel1.Location = New System.Drawing.Point(12, 12)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(1308, 752)
         Me.Panel1.TabIndex = 0
+        '
+        'Button3
+        '
+        Me.Button3.BackColor = System.Drawing.Color.Firebrick
+        Me.Button3.FlatAppearance.BorderColor = System.Drawing.Color.Firebrick
+        Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button3.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button3.ForeColor = System.Drawing.Color.Gold
+        Me.Button3.Location = New System.Drawing.Point(264, 397)
+        Me.Button3.Name = "Button3"
+        Me.Button3.Size = New System.Drawing.Size(354, 130)
+        Me.Button3.TabIndex = 3
+        Me.Button3.Text = "Pending Documents"
+        Me.Button3.UseVisualStyleBackColor = False
+        '
+        'Button4
+        '
+        Me.Button4.BackColor = System.Drawing.Color.Firebrick
+        Me.Button4.FlatAppearance.BorderColor = System.Drawing.Color.Firebrick
+        Me.Button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button4.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button4.ForeColor = System.Drawing.Color.Gold
+        Me.Button4.Location = New System.Drawing.Point(624, 397)
+        Me.Button4.Name = "Button4"
+        Me.Button4.Size = New System.Drawing.Size(354, 130)
+        Me.Button4.TabIndex = 5
+        Me.Button4.Text = "Incoming Documents"
+        Me.Button4.UseVisualStyleBackColor = False
+        '
+        'AddButton
+        '
+        Me.AddButton.BackColor = System.Drawing.Color.DimGray
+        Me.AddButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.AddButton.Cursor = System.Windows.Forms.Cursors.Arrow
+        Me.AddButton.FlatAppearance.BorderColor = System.Drawing.Color.DimGray
+        Me.AddButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.AddButton.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.AddButton.ForeColor = System.Drawing.Color.Gold
+        Me.AddButton.Location = New System.Drawing.Point(264, 261)
+        Me.AddButton.Name = "AddButton"
+        Me.AddButton.Size = New System.Drawing.Size(354, 130)
+        Me.AddButton.TabIndex = 8
+        Me.AddButton.Text = "Add Documents"
+        Me.AddButton.UseVisualStyleBackColor = False
+        '
+        'Button5
+        '
+        Me.Button5.BackColor = System.Drawing.Color.DimGray
+        Me.Button5.FlatAppearance.BorderColor = System.Drawing.Color.DimGray
+        Me.Button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button5.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button5.ForeColor = System.Drawing.Color.Gold
+        Me.Button5.Location = New System.Drawing.Point(624, 261)
+        Me.Button5.Name = "Button5"
+        Me.Button5.Size = New System.Drawing.Size(354, 130)
+        Me.Button5.TabIndex = 4
+        Me.Button5.Text = "Track Documents"
+        Me.Button5.UseVisualStyleBackColor = False
+        '
+        'Button2
+        '
+        Me.Button2.BackColor = System.Drawing.Color.Firebrick
+        Me.Button2.ForeColor = System.Drawing.Color.Gold
+        Me.Button2.Location = New System.Drawing.Point(1116, 660)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(164, 60)
+        Me.Button2.TabIndex = 7
+        Me.Button2.Text = "Logout"
+        Me.Button2.UseVisualStyleBackColor = False
         '
         'Label2
         '
@@ -66,85 +127,9 @@ Partial Class Dashboard
         Me.Label2.TabIndex = 4
         Me.Label2.Text = "Label2"
         '
-        'Panel5
-        '
-        Me.Panel5.BackColor = System.Drawing.Color.Firebrick
-        Me.Panel5.Controls.Add(Me.IncomingButton)
-        Me.Panel5.Location = New System.Drawing.Point(646, 385)
-        Me.Panel5.Name = "Panel5"
-        Me.Panel5.Size = New System.Drawing.Size(354, 130)
-        Me.Panel5.TabIndex = 3
-        '
-        'IncomingButton
-        '
-        Me.IncomingButton.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.IncomingButton.Location = New System.Drawing.Point(0, 0)
-        Me.IncomingButton.Name = "IncomingButton"
-        Me.IncomingButton.Size = New System.Drawing.Size(354, 130)
-        Me.IncomingButton.TabIndex = 2
-        Me.IncomingButton.Text = "Incoming Documents"
-        Me.IncomingButton.UseVisualStyleBackColor = True
-        '
-        'Panel6
-        '
-        Me.Panel6.BackColor = System.Drawing.Color.IndianRed
-        Me.Panel6.Controls.Add(Me.PendingButton)
-        Me.Panel6.Location = New System.Drawing.Point(293, 385)
-        Me.Panel6.Name = "Panel6"
-        Me.Panel6.Size = New System.Drawing.Size(354, 130)
-        Me.Panel6.TabIndex = 2
-        '
-        'PendingButton
-        '
-        Me.PendingButton.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.PendingButton.Location = New System.Drawing.Point(0, 0)
-        Me.PendingButton.Name = "PendingButton"
-        Me.PendingButton.Size = New System.Drawing.Size(354, 130)
-        Me.PendingButton.TabIndex = 1
-        Me.PendingButton.Text = "Pending Documents"
-        Me.PendingButton.UseVisualStyleBackColor = True
-        '
-        'Panel4
-        '
-        Me.Panel4.BackColor = System.Drawing.Color.IndianRed
-        Me.Panel4.Controls.Add(Me.TrackButton)
-        Me.Panel4.Location = New System.Drawing.Point(646, 256)
-        Me.Panel4.Name = "Panel4"
-        Me.Panel4.Size = New System.Drawing.Size(354, 130)
-        Me.Panel4.TabIndex = 1
-        '
-        'TrackButton
-        '
-        Me.TrackButton.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TrackButton.Location = New System.Drawing.Point(0, 0)
-        Me.TrackButton.Name = "TrackButton"
-        Me.TrackButton.Size = New System.Drawing.Size(354, 130)
-        Me.TrackButton.TabIndex = 1
-        Me.TrackButton.Text = "Track Documents"
-        Me.TrackButton.UseVisualStyleBackColor = True
-        '
-        'Panel3
-        '
-        Me.Panel3.BackColor = System.Drawing.Color.Firebrick
-        Me.Panel3.Controls.Add(Me.AddButton)
-        Me.Panel3.Location = New System.Drawing.Point(293, 256)
-        Me.Panel3.Name = "Panel3"
-        Me.Panel3.Size = New System.Drawing.Size(354, 130)
-        Me.Panel3.TabIndex = 0
-        '
-        'AddButton
-        '
-        Me.AddButton.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.AddButton.Location = New System.Drawing.Point(0, 0)
-        Me.AddButton.Name = "AddButton"
-        Me.AddButton.Size = New System.Drawing.Size(354, 130)
-        Me.AddButton.TabIndex = 0
-        Me.AddButton.Text = "Add Documents"
-        Me.AddButton.UseVisualStyleBackColor = True
-        '
         'Panel2
         '
-        Me.Panel2.BackColor = System.Drawing.Color.Maroon
+        Me.Panel2.BackColor = System.Drawing.Color.Firebrick
         Me.Panel2.Controls.Add(Me.Label1)
         Me.Panel2.Location = New System.Drawing.Point(12, 12)
         Me.Panel2.Name = "Panel2"
@@ -154,21 +139,13 @@ Partial Class Dashboard
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 32.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(3, 15)
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.ForeColor = System.Drawing.Color.Gold
+        Me.Label1.Location = New System.Drawing.Point(0, 29)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(971, 63)
+        Me.Label1.Size = New System.Drawing.Size(530, 36)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Inter-Office Document Tracking System"
-        '
-        'Button2
-        '
-        Me.Button2.Location = New System.Drawing.Point(1116, 660)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(164, 60)
-        Me.Button2.TabIndex = 7
-        Me.Button2.Text = "Logout"
-        Me.Button2.UseVisualStyleBackColor = True
         '
         'Dashboard
         '
@@ -181,10 +158,6 @@ Partial Class Dashboard
         Me.Text = "Form2"
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
-        Me.Panel5.ResumeLayout(False)
-        Me.Panel6.ResumeLayout(False)
-        Me.Panel4.ResumeLayout(False)
-        Me.Panel3.ResumeLayout(False)
         Me.Panel2.ResumeLayout(False)
         Me.Panel2.PerformLayout()
         Me.ResumeLayout(False)
@@ -194,14 +167,10 @@ Partial Class Dashboard
     Friend WithEvents Panel1 As Panel
     Friend WithEvents Panel2 As Panel
     Friend WithEvents Label1 As Label
-    Friend WithEvents Panel5 As Panel
-    Friend WithEvents Panel6 As Panel
-    Friend WithEvents Panel4 As Panel
-    Friend WithEvents Panel3 As Panel
-    Friend WithEvents IncomingButton As Button
-    Friend WithEvents PendingButton As Button
-    Friend WithEvents TrackButton As Button
-    Friend WithEvents AddButton As Button
     Friend WithEvents Label2 As Label
     Friend WithEvents Button2 As Button
+    Friend WithEvents Button3 As Button
+    Friend WithEvents Button4 As Button
+    Friend WithEvents AddButton As Button
+    Friend WithEvents Button5 As Button
 End Class

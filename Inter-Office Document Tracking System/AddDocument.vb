@@ -87,20 +87,20 @@ Public Class AddDocument
                 End If
 
 
-                'Dim Smtp_server As New SmtpClient
-                'Dim e_mail As New MailMessage
-                'Smtp_server.UseDefaultCredentials = False
-                'Smtp_server.Credentials = New Net.NetworkCredential("ocliasomavon@gmail.com", "Kiritetsuya1011")
-                'Smtp_server.Port = 587
-                'Smtp_server.EnableSsl = True
-                'Smtp_server.Host = "smtp.gmail.com"
-                'e_mail = New MailMessage
-                'e_mail.From = New MailAddress("PUP@gmail.com")
-                'e_mail.To.Add(TextBox3.Text)
-                'e_mail.Subject = "Document Update"
-                'e_mail.Body = "Your document has been added"
-                'Smtp_server.Send(e_mail)
-                'MessageBox.Show("Document has been added")
+                Dim Smtp_server As New SmtpClient
+                Dim e_mail As New MailMessage
+                Smtp_server.UseDefaultCredentials = False
+                Smtp_server.Credentials = New Net.NetworkCredential("ocliasomavon@gmail.com", "Kiritetsuya1011")
+                Smtp_server.Port = 587
+                Smtp_server.EnableSsl = True
+                Smtp_server.Host = "smtp.gmail.com"
+                e_mail = New MailMessage
+                e_mail.From = New MailAddress("PUP@gmail.com")
+                e_mail.To.Add(TextBox3.Text)
+                e_mail.Subject = "Document Update"
+                e_mail.Body = "Your document has been added"
+                Smtp_server.Send(e_mail)
+                MessageBox.Show("Document has been added")
 
                 'Yo Mavon, if nabasa mo ito, ginawa ko lang na comment muna yung email na part. highlight mo yung buong code sa email. CTRL + K then CTRL + U para mawala yung comment tag
 

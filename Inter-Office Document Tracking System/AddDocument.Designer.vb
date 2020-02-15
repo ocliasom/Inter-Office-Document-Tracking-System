@@ -49,7 +49,7 @@ Partial Class AddDocument
         '
         'Panel1
         '
-        Me.Panel1.BackColor = System.Drawing.SystemColors.ActiveCaption
+        Me.Panel1.BackColor = System.Drawing.SystemColors.ControlLight
         Me.Panel1.Controls.Add(Me.TextBox2)
         Me.Panel1.Controls.Add(Me.Label9)
         Me.Panel1.Controls.Add(Me.TextBox1)
@@ -75,7 +75,7 @@ Partial Class AddDocument
         '
         Me.TextBox2.Location = New System.Drawing.Point(695, 497)
         Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(233, 22)
+        Me.TextBox2.Size = New System.Drawing.Size(248, 22)
         Me.TextBox2.TabIndex = 17
         '
         'Label9
@@ -92,7 +92,7 @@ Partial Class AddDocument
         '
         Me.TextBox1.Location = New System.Drawing.Point(220, 586)
         Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(591, 22)
+        Me.TextBox1.Size = New System.Drawing.Size(723, 22)
         Me.TextBox1.TabIndex = 15
         '
         'Label8
@@ -145,9 +145,11 @@ Partial Class AddDocument
         '
         'TextBox3
         '
+        Me.TextBox3.BackColor = System.Drawing.SystemColors.ControlLight
+        Me.TextBox3.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.TextBox3.Location = New System.Drawing.Point(220, 497)
         Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(240, 22)
+        Me.TextBox3.Size = New System.Drawing.Size(250, 15)
         Me.TextBox3.TabIndex = 9
         '
         'Label7
@@ -162,6 +164,8 @@ Partial Class AddDocument
         '
         'ComboBox1
         '
+        Me.ComboBox1.BackColor = System.Drawing.Color.DimGray
+        Me.ComboBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.ComboBox1.FormattingEnabled = True
         Me.ComboBox1.Location = New System.Drawing.Point(220, 387)
         Me.ComboBox1.Name = "ComboBox1"
@@ -210,17 +214,18 @@ Partial Class AddDocument
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(215, 175)
+        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Location = New System.Drawing.Point(215, 171)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(142, 25)
+        Me.Label2.Size = New System.Drawing.Size(171, 29)
         Me.Label2.TabIndex = 0
         Me.Label2.Text = "Add Document"
         '
         'Panel2
         '
-        Me.Panel2.BackColor = System.Drawing.Color.Maroon
+        Me.Panel2.BackColor = System.Drawing.Color.Firebrick
         Me.Panel2.Controls.Add(Me.Label1)
+        Me.Panel2.ForeColor = System.Drawing.Color.Gold
         Me.Panel2.Location = New System.Drawing.Point(12, 12)
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(1308, 100)
@@ -229,10 +234,10 @@ Partial Class AddDocument
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 32.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(3, 15)
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Location = New System.Drawing.Point(3, 27)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(971, 63)
+        Me.Label1.Size = New System.Drawing.Size(530, 36)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Inter-Office Document Tracking System"
         '
