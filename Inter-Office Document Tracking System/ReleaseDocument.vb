@@ -30,4 +30,5 @@ Public Class ReleaseDocument
             connection.Dispose()
         End Try
     End Sub
+
 End Class

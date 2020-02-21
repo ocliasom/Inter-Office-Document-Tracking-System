@@ -6,7 +6,7 @@
 
         AddPage.Office = Label2.Text
         AddPage.Show()
-        Me.Dispose()
+        Me.Close()
     End Sub
 
     Private Sub Dashboard_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -26,14 +26,14 @@
         Dim TrackPage As New TrackDocument
 
         TrackPage.Show()
-        Me.Dispose()
+        Me.Close()
     End Sub
 
     Private Sub PendingButton_Click(sender As Object, e As EventArgs)
         Dim PendingPage As New PendingDocument
 
         PendingPage.Show()
-        Me.Dispose()
+        Me.Close()
     End Sub
 
     Private Sub AddButton_Click_1(sender As Object, e As EventArgs) Handles AddButton.Click
@@ -42,21 +42,21 @@
 
         AddPage.Office = Label2.Text
         AddPage.Show()
-        Me.Dispose()
+        Me.Close()
     End Sub
 
     Private Sub Button5_Click(sender As Object, e As EventArgs) Handles Button5.Click
         Dim TrackPage As New TrackDocument
 
         TrackPage.Show()
-        Me.Dispose()
+        Me.Close()
     End Sub
 
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
         Dim PendingPage As New PendingDocument
 
         PendingPage.Show()
-        Me.Dispose()
+        Me.Close()
     End Sub
 
     Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click

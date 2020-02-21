@@ -23,11 +23,8 @@ Partial Class PendingDocument
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Test = New System.Windows.Forms.Label()
+        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.CTS = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Type = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DateReceived = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -35,6 +32,9 @@ Partial Class PendingDocument
         Me.Description = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Forward = New System.Windows.Forms.DataGridViewButtonColumn()
         Me.Release = New System.Windows.Forms.DataGridViewButtonColumn()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Panel1.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel2.SuspendLayout()
@@ -42,7 +42,7 @@ Partial Class PendingDocument
         '
         'Panel1
         '
-        Me.Panel1.BackColor = System.Drawing.SystemColors.ActiveCaption
+        Me.Panel1.BackColor = System.Drawing.Color.DimGray
         Me.Panel1.Controls.Add(Me.Test)
         Me.Panel1.Controls.Add(Me.DataGridView1)
         Me.Panel1.Controls.Add(Me.Label2)
@@ -50,6 +50,16 @@ Partial Class PendingDocument
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(1201, 597)
         Me.Panel1.TabIndex = 4
+        '
+        'Test
+        '
+        Me.Test.AutoSize = True
+        Me.Test.Font = New System.Drawing.Font("Microsoft Sans Serif", 32.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Test.Location = New System.Drawing.Point(564, 124)
+        Me.Test.Name = "Test"
+        Me.Test.Size = New System.Drawing.Size(513, 63)
+        Me.Test.TabIndex = 3
+        Me.Test.Text = "Pending Documents"
         '
         'DataGridView1
         '
@@ -59,7 +69,8 @@ Partial Class PendingDocument
         Me.DataGridView1.AllowUserToResizeRows = False
         Me.DataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.DataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells
-        Me.DataGridView1.BackgroundColor = System.Drawing.SystemColors.ActiveCaption
+        Me.DataGridView1.BackgroundColor = System.Drawing.Color.DimGray
+        Me.DataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.CTS, Me.Type, Me.DateReceived, Me.SourceOffice, Me.Description, Me.Forward, Me.Release})
         Me.DataGridView1.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically
@@ -71,45 +82,6 @@ Partial Class PendingDocument
         Me.DataGridView1.RowTemplate.Height = 24
         Me.DataGridView1.Size = New System.Drawing.Size(1162, 354)
         Me.DataGridView1.TabIndex = 2
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 32.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(12, 124)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(513, 63)
-        Me.Label2.TabIndex = 1
-        Me.Label2.Text = "Pending Documents"
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 32.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(3, 15)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(971, 63)
-        Me.Label1.TabIndex = 0
-        Me.Label1.Text = "Inter-Office Document Tracking System"
-        '
-        'Panel2
-        '
-        Me.Panel2.BackColor = System.Drawing.Color.Maroon
-        Me.Panel2.Controls.Add(Me.Label1)
-        Me.Panel2.Location = New System.Drawing.Point(17, 15)
-        Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(1201, 100)
-        Me.Panel2.TabIndex = 5
-        '
-        'Test
-        '
-        Me.Test.AutoSize = True
-        Me.Test.Font = New System.Drawing.Font("Microsoft Sans Serif", 32.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Test.Location = New System.Drawing.Point(564, 124)
-        Me.Test.Name = "Test"
-        Me.Test.Size = New System.Drawing.Size(513, 63)
-        Me.Test.TabIndex = 3
-        Me.Test.Text = "Pending Documents"
         '
         'CTS
         '
@@ -170,6 +142,37 @@ Partial Class PendingDocument
         Me.Release.ReadOnly = True
         Me.Release.Text = "Release"
         Me.Release.UseColumnTextForButtonValue = True
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 24.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.ForeColor = System.Drawing.Color.White
+        Me.Label2.Location = New System.Drawing.Point(12, 124)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(380, 46)
+        Me.Label2.TabIndex = 1
+        Me.Label2.Text = "Pending Documents"
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.ForeColor = System.Drawing.Color.Gold
+        Me.Label1.Location = New System.Drawing.Point(3, 31)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(530, 36)
+        Me.Label1.TabIndex = 0
+        Me.Label1.Text = "Inter-Office Document Tracking System"
+        '
+        'Panel2
+        '
+        Me.Panel2.BackColor = System.Drawing.Color.Firebrick
+        Me.Panel2.Controls.Add(Me.Label1)
+        Me.Panel2.Location = New System.Drawing.Point(17, 15)
+        Me.Panel2.Name = "Panel2"
+        Me.Panel2.Size = New System.Drawing.Size(1201, 100)
+        Me.Panel2.TabIndex = 5
         '
         'PendingDocument
         '

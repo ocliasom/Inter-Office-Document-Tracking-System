@@ -49,7 +49,7 @@ Public Class Login
                             Homepage.Office = reader("office").ToString()
                         End If
                         Homepage.Show()
-                        Me.Dispose()
+                        Me.Close()
                         connection.Close()
                     End If
                 Else

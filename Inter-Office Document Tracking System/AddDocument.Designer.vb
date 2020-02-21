@@ -43,13 +43,15 @@ Partial Class AddDocument
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
+        Me.Sidebar = New System.Windows.Forms.Panel()
         Me.Panel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
         Me.SuspendLayout()
         '
         'Panel1
         '
-        Me.Panel1.BackColor = System.Drawing.SystemColors.ControlLight
+        Me.Panel1.BackColor = System.Drawing.Color.DimGray
+        Me.Panel1.Controls.Add(Me.Sidebar)
         Me.Panel1.Controls.Add(Me.TextBox2)
         Me.Panel1.Controls.Add(Me.Label9)
         Me.Panel1.Controls.Add(Me.TextBox1)
@@ -66,6 +68,7 @@ Partial Class AddDocument
         Me.Panel1.Controls.Add(Me.Label4)
         Me.Panel1.Controls.Add(Me.Label3)
         Me.Panel1.Controls.Add(Me.Label2)
+        Me.Panel1.ForeColor = System.Drawing.Color.White
         Me.Panel1.Location = New System.Drawing.Point(12, 12)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(1308, 752)
@@ -73,7 +76,7 @@ Partial Class AddDocument
         '
         'TextBox2
         '
-        Me.TextBox2.Location = New System.Drawing.Point(695, 497)
+        Me.TextBox2.Location = New System.Drawing.Point(842, 501)
         Me.TextBox2.Name = "TextBox2"
         Me.TextBox2.Size = New System.Drawing.Size(248, 22)
         Me.TextBox2.TabIndex = 17
@@ -82,7 +85,7 @@ Partial Class AddDocument
         '
         Me.Label9.AutoSize = True
         Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label9.Location = New System.Drawing.Point(690, 458)
+        Me.Label9.Location = New System.Drawing.Point(837, 462)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(143, 25)
         Me.Label9.TabIndex = 16
@@ -90,7 +93,7 @@ Partial Class AddDocument
         '
         'TextBox1
         '
-        Me.TextBox1.Location = New System.Drawing.Point(220, 586)
+        Me.TextBox1.Location = New System.Drawing.Point(367, 590)
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.Size = New System.Drawing.Size(723, 22)
         Me.TextBox1.TabIndex = 15
@@ -99,7 +102,7 @@ Partial Class AddDocument
         '
         Me.Label8.AutoSize = True
         Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label8.Location = New System.Drawing.Point(215, 547)
+        Me.Label8.Location = New System.Drawing.Point(362, 551)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(109, 25)
         Me.Label8.TabIndex = 14
@@ -107,27 +110,35 @@ Partial Class AddDocument
         '
         'Button2
         '
-        Me.Button2.Location = New System.Drawing.Point(645, 684)
+        Me.Button2.BackColor = System.Drawing.Color.Firebrick
+        Me.Button2.FlatAppearance.BorderColor = System.Drawing.Color.Firebrick
+        Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button2.ForeColor = System.Drawing.Color.Gold
+        Me.Button2.Location = New System.Drawing.Point(1190, 681)
         Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(75, 23)
+        Me.Button2.Size = New System.Drawing.Size(115, 41)
         Me.Button2.TabIndex = 13
         Me.Button2.Text = "Cancel"
-        Me.Button2.UseVisualStyleBackColor = True
+        Me.Button2.UseVisualStyleBackColor = False
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(564, 684)
+        Me.Button1.BackColor = System.Drawing.Color.Firebrick
+        Me.Button1.FlatAppearance.BorderColor = System.Drawing.Color.Firebrick
+        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button1.ForeColor = System.Drawing.Color.Gold
+        Me.Button1.Location = New System.Drawing.Point(1069, 681)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(75, 23)
+        Me.Button1.Size = New System.Drawing.Size(115, 41)
         Me.Button1.TabIndex = 12
         Me.Button1.Text = "Add"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.Button1.UseVisualStyleBackColor = False
         '
         'Officebox
         '
         Me.Officebox.AutoSize = True
         Me.Officebox.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Officebox.Location = New System.Drawing.Point(690, 285)
+        Me.Officebox.Location = New System.Drawing.Point(837, 289)
         Me.Officebox.Name = "Officebox"
         Me.Officebox.Size = New System.Drawing.Size(73, 25)
         Me.Officebox.TabIndex = 11
@@ -137,7 +148,7 @@ Partial Class AddDocument
         '
         Me.Datebox.AutoSize = True
         Me.Datebox.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Datebox.Location = New System.Drawing.Point(215, 285)
+        Me.Datebox.Location = New System.Drawing.Point(362, 289)
         Me.Datebox.Name = "Datebox"
         Me.Datebox.Size = New System.Drawing.Size(53, 25)
         Me.Datebox.TabIndex = 10
@@ -147,7 +158,7 @@ Partial Class AddDocument
         '
         Me.TextBox3.BackColor = System.Drawing.Color.White
         Me.TextBox3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.TextBox3.Location = New System.Drawing.Point(220, 497)
+        Me.TextBox3.Location = New System.Drawing.Point(367, 501)
         Me.TextBox3.Name = "TextBox3"
         Me.TextBox3.Size = New System.Drawing.Size(250, 22)
         Me.TextBox3.TabIndex = 9
@@ -156,7 +167,7 @@ Partial Class AddDocument
         '
         Me.Label7.AutoSize = True
         Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.Location = New System.Drawing.Point(215, 458)
+        Me.Label7.Location = New System.Drawing.Point(362, 462)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(145, 25)
         Me.Label7.TabIndex = 8
@@ -167,7 +178,7 @@ Partial Class AddDocument
         Me.ComboBox1.BackColor = System.Drawing.Color.White
         Me.ComboBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(220, 387)
+        Me.ComboBox1.Location = New System.Drawing.Point(367, 391)
         Me.ComboBox1.Name = "ComboBox1"
         Me.ComboBox1.Size = New System.Drawing.Size(723, 24)
         Me.ComboBox1.TabIndex = 7
@@ -176,7 +187,7 @@ Partial Class AddDocument
         '
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.Location = New System.Drawing.Point(215, 359)
+        Me.Label6.Location = New System.Drawing.Point(362, 363)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(151, 25)
         Me.Label6.TabIndex = 6
@@ -186,7 +197,7 @@ Partial Class AddDocument
         '
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(690, 260)
+        Me.Label5.Location = New System.Drawing.Point(837, 264)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(63, 25)
         Me.Label5.TabIndex = 3
@@ -196,7 +207,7 @@ Partial Class AddDocument
         '
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(215, 260)
+        Me.Label4.Location = New System.Drawing.Point(362, 264)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(53, 25)
         Me.Label4.TabIndex = 2
@@ -205,7 +216,7 @@ Partial Class AddDocument
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(217, 200)
+        Me.Label3.Location = New System.Drawing.Point(364, 204)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(243, 17)
         Me.Label3.TabIndex = 1
@@ -215,7 +226,7 @@ Partial Class AddDocument
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(215, 171)
+        Me.Label2.Location = New System.Drawing.Point(362, 175)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(171, 29)
         Me.Label2.TabIndex = 0
@@ -243,6 +254,14 @@ Partial Class AddDocument
         '
         'Timer1
         '
+        '
+        'Sidebar
+        '
+        Me.Sidebar.BackColor = System.Drawing.SystemColors.ActiveCaption
+        Me.Sidebar.Location = New System.Drawing.Point(0, 97)
+        Me.Sidebar.Name = "Sidebar"
+        Me.Sidebar.Size = New System.Drawing.Size(314, 655)
+        Me.Sidebar.TabIndex = 18
         '
         'AddDocument
         '
@@ -281,4 +300,5 @@ Partial Class AddDocument
     Friend WithEvents Label9 As Label
     Friend WithEvents TextBox1 As TextBox
     Friend WithEvents Label8 As Label
+    Friend WithEvents Sidebar As Panel
 End Class
