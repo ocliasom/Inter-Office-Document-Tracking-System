@@ -126,6 +126,7 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="OfficeName.vb" />
     <Compile Include="PendingDocument.Designer.vb">
       <DependentUpon>PendingDocument.vb</DependentUpon>
     </Compile>

@@ -1,4 +1,5 @@
 ﻿Imports MySql.Data.MySqlClient
+Imports System.Net.Mail
 Public Class ReleaseDocument
     Public Property tracknum As String
 
@@ -14,7 +15,7 @@ Public Class ReleaseDocument
         Try
             connection.Open()
             Dim Query As String
-            Query = "select trackingnum, doctype, date_received, description, source_office from document WHERE trackingnum ='" & tracking.Text & "'"
+            Query = "select trackingnum, doctype, date_received, description, source_office from document WHERE trackingnum ='" & tracknum & "'"
             cmd = New MySqlCommand(Query, connection)
             adapter.SelectCommand = cmd
             adapter.Fill(table)
@@ -29,6 +30,23 @@ Public Class ReleaseDocument
         Finally
             connection.Dispose()
         End Try
+        tracking.Text = DataGridView1.Rows(0).Cells(5).Value
     End Sub
 
+    Private Sub Release_Click(sender As Object, e As EventArgs) Handles Release.Click
+        Dim Smtp_server As New SmtpClient
+        Dim e_mail As New MailMessage
+        Smtp_server.UseDefaultCredentials = False
+        Smtp_server.Credentials = New Net.NetworkCredential("ocliasomavon@gmail.com", "Kiritetsuya1011")
+        Smtp_server.Port = 587
+        Smtp_server.EnableSsl = True
+        Smtp_server.Host = "smtp.gmail.com"
+        e_mail = New MailMessage
+        e_mail.From = New MailAddress("PUP@gmail.com")
+        e_mail.To.Add(tracking.Text)
+        e_mail.Subject = "Document Update"
+        e_mail.Body = "Your document has been released. Please claim it on your respective Department Office"
+        Smtp_server.Send(e_mail)
+        MessageBox.Show("Document has been Released")
+    End Sub
 End Class

@@ -3,7 +3,7 @@ Imports System.Net.Mail
 Public Class AddDocument
 
     Dim connection As New MySqlConnection("datasource=localhost;port=3306;username=root;password=;database=iods")
-    Public Property Office As String
+    'Public Property Office As String
     Private Sub Label4_Click(sender As Object, e As EventArgs) Handles Label4.Click
 
     End Sub
@@ -12,14 +12,15 @@ Public Class AddDocument
 
     Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
         Datebox.Text = DateTime.Now.ToString("yyyy-MM-dd")
+        HiddenDate.Text = DateTime.Now.ToString("yyyyMMdd")
     End Sub
 
     Private Sub AddDocument_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Timer1.Enabled = True
-        Officebox.Text = Office
+        Officebox.Text = X
 
 
-        Dim command As New MySqlCommand("SELECT * FROM `type`", connection)
+        Dim command As New MySqlCommand("SELECT * FROM `type` ", connection)
 
 
 
@@ -63,14 +64,15 @@ Public Class AddDocument
                 Dim Addpage As New AddDocument
 
 
-                Dim command As New MySqlCommand("INSERT INTO `document` (current_office,date_received,description,doctype,source_office,status,email_address) values(@office,@date,@description,@doctype,@source,@status,@email)", connection)
+                Dim command As New MySqlCommand("INSERT INTO `document` (trackingnum,current_office,date_received,description,doctype,source_office,status,email_address) values(@tracking,@office,@date,@description,@doctype,@source,@status,@email)", connection)
 
+                command.Parameters.AddWithValue("@tracking", HiddenDate.Text)
                 command.Parameters.AddWithValue("@office", Officebox.Text)
                 command.Parameters.AddWithValue("@date", Datebox.Text)
                 command.Parameters.AddWithValue("@description", TextBox3.Text)
                 command.Parameters.AddWithValue("@doctype", ComboBox1.SelectedValue)
                 command.Parameters.AddWithValue("@source", Officebox.Text)
-                command.Parameters.AddWithValue("@status", "pending")
+                command.Parameters.AddWithValue("@status", "PENDING")
                 command.Parameters.AddWithValue("@email", TextBox3.Text)
 
                 connection.Open()
@@ -121,7 +123,7 @@ Public Class AddDocument
         If (result = DialogResult.Yes) Then
 
             Dashboard.Show()
-            Dashboard.Label2.Text = Office
+            'Dashboard.Label2.Text = Office
             Me.Hide()
         End If
     End Sub

@@ -28,11 +28,25 @@ Public Class Login
                     Dim usertype = rolereader.GetString("role")
                     If usertype = "admin" Then
                         Adminpage.Show()
-                        Me.Hide()
+                        Me.Close()
                         connection.Close()
                     ElseIf usertype = "OFFICE" Then
-                        Adminpage.Show()
-                        Me.Hide()
+                        connection.Close()
+                        connection.Open()
+
+                        Dim command2 As New MySqlCommand("SELECT `office` FROM `user` WHERE `username` = @username ", connection)
+                        Dim reader As MySqlDataReader
+                        command2.Parameters.Add("@username", MySqlDbType.VarChar).Value = Username.Text
+
+
+                        reader = command2.ExecuteReader()
+                        reader.Read()
+                        If reader.HasRows Then
+                            X = reader("office").ToString()
+                        End If
+
+                        Homepage.Show()
+                        Me.Close()
                         connection.Close()
                     ElseIf usertype = "USER" Then
                         connection.Close()
@@ -46,7 +60,7 @@ Public Class Login
                         reader = command2.ExecuteReader()
                         reader.Read()
                         If reader.HasRows Then
-                            Homepage.Office = reader("office").ToString()
+                            X = reader("office").ToString()
                         End If
                         Homepage.Show()
                         Me.Close()

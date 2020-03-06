@@ -24,6 +24,7 @@ Partial Class AddDocument
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.Sidebar = New System.Windows.Forms.Panel()
         Me.TextBox2 = New System.Windows.Forms.TextBox()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
@@ -43,7 +44,7 @@ Partial Class AddDocument
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
-        Me.Sidebar = New System.Windows.Forms.Panel()
+        Me.HiddenDate = New System.Windows.Forms.Label()
         Me.Panel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
         Me.SuspendLayout()
@@ -51,6 +52,7 @@ Partial Class AddDocument
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.Color.DimGray
+        Me.Panel1.Controls.Add(Me.HiddenDate)
         Me.Panel1.Controls.Add(Me.Sidebar)
         Me.Panel1.Controls.Add(Me.TextBox2)
         Me.Panel1.Controls.Add(Me.Label9)
@@ -74,6 +76,14 @@ Partial Class AddDocument
         Me.Panel1.Size = New System.Drawing.Size(1308, 752)
         Me.Panel1.TabIndex = 1
         '
+        'Sidebar
+        '
+        Me.Sidebar.BackColor = System.Drawing.SystemColors.ActiveCaption
+        Me.Sidebar.Location = New System.Drawing.Point(0, 97)
+        Me.Sidebar.Name = "Sidebar"
+        Me.Sidebar.Size = New System.Drawing.Size(314, 655)
+        Me.Sidebar.TabIndex = 18
+        '
         'TextBox2
         '
         Me.TextBox2.Location = New System.Drawing.Point(842, 501)
@@ -87,7 +97,7 @@ Partial Class AddDocument
         Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label9.Location = New System.Drawing.Point(837, 462)
         Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(143, 25)
+        Me.Label9.Size = New System.Drawing.Size(115, 20)
         Me.Label9.TabIndex = 16
         Me.Label9.Text = "Phone Number"
         '
@@ -104,7 +114,7 @@ Partial Class AddDocument
         Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label8.Location = New System.Drawing.Point(362, 551)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(109, 25)
+        Me.Label8.Size = New System.Drawing.Size(89, 20)
         Me.Label8.TabIndex = 14
         Me.Label8.Text = "Description"
         '
@@ -140,7 +150,7 @@ Partial Class AddDocument
         Me.Officebox.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Officebox.Location = New System.Drawing.Point(837, 289)
         Me.Officebox.Name = "Officebox"
-        Me.Officebox.Size = New System.Drawing.Size(73, 25)
+        Me.Officebox.Size = New System.Drawing.Size(59, 20)
         Me.Officebox.TabIndex = 11
         Me.Officebox.Text = "Offices"
         '
@@ -150,7 +160,7 @@ Partial Class AddDocument
         Me.Datebox.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Datebox.Location = New System.Drawing.Point(362, 289)
         Me.Datebox.Name = "Datebox"
-        Me.Datebox.Size = New System.Drawing.Size(53, 25)
+        Me.Datebox.Size = New System.Drawing.Size(44, 20)
         Me.Datebox.TabIndex = 10
         Me.Datebox.Text = "Date"
         '
@@ -169,7 +179,7 @@ Partial Class AddDocument
         Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label7.Location = New System.Drawing.Point(362, 462)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(145, 25)
+        Me.Label7.Size = New System.Drawing.Size(116, 20)
         Me.Label7.TabIndex = 8
         Me.Label7.Text = "E-mail Address"
         '
@@ -189,7 +199,7 @@ Partial Class AddDocument
         Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label6.Location = New System.Drawing.Point(362, 363)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(151, 25)
+        Me.Label6.Size = New System.Drawing.Size(121, 20)
         Me.Label6.TabIndex = 6
         Me.Label6.Text = "Document Type"
         '
@@ -199,7 +209,7 @@ Partial Class AddDocument
         Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label5.Location = New System.Drawing.Point(837, 264)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(63, 25)
+        Me.Label5.Size = New System.Drawing.Size(51, 20)
         Me.Label5.TabIndex = 3
         Me.Label5.Text = "Office"
         '
@@ -209,7 +219,7 @@ Partial Class AddDocument
         Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label4.Location = New System.Drawing.Point(362, 264)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(53, 25)
+        Me.Label4.Size = New System.Drawing.Size(44, 20)
         Me.Label4.TabIndex = 2
         Me.Label4.Text = "Date"
         '
@@ -218,7 +228,7 @@ Partial Class AddDocument
         Me.Label3.AutoSize = True
         Me.Label3.Location = New System.Drawing.Point(364, 204)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(243, 17)
+        Me.Label3.Size = New System.Drawing.Size(225, 16)
         Me.Label3.TabIndex = 1
         Me.Label3.Text = "Add your document here for tracking."
         '
@@ -228,7 +238,7 @@ Partial Class AddDocument
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.Location = New System.Drawing.Point(362, 175)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(171, 29)
+        Me.Label2.Size = New System.Drawing.Size(137, 24)
         Me.Label2.TabIndex = 0
         Me.Label2.Text = "Add Document"
         '
@@ -248,20 +258,22 @@ Partial Class AddDocument
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.Location = New System.Drawing.Point(3, 27)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(530, 36)
+        Me.Label1.Size = New System.Drawing.Size(431, 29)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Inter-Office Document Tracking System"
         '
         'Timer1
         '
         '
-        'Sidebar
+        'HiddenDate
         '
-        Me.Sidebar.BackColor = System.Drawing.SystemColors.ActiveCaption
-        Me.Sidebar.Location = New System.Drawing.Point(0, 97)
-        Me.Sidebar.Name = "Sidebar"
-        Me.Sidebar.Size = New System.Drawing.Size(314, 655)
-        Me.Sidebar.TabIndex = 18
+        Me.HiddenDate.AutoSize = True
+        Me.HiddenDate.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.HiddenDate.Location = New System.Drawing.Point(363, 309)
+        Me.HiddenDate.Name = "HiddenDate"
+        Me.HiddenDate.Size = New System.Drawing.Size(99, 20)
+        Me.HiddenDate.TabIndex = 19
+        Me.HiddenDate.Text = "Date Hidden"
         '
         'AddDocument
         '
@@ -301,4 +313,5 @@ Partial Class AddDocument
     Friend WithEvents TextBox1 As TextBox
     Friend WithEvents Label8 As Label
     Friend WithEvents Sidebar As Panel
+    Friend WithEvents HiddenDate As Label
 End Class

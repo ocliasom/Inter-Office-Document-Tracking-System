@@ -1,10 +1,10 @@
 ﻿Public Class Dashboard
-    Public Property Office As String
+    'Public Property Office As String
     Private Sub AddButton_Click(sender As Object, e As EventArgs)
         Dim AddPage As New AddDocument
 
 
-        AddPage.Office = Label2.Text
+        'AddPage.Office = Label2.Text
         AddPage.Show()
         Me.Close()
     End Sub
@@ -12,7 +12,7 @@
     Private Sub Dashboard_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
 
-        Label2.Text = Office
+        Label2.Text = X
 
 
     End Sub
@@ -32,6 +32,7 @@
     Private Sub PendingButton_Click(sender As Object, e As EventArgs)
         Dim PendingPage As New PendingDocument
 
+        'PendingPage.Offices = Label2.Text
         PendingPage.Show()
         Me.Close()
     End Sub
@@ -40,7 +41,7 @@
         Dim AddPage As New AddDocument
 
 
-        AddPage.Office = Label2.Text
+
         AddPage.Show()
         Me.Close()
     End Sub

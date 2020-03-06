@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class PendingDocument
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,10 +20,9 @@ Partial Class PendingDocument
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.Test = New System.Windows.Forms.Label()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.CTS = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Type = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -43,23 +42,12 @@ Partial Class PendingDocument
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.Color.DimGray
-        Me.Panel1.Controls.Add(Me.Test)
         Me.Panel1.Controls.Add(Me.DataGridView1)
         Me.Panel1.Controls.Add(Me.Label2)
         Me.Panel1.Location = New System.Drawing.Point(17, 15)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(1201, 597)
         Me.Panel1.TabIndex = 4
-        '
-        'Test
-        '
-        Me.Test.AutoSize = True
-        Me.Test.Font = New System.Drawing.Font("Microsoft Sans Serif", 32.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Test.Location = New System.Drawing.Point(564, 124)
-        Me.Test.Name = "Test"
-        Me.Test.Size = New System.Drawing.Size(513, 63)
-        Me.Test.TabIndex = 3
-        Me.Test.Text = "Pending Documents"
         '
         'DataGridView1
         '
@@ -150,7 +138,7 @@ Partial Class PendingDocument
         Me.Label2.ForeColor = System.Drawing.Color.White
         Me.Label2.Location = New System.Drawing.Point(12, 124)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(380, 46)
+        Me.Label2.Size = New System.Drawing.Size(305, 37)
         Me.Label2.TabIndex = 1
         Me.Label2.Text = "Pending Documents"
         '
@@ -161,7 +149,7 @@ Partial Class PendingDocument
         Me.Label1.ForeColor = System.Drawing.Color.Gold
         Me.Label1.Location = New System.Drawing.Point(3, 31)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(530, 36)
+        Me.Label1.Size = New System.Drawing.Size(431, 29)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Inter-Office Document Tracking System"
         '
@@ -197,7 +185,6 @@ Partial Class PendingDocument
     Friend WithEvents Label2 As Label
     Friend WithEvents Label1 As Label
     Friend WithEvents Panel2 As Panel
-    Friend WithEvents Test As Label
     Friend WithEvents CTS As DataGridViewTextBoxColumn
     Friend WithEvents Type As DataGridViewTextBoxColumn
     Friend WithEvents DateReceived As DataGridViewTextBoxColumn
