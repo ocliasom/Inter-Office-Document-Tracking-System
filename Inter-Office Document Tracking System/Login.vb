@@ -3,8 +3,7 @@
 Public Class Login
 
     Dim connection As New MySqlConnection("datasource=localhost;port=3306;username=root;password=;database=iods")
-    Dim Homepage As New Dashboard
-    Dim Adminpage As New AdminDashboard
+
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Sign_in.Click
         If Username.Text = "" Or Password.Text = "" Then
             MessageBox.Show("Please Fill in Empty Fields!")
@@ -30,6 +29,8 @@ Public Class Login
                         Adminpage.Show()
                         Me.Close()
                         connection.Close()
+
+
                     ElseIf usertype = "OFFICE" Then
                         connection.Close()
                         connection.Open()
@@ -45,9 +46,11 @@ Public Class Login
                             X = reader("office").ToString()
                         End If
 
-                        Homepage.Show()
+                        Officepage.Show()
                         Me.Close()
                         connection.Close()
+
+                        'DEPARTMENTS
                     ElseIf usertype = "USER" Then
                         connection.Close()
                         connection.Open()

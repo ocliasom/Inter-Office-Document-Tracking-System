@@ -126,6 +126,12 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="OfficeDashboard.Designer.vb">
+      <DependentUpon>OfficeDashboard.vb</DependentUpon>
+    </Compile>
+    <Compile Include="OfficeDashboard.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="OfficeName.vb" />
     <Compile Include="PendingDocument.Designer.vb">
       <DependentUpon>PendingDocument.vb</DependentUpon>
@@ -167,6 +173,9 @@
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OfficeDashboard.resx">
+      <DependentUpon>OfficeDashboard.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PendingDocument.resx">
       <DependentUpon>PendingDocument.vb</DependentUpon>
