@@ -23,6 +23,8 @@ Partial Class ReleaseDocument
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.Status = New System.Windows.Forms.ComboBox()
         Me.Cancel = New System.Windows.Forms.Button()
         Me.Release = New System.Windows.Forms.Button()
         Me.Remarks = New System.Windows.Forms.TextBox()
@@ -32,12 +34,11 @@ Partial Class ReleaseDocument
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Panel2 = New System.Windows.Forms.Panel()
-        Me.Status = New System.Windows.Forms.ComboBox()
-        Me.Label4 = New System.Windows.Forms.Label()
         Me.CTS = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Type = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Remark = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Email = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Number = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Panel1.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel2.SuspendLayout()
@@ -60,6 +61,27 @@ Partial Class ReleaseDocument
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(982, 611)
         Me.Panel1.TabIndex = 8
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.ForeColor = System.Drawing.Color.White
+        Me.Label4.Location = New System.Drawing.Point(282, 266)
+        Me.Label4.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(60, 24)
+        Me.Label4.TabIndex = 17
+        Me.Label4.Text = "Status"
+        '
+        'Status
+        '
+        Me.Status.FormattingEnabled = True
+        Me.Status.Items.AddRange(New Object() {"RELEASED: SIGNED", "RELEASED: UNSIGNED"})
+        Me.Status.Location = New System.Drawing.Point(286, 293)
+        Me.Status.Name = "Status"
+        Me.Status.Size = New System.Drawing.Size(165, 21)
+        Me.Status.TabIndex = 16
         '
         'Cancel
         '
@@ -130,7 +152,7 @@ Partial Class ReleaseDocument
         Me.DataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.DataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.CTS, Me.Type, Me.Remark, Me.Email})
+        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.CTS, Me.Type, Me.Remark, Me.Email, Me.Number})
         Me.DataGridView1.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically
         Me.DataGridView1.Location = New System.Drawing.Point(17, 169)
         Me.DataGridView1.Margin = New System.Windows.Forms.Padding(2)
@@ -177,27 +199,6 @@ Partial Class ReleaseDocument
         Me.Panel2.Size = New System.Drawing.Size(982, 81)
         Me.Panel2.TabIndex = 9
         '
-        'Status
-        '
-        Me.Status.FormattingEnabled = True
-        Me.Status.Items.AddRange(New Object() {"RELEASED: SIGNED", "RELEASED: UNSIGNED"})
-        Me.Status.Location = New System.Drawing.Point(286, 293)
-        Me.Status.Name = "Status"
-        Me.Status.Size = New System.Drawing.Size(165, 21)
-        Me.Status.TabIndex = 16
-        '
-        'Label4
-        '
-        Me.Label4.AutoSize = True
-        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.ForeColor = System.Drawing.Color.White
-        Me.Label4.Location = New System.Drawing.Point(282, 266)
-        Me.Label4.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(60, 24)
-        Me.Label4.TabIndex = 17
-        Me.Label4.Text = "Status"
-        '
         'CTS
         '
         Me.CTS.DataPropertyName = "trackingnum"
@@ -228,6 +229,14 @@ Partial Class ReleaseDocument
         Me.Email.HeaderText = "Email"
         Me.Email.Name = "Email"
         Me.Email.ReadOnly = True
+        '
+        'Number
+        '
+        Me.Number.DataPropertyName = "Number"
+        Me.Number.HeaderText = "Number"
+        Me.Number.Name = "Number"
+        Me.Number.ReadOnly = True
+        Me.Number.Visible = False
         '
         'ReleaseDocument
         '
@@ -264,4 +273,5 @@ Partial Class ReleaseDocument
     Friend WithEvents Type As DataGridViewTextBoxColumn
     Friend WithEvents Remark As DataGridViewTextBoxColumn
     Friend WithEvents Email As DataGridViewTextBoxColumn
+    Friend WithEvents Number As DataGridViewTextBoxColumn
 End Class

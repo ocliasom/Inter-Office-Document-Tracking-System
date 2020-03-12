@@ -26,7 +26,7 @@ Partial Class AddDocument
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.HiddenDate = New System.Windows.Forms.Label()
         Me.Sidebar = New System.Windows.Forms.Panel()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.Number = New System.Windows.Forms.TextBox()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.Label8 = New System.Windows.Forms.Label()
@@ -58,7 +58,7 @@ Partial Class AddDocument
         Me.Panel1.BackColor = System.Drawing.Color.DimGray
         Me.Panel1.Controls.Add(Me.HiddenDate)
         Me.Panel1.Controls.Add(Me.Sidebar)
-        Me.Panel1.Controls.Add(Me.TextBox2)
+        Me.Panel1.Controls.Add(Me.Number)
         Me.Panel1.Controls.Add(Me.Label9)
         Me.Panel1.Controls.Add(Me.TextBox1)
         Me.Panel1.Controls.Add(Me.Label8)
@@ -101,13 +101,13 @@ Partial Class AddDocument
         Me.Sidebar.Size = New System.Drawing.Size(236, 532)
         Me.Sidebar.TabIndex = 18
         '
-        'TextBox2
+        'Number
         '
-        Me.TextBox2.Location = New System.Drawing.Point(632, 407)
-        Me.TextBox2.Margin = New System.Windows.Forms.Padding(2)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(187, 20)
-        Me.TextBox2.TabIndex = 17
+        Me.Number.Location = New System.Drawing.Point(632, 407)
+        Me.Number.Margin = New System.Windows.Forms.Padding(2)
+        Me.Number.Name = "Number"
+        Me.Number.Size = New System.Drawing.Size(187, 20)
+        Me.Number.TabIndex = 17
         '
         'Label9
         '
@@ -391,7 +391,7 @@ Partial Class AddDocument
     Friend WithEvents Datebox As Label
     Friend WithEvents CancelButton As Button
     Friend WithEvents Button1 As Button
-    Friend WithEvents TextBox2 As TextBox
+    Friend WithEvents Number As TextBox
     Friend WithEvents Label9 As Label
     Friend WithEvents TextBox1 As TextBox
     Friend WithEvents Label8 As Label

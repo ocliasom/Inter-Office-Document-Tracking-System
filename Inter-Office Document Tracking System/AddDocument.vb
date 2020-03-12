@@ -64,7 +64,7 @@ Public Class AddDocument
                 Dim Addpage As New AddDocument
 
 
-                Dim command As New MySqlCommand("INSERT INTO `document` (trackingnum,current_office,date_received,description,doctype,source_office,status,email_address) values(@tracking,@office,@date,@description,@doctype,@source,@status,@email)", connection)
+                Dim command As New MySqlCommand("INSERT INTO `document` (trackingnum,current_office,date_received,description,doctype,source_office,status,email_address,number) values(@tracking,@office,@date,@description,@doctype,@source,@status,@email,@number)", connection)
 
                 command.Parameters.AddWithValue("@tracking", HiddenDate.Text)
                 command.Parameters.AddWithValue("@office", Officebox.Text)
@@ -74,16 +74,17 @@ Public Class AddDocument
                 command.Parameters.AddWithValue("@source", Officebox.Text)
                 command.Parameters.AddWithValue("@status", "PENDING")
                 command.Parameters.AddWithValue("@email", TextBox3.Text)
+                command.Parameters.AddWithValue("@number", Number.Text)
 
                 connection.Open()
                 command.ExecuteNonQuery()
                 connection.Close()
 
-                Dim cell As String = TextBox2.Text
+                Dim cell As String = Number.Text
 
-                Dim results = itexmo(cell, "Document Received Successfully!", "TR-INTER334992_FE7KH")
+                Dim results = itexmo(cell, "Document Received Successfully!", "TR-MAVON636050_KG6XN")
                 If results = 0 Then
-                    MsgBox("Message Sent!")
+                    'MsgBox("Message Sent!")
                 Else
                     MsgBox("Error num " & results & " was encountered")
                 End If

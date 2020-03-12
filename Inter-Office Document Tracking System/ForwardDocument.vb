@@ -26,7 +26,7 @@ Public Class ForwardDocument
         Try
             connection.Open()
             Dim Query As String
-            Query = "select trackingnum, doctype, date_received, description, source_office, email_address from document WHERE trackingnum ='" & trackingnum & "'"
+            Query = "select trackingnum, doctype, date_received, description, source_office, email_address, number from document WHERE trackingnum ='" & trackingnum & "'"
             cmd = New MySqlCommand(Query, connection)
             adapter.SelectCommand = cmd
             adapter.Fill(table)
@@ -67,6 +67,27 @@ Public Class ForwardDocument
 
     End Sub
 
+
+    '########################################################################################
+    'iTexmo API for C --> go to www.itexmo.com/developers.php for API Documentation
+    '########################################################################################
+    Function itexmo(ByVal Number As String, ByVal Message As String, ByVal API_CODE As String)
+        Using client As New Net.WebClient
+            Dim parameter As New Specialized.NameValueCollection
+            Dim url As String = "https://www.itexmo.com/php_api/api.php"
+            parameter.Add("1", Number)
+            parameter.Add("2", Message)
+            parameter.Add("3", API_CODE)
+            Dim rpb = client.UploadValues(url, "POST", parameter)
+            itexmo = (New System.Text.UTF8Encoding).GetString(rpb)
+        End Using
+    End Function
+    '########################################################################################
+    'API END     '###########################################################################
+    '########################################################################################
+
+
+
     Private Sub Forward_Click(sender As Object, e As EventArgs) Handles Forward.Click
         Dim result As DialogResult = MessageBox.Show("Forward Document?",
                               "Title",
@@ -89,14 +110,13 @@ Public Class ForwardDocument
                 connection.Close()
 
 
-                'Dim cell As String = TextBox2.Text
 
-                'Dim results = itexmo(cell, "Document Received Successfully!", "TR-INTER334992_FE7KH")
-                'If results = 0 Then
-                '    MsgBox("Message Sent!")
-                'Else
-                '    MsgBox("Error num " & results & " was encountered")
-                'End If
+                Dim results = itexmo(DataGridView1.Rows(0).Cells(6).Value, "Document has been forwarded to " & DestOffice.Text, "TR-INTER334992_FE7KH") 'NUMBER COLUMN
+                If results = 0 Then
+                    MsgBox("Message Sent!")
+                Else
+                    MsgBox("Error num " & results & " was encountered")
+                End If
 
 
                 Dim Smtp_server As New SmtpClient
@@ -108,7 +128,7 @@ Public Class ForwardDocument
                 Smtp_server.Host = "smtp.gmail.com"
                 e_mail = New MailMessage
                 e_mail.From = New MailAddress("PUP@gmail.com")
-                e_mail.To.Add(tracking.Text)
+                e_mail.To.Add(DataGridView1.Rows(0).Cells(5).Value) 'email address
                 e_mail.Subject = "Document Update"
                 e_mail.Body = "Your document has been Forwarded"
                 Smtp_server.Send(e_mail)

@@ -23,6 +23,7 @@ Partial Class ForwardDocument
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.OfficeBox = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Remarks = New System.Windows.Forms.TextBox()
         Me.Cancel = New System.Windows.Forms.Button()
@@ -31,16 +32,16 @@ Partial Class ForwardDocument
         Me.Forward = New System.Windows.Forms.Button()
         Me.tracking = New System.Windows.Forms.Label()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.Panel2 = New System.Windows.Forms.Panel()
         Me.CTS = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Type = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DateReceived = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.SourceOffice = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Description = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Email = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.Panel2 = New System.Windows.Forms.Panel()
-        Me.OfficeBox = New System.Windows.Forms.Label()
+        Me.Number = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Panel1.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel2.SuspendLayout()
@@ -60,10 +61,21 @@ Partial Class ForwardDocument
         Me.Panel1.Controls.Add(Me.DataGridView1)
         Me.Panel1.Controls.Add(Me.Label2)
         Me.Panel1.Location = New System.Drawing.Point(9, 10)
-        Me.Panel1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Panel1.Margin = New System.Windows.Forms.Padding(2)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(981, 611)
         Me.Panel1.TabIndex = 6
+        '
+        'OfficeBox
+        '
+        Me.OfficeBox.AutoSize = True
+        Me.OfficeBox.Location = New System.Drawing.Point(786, 101)
+        Me.OfficeBox.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.OfficeBox.Name = "OfficeBox"
+        Me.OfficeBox.Size = New System.Drawing.Size(68, 13)
+        Me.OfficeBox.TabIndex = 10
+        Me.OfficeBox.Text = "hidden office"
+        Me.OfficeBox.Visible = False
         '
         'Label4
         '
@@ -92,7 +104,7 @@ Partial Class ForwardDocument
         Me.Cancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Cancel.ForeColor = System.Drawing.Color.Gold
         Me.Cancel.Location = New System.Drawing.Point(478, 496)
-        Me.Cancel.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Cancel.Margin = New System.Windows.Forms.Padding(2)
         Me.Cancel.Name = "Cancel"
         Me.Cancel.Size = New System.Drawing.Size(110, 32)
         Me.Cancel.TabIndex = 7
@@ -115,7 +127,7 @@ Partial Class ForwardDocument
         '
         Me.DestOffice.FormattingEnabled = True
         Me.DestOffice.Location = New System.Drawing.Point(337, 279)
-        Me.DestOffice.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.DestOffice.Margin = New System.Windows.Forms.Padding(2)
         Me.DestOffice.Name = "DestOffice"
         Me.DestOffice.Size = New System.Drawing.Size(278, 21)
         Me.DestOffice.TabIndex = 5
@@ -127,7 +139,7 @@ Partial Class ForwardDocument
         Me.Forward.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Forward.ForeColor = System.Drawing.Color.Gold
         Me.Forward.Location = New System.Drawing.Point(364, 496)
-        Me.Forward.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Forward.Margin = New System.Windows.Forms.Padding(2)
         Me.Forward.Name = "Forward"
         Me.Forward.Size = New System.Drawing.Size(110, 32)
         Me.Forward.TabIndex = 4
@@ -154,10 +166,10 @@ Partial Class ForwardDocument
         Me.DataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.DataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.CTS, Me.Type, Me.DateReceived, Me.SourceOffice, Me.Description, Me.Email})
+        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.CTS, Me.Type, Me.DateReceived, Me.SourceOffice, Me.Description, Me.Email, Me.Number})
         Me.DataGridView1.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically
         Me.DataGridView1.Location = New System.Drawing.Point(17, 169)
-        Me.DataGridView1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.DataGridView1.Margin = New System.Windows.Forms.Padding(2)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.ReadOnly = True
         Me.DataGridView1.RowHeadersVisible = False
@@ -165,6 +177,40 @@ Partial Class ForwardDocument
         Me.DataGridView1.RowTemplate.Height = 24
         Me.DataGridView1.Size = New System.Drawing.Size(962, 68)
         Me.DataGridView1.TabIndex = 2
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 24.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.ForeColor = System.Drawing.Color.White
+        Me.Label2.Location = New System.Drawing.Point(9, 101)
+        Me.Label2.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(334, 37)
+        Me.Label2.TabIndex = 1
+        Me.Label2.Text = "Forwarding Document"
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.ForeColor = System.Drawing.Color.Gold
+        Me.Label1.Location = New System.Drawing.Point(3, 23)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(431, 29)
+        Me.Label1.TabIndex = 0
+        Me.Label1.Text = "Inter-Office Document Tracking System"
+        '
+        'Panel2
+        '
+        Me.Panel2.BackColor = System.Drawing.Color.Firebrick
+        Me.Panel2.Controls.Add(Me.Label1)
+        Me.Panel2.Location = New System.Drawing.Point(8, 10)
+        Me.Panel2.Margin = New System.Windows.Forms.Padding(2)
+        Me.Panel2.Name = "Panel2"
+        Me.Panel2.Size = New System.Drawing.Size(982, 81)
+        Me.Panel2.TabIndex = 7
         '
         'CTS
         '
@@ -215,50 +261,13 @@ Partial Class ForwardDocument
         Me.Email.ReadOnly = True
         Me.Email.Visible = False
         '
-        'Label2
+        'Number
         '
-        Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 24.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.ForeColor = System.Drawing.Color.White
-        Me.Label2.Location = New System.Drawing.Point(9, 101)
-        Me.Label2.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(334, 37)
-        Me.Label2.TabIndex = 1
-        Me.Label2.Text = "Forwarding Document"
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.ForeColor = System.Drawing.Color.Gold
-        Me.Label1.Location = New System.Drawing.Point(3, 23)
-        Me.Label1.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(431, 29)
-        Me.Label1.TabIndex = 0
-        Me.Label1.Text = "Inter-Office Document Tracking System"
-        '
-        'Panel2
-        '
-        Me.Panel2.BackColor = System.Drawing.Color.Firebrick
-        Me.Panel2.Controls.Add(Me.Label1)
-        Me.Panel2.Location = New System.Drawing.Point(8, 10)
-        Me.Panel2.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
-        Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(982, 81)
-        Me.Panel2.TabIndex = 7
-        '
-        'OfficeBox
-        '
-        Me.OfficeBox.AutoSize = True
-        Me.OfficeBox.Location = New System.Drawing.Point(786, 101)
-        Me.OfficeBox.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
-        Me.OfficeBox.Name = "OfficeBox"
-        Me.OfficeBox.Size = New System.Drawing.Size(68, 13)
-        Me.OfficeBox.TabIndex = 10
-        Me.OfficeBox.Text = "hidden office"
-        Me.OfficeBox.Visible = False
+        Me.Number.DataPropertyName = "Number"
+        Me.Number.HeaderText = "Number"
+        Me.Number.Name = "Number"
+        Me.Number.ReadOnly = True
+        Me.Number.Visible = False
         '
         'ForwardDocument
         '
@@ -267,7 +276,7 @@ Partial Class ForwardDocument
         Me.ClientSize = New System.Drawing.Size(999, 630)
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.Panel1)
-        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Margin = New System.Windows.Forms.Padding(2)
         Me.Name = "ForwardDocument"
         Me.Text = "ForwardDocument"
         Me.Panel1.ResumeLayout(False)
@@ -285,12 +294,6 @@ Partial Class ForwardDocument
     Friend WithEvents Label1 As Label
     Friend WithEvents Panel2 As Panel
     Friend WithEvents tracking As Label
-    Friend WithEvents CTS As DataGridViewTextBoxColumn
-    Friend WithEvents Type As DataGridViewTextBoxColumn
-    Friend WithEvents DateReceived As DataGridViewTextBoxColumn
-    Friend WithEvents SourceOffice As DataGridViewTextBoxColumn
-    Friend WithEvents Description As DataGridViewTextBoxColumn
-    Friend WithEvents Email As DataGridViewTextBoxColumn
     Friend WithEvents Forward As Button
     Friend WithEvents Label3 As Label
     Friend WithEvents DestOffice As ComboBox
@@ -298,4 +301,11 @@ Partial Class ForwardDocument
     Friend WithEvents Label4 As Label
     Friend WithEvents Remarks As TextBox
     Friend WithEvents OfficeBox As Label
+    Friend WithEvents CTS As DataGridViewTextBoxColumn
+    Friend WithEvents Type As DataGridViewTextBoxColumn
+    Friend WithEvents DateReceived As DataGridViewTextBoxColumn
+    Friend WithEvents SourceOffice As DataGridViewTextBoxColumn
+    Friend WithEvents Description As DataGridViewTextBoxColumn
+    Friend WithEvents Email As DataGridViewTextBoxColumn
+    Friend WithEvents Number As DataGridViewTextBoxColumn
 End Class
