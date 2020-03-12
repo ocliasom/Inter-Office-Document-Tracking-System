@@ -4,8 +4,7 @@ Public Class TrackDocument
 
     Dim connection As New MySqlConnection("datasource=localhost;port=3306;username=root;password=;database=iods")
     Dim cmd As MySqlCommand
-    Dim Homepage As New Dashboard
-    Dim Adminpage As New AdminDashboard
+
 
 
 

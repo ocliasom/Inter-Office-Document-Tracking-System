@@ -48,9 +48,10 @@ Partial Class TrackDocument
         Me.Panel1.BackColor = System.Drawing.Color.DimGray
         Me.Panel1.Controls.Add(Me.DataGridView1)
         Me.Panel1.Controls.Add(Me.Label2)
-        Me.Panel1.Location = New System.Drawing.Point(12, 12)
+        Me.Panel1.Location = New System.Drawing.Point(9, 10)
+        Me.Panel1.Margin = New System.Windows.Forms.Padding(2)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(1305, 752)
+        Me.Panel1.Size = New System.Drawing.Size(979, 611)
         Me.Panel1.TabIndex = 0
         '
         'DataGridView1
@@ -75,7 +76,8 @@ Partial Class TrackDocument
         Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.CTS, Me.Type, Me.CurrentOffice, Me.DateReceived, Me.Status})
         Me.DataGridView1.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically
         Me.DataGridView1.GridColor = System.Drawing.Color.DimGray
-        Me.DataGridView1.Location = New System.Drawing.Point(23, 208)
+        Me.DataGridView1.Location = New System.Drawing.Point(17, 169)
+        Me.DataGridView1.Margin = New System.Windows.Forms.Padding(2)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.ReadOnly = True
         DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
@@ -89,7 +91,7 @@ Partial Class TrackDocument
         Me.DataGridView1.RowHeadersVisible = False
         Me.DataGridView1.RowHeadersWidth = 51
         Me.DataGridView1.RowTemplate.Height = 24
-        Me.DataGridView1.Size = New System.Drawing.Size(1255, 495)
+        Me.DataGridView1.Size = New System.Drawing.Size(941, 402)
         Me.DataGridView1.TabIndex = 2
         '
         'CTS
@@ -137,9 +139,10 @@ Partial Class TrackDocument
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 24.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.Color.White
-        Me.Label2.Location = New System.Drawing.Point(15, 131)
+        Me.Label2.Location = New System.Drawing.Point(11, 106)
+        Me.Label2.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(334, 46)
+        Me.Label2.Size = New System.Drawing.Size(269, 37)
         Me.Label2.TabIndex = 1
         Me.Label2.Text = "Track Documents"
         '
@@ -149,9 +152,10 @@ Partial Class TrackDocument
         Me.Label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.Gold
-        Me.Label1.Location = New System.Drawing.Point(3, 30)
+        Me.Label1.Location = New System.Drawing.Point(2, 24)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(530, 36)
+        Me.Label1.Size = New System.Drawing.Size(431, 29)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Inter-Office Document Tracking System"
         '
@@ -163,9 +167,10 @@ Partial Class TrackDocument
         Me.Panel2.Controls.Add(Me.Button2)
         Me.Panel2.Controls.Add(Me.Home)
         Me.Panel2.Controls.Add(Me.Label1)
-        Me.Panel2.Location = New System.Drawing.Point(12, 12)
+        Me.Panel2.Location = New System.Drawing.Point(9, 10)
+        Me.Panel2.Margin = New System.Windows.Forms.Padding(2)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(1305, 100)
+        Me.Panel2.Size = New System.Drawing.Size(979, 81)
         Me.Panel2.TabIndex = 3
         '
         'Button4
@@ -173,9 +178,10 @@ Partial Class TrackDocument
         Me.Button4.FlatAppearance.BorderColor = System.Drawing.Color.Firebrick
         Me.Button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button4.ForeColor = System.Drawing.Color.Gold
-        Me.Button4.Location = New System.Drawing.Point(963, 33)
+        Me.Button4.Location = New System.Drawing.Point(722, 27)
+        Me.Button4.Margin = New System.Windows.Forms.Padding(2)
         Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(167, 33)
+        Me.Button4.Size = New System.Drawing.Size(125, 27)
         Me.Button4.TabIndex = 4
         Me.Button4.Text = "Pending Documents"
         Me.Button4.UseVisualStyleBackColor = True
@@ -185,9 +191,10 @@ Partial Class TrackDocument
         Me.Button3.FlatAppearance.BorderColor = System.Drawing.Color.Firebrick
         Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button3.ForeColor = System.Drawing.Color.Gold
-        Me.Button3.Location = New System.Drawing.Point(798, 33)
+        Me.Button3.Location = New System.Drawing.Point(598, 27)
+        Me.Button3.Margin = New System.Windows.Forms.Padding(2)
         Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(159, 33)
+        Me.Button3.Size = New System.Drawing.Size(119, 27)
         Me.Button3.TabIndex = 3
         Me.Button3.Text = "Incoming Documents"
         Me.Button3.UseVisualStyleBackColor = True
@@ -197,9 +204,10 @@ Partial Class TrackDocument
         Me.Button2.FlatAppearance.BorderColor = System.Drawing.Color.Firebrick
         Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button2.ForeColor = System.Drawing.Color.Gold
-        Me.Button2.Location = New System.Drawing.Point(670, 33)
+        Me.Button2.Location = New System.Drawing.Point(499, 29)
+        Me.Button2.Margin = New System.Windows.Forms.Padding(2)
         Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(111, 33)
+        Me.Button2.Size = New System.Drawing.Size(95, 27)
         Me.Button2.TabIndex = 2
         Me.Button2.Text = "Add Document"
         Me.Button2.UseVisualStyleBackColor = True
@@ -210,20 +218,22 @@ Partial Class TrackDocument
         Me.Home.FlatAppearance.BorderColor = System.Drawing.Color.Firebrick
         Me.Home.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Home.ForeColor = System.Drawing.Color.Gold
-        Me.Home.Location = New System.Drawing.Point(574, 33)
+        Me.Home.Location = New System.Drawing.Point(430, 27)
+        Me.Home.Margin = New System.Windows.Forms.Padding(2)
         Me.Home.Name = "Home"
-        Me.Home.Size = New System.Drawing.Size(75, 33)
+        Me.Home.Size = New System.Drawing.Size(56, 27)
         Me.Home.TabIndex = 1
         Me.Home.Text = "Home"
         Me.Home.UseVisualStyleBackColor = False
         '
         'TrackDocument
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1332, 776)
+        Me.ClientSize = New System.Drawing.Size(999, 630)
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.Panel1)
+        Me.Margin = New System.Windows.Forms.Padding(2)
         Me.Name = "TrackDocument"
         Me.Text = "TrackDocument"
         Me.Panel1.ResumeLayout(False)

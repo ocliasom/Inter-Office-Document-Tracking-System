@@ -8,7 +8,7 @@ Public Class PendingDocument
     Dim ForwardPage As New ForwardDocument
     Dim ReleasePage As New ReleaseDocument
     Private Sub PendingPage_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        If (X <> "CPE Department") Then
+        If (usertype <> "USER") Then
 
             DataGridView1.Columns(6).Visible = False
 
@@ -22,7 +22,7 @@ Public Class PendingDocument
         Try
             connection.Open()
             Dim Query As String
-            Query = "select trackingnum, doctype, date_received, source_office, description from `document`"
+            Query = "select trackingnum, doctype, date_received, source_office, description from `document` WHERE `current_office` = '" & Office & "' AND `status` = 'PENDING'"
             cmd = New MySqlCommand(Query, connection)
             adapter.SelectCommand = cmd
             adapter.Fill(table)
@@ -47,14 +47,14 @@ Public Class PendingDocument
         If e.ColumnIndex = 5 AndAlso
        e.RowIndex >= 0 Then
 
-            ForwardPage.tracknum = DataGridView1.Rows(e.RowIndex).Cells(0).Value
+            trackingnum = DataGridView1.Rows(e.RowIndex).Cells(0).Value
             ForwardPage.Show()
             Me.Close()
 
         ElseIf e.ColumnIndex = 6 AndAlso
        e.RowIndex >= 0 Then
 
-            ReleasePage.tracknum = DataGridView1.Rows(e.RowIndex).Cells(0).Value
+            trackingnum = DataGridView1.Rows(e.RowIndex).Cells(0).Value
             ReleasePage.Show()
             Me.Close()
         End If

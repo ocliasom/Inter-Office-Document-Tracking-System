@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
-Partial Class PendingDocument
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+Partial Class IncomingDocument
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()>
+    <System.Diagnostics.DebuggerNonUserCode()> _
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,17 +20,15 @@ Partial Class PendingDocument
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()>
+    <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.Panel1 = New System.Windows.Forms.Panel()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.CTS = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Type = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DateReceived = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.SourceOffice = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Description = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Forward = New System.Windows.Forms.DataGridViewButtonColumn()
-        Me.Release = New System.Windows.Forms.DataGridViewButtonColumn()
+        Me.From = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Remarks = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Receive = New System.Windows.Forms.DataGridViewButtonColumn()
+        Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Panel2 = New System.Windows.Forms.Panel()
@@ -38,21 +36,10 @@ Partial Class PendingDocument
         Me.Button3 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Home = New System.Windows.Forms.Button()
-        Me.Panel1.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Panel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
         Me.SuspendLayout()
-        '
-        'Panel1
-        '
-        Me.Panel1.BackColor = System.Drawing.Color.DimGray
-        Me.Panel1.Controls.Add(Me.DataGridView1)
-        Me.Panel1.Controls.Add(Me.Label2)
-        Me.Panel1.Location = New System.Drawing.Point(13, 12)
-        Me.Panel1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
-        Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(975, 607)
-        Me.Panel1.TabIndex = 4
         '
         'DataGridView1
         '
@@ -65,10 +52,10 @@ Partial Class PendingDocument
         Me.DataGridView1.BackgroundColor = System.Drawing.Color.DimGray
         Me.DataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.CTS, Me.Type, Me.DateReceived, Me.SourceOffice, Me.Description, Me.Forward, Me.Release})
+        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.CTS, Me.Type, Me.From, Me.Remarks, Me.Receive})
         Me.DataGridView1.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically
         Me.DataGridView1.Location = New System.Drawing.Point(17, 169)
-        Me.DataGridView1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.DataGridView1.Margin = New System.Windows.Forms.Padding(2)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.ReadOnly = True
         Me.DataGridView1.RowHeadersVisible = False
@@ -93,49 +80,42 @@ Partial Class PendingDocument
         Me.Type.Name = "Type"
         Me.Type.ReadOnly = True
         '
-        'DateReceived
+        'From
         '
-        Me.DateReceived.DataPropertyName = "date_received"
-        Me.DateReceived.HeaderText = "Date Received"
-        Me.DateReceived.MinimumWidth = 6
-        Me.DateReceived.Name = "DateReceived"
-        Me.DateReceived.ReadOnly = True
+        Me.From.DataPropertyName = "current_office"
+        Me.From.HeaderText = "From"
+        Me.From.MinimumWidth = 6
+        Me.From.Name = "From"
+        Me.From.ReadOnly = True
         '
-        'SourceOffice
+        'Remarks
         '
-        Me.SourceOffice.DataPropertyName = "source_office"
-        Me.SourceOffice.HeaderText = "Source Office"
-        Me.SourceOffice.MinimumWidth = 6
-        Me.SourceOffice.Name = "SourceOffice"
-        Me.SourceOffice.ReadOnly = True
+        Me.Remarks.DataPropertyName = "remark"
+        Me.Remarks.HeaderText = "Remarks"
+        Me.Remarks.MinimumWidth = 6
+        Me.Remarks.Name = "Remarks"
+        Me.Remarks.ReadOnly = True
         '
-        'Description
+        'Receive
         '
-        Me.Description.DataPropertyName = "description"
-        Me.Description.HeaderText = "Description"
-        Me.Description.MinimumWidth = 6
-        Me.Description.Name = "Description"
-        Me.Description.ReadOnly = True
+        Me.Receive.DataPropertyName = "trackingnum"
+        Me.Receive.HeaderText = "Receive"
+        Me.Receive.MinimumWidth = 6
+        Me.Receive.Name = "Receive"
+        Me.Receive.ReadOnly = True
+        Me.Receive.Text = "Receive"
+        Me.Receive.UseColumnTextForButtonValue = True
         '
-        'Forward
+        'Panel1
         '
-        Me.Forward.DataPropertyName = "trackingnum"
-        Me.Forward.HeaderText = "Forward"
-        Me.Forward.MinimumWidth = 6
-        Me.Forward.Name = "Forward"
-        Me.Forward.ReadOnly = True
-        Me.Forward.Text = "Forward"
-        Me.Forward.UseColumnTextForButtonValue = True
-        '
-        'Release
-        '
-        Me.Release.DataPropertyName = "trackingnum"
-        Me.Release.HeaderText = "Release"
-        Me.Release.MinimumWidth = 6
-        Me.Release.Name = "Release"
-        Me.Release.ReadOnly = True
-        Me.Release.Text = "Release"
-        Me.Release.UseColumnTextForButtonValue = True
+        Me.Panel1.BackColor = System.Drawing.Color.DimGray
+        Me.Panel1.Controls.Add(Me.DataGridView1)
+        Me.Panel1.Controls.Add(Me.Label2)
+        Me.Panel1.Location = New System.Drawing.Point(12, 12)
+        Me.Panel1.Margin = New System.Windows.Forms.Padding(2)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New System.Drawing.Size(975, 607)
+        Me.Panel1.TabIndex = 6
         '
         'Label2
         '
@@ -145,9 +125,9 @@ Partial Class PendingDocument
         Me.Label2.Location = New System.Drawing.Point(9, 101)
         Me.Label2.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(305, 37)
+        Me.Label2.Size = New System.Drawing.Size(318, 37)
         Me.Label2.TabIndex = 1
-        Me.Label2.Text = "Pending Documents"
+        Me.Label2.Text = "Incoming Documents"
         '
         'Label1
         '
@@ -169,18 +149,18 @@ Partial Class PendingDocument
         Me.Panel2.Controls.Add(Me.Button3)
         Me.Panel2.Controls.Add(Me.Home)
         Me.Panel2.Controls.Add(Me.Button2)
-        Me.Panel2.Location = New System.Drawing.Point(13, 12)
-        Me.Panel2.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Panel2.Location = New System.Drawing.Point(12, 12)
+        Me.Panel2.Margin = New System.Windows.Forms.Padding(2)
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(975, 81)
-        Me.Panel2.TabIndex = 5
+        Me.Panel2.TabIndex = 7
         '
         'Button4
         '
         Me.Button4.FlatAppearance.BorderColor = System.Drawing.Color.Firebrick
         Me.Button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button4.ForeColor = System.Drawing.Color.Gold
-        Me.Button4.Location = New System.Drawing.Point(747, 30)
+        Me.Button4.Location = New System.Drawing.Point(748, 30)
         Me.Button4.Margin = New System.Windows.Forms.Padding(2)
         Me.Button4.Name = "Button4"
         Me.Button4.Size = New System.Drawing.Size(125, 27)
@@ -193,7 +173,7 @@ Partial Class PendingDocument
         Me.Button3.FlatAppearance.BorderColor = System.Drawing.Color.Firebrick
         Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button3.ForeColor = System.Drawing.Color.Gold
-        Me.Button3.Location = New System.Drawing.Point(623, 30)
+        Me.Button3.Location = New System.Drawing.Point(624, 30)
         Me.Button3.Margin = New System.Windows.Forms.Padding(2)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(119, 27)
@@ -206,7 +186,7 @@ Partial Class PendingDocument
         Me.Button2.FlatAppearance.BorderColor = System.Drawing.Color.Firebrick
         Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button2.ForeColor = System.Drawing.Color.Gold
-        Me.Button2.Location = New System.Drawing.Point(524, 32)
+        Me.Button2.Location = New System.Drawing.Point(525, 32)
         Me.Button2.Margin = New System.Windows.Forms.Padding(2)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(83, 27)
@@ -220,7 +200,7 @@ Partial Class PendingDocument
         Me.Home.FlatAppearance.BorderColor = System.Drawing.Color.Firebrick
         Me.Home.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Home.ForeColor = System.Drawing.Color.Gold
-        Me.Home.Location = New System.Drawing.Point(455, 30)
+        Me.Home.Location = New System.Drawing.Point(456, 30)
         Me.Home.Margin = New System.Windows.Forms.Padding(2)
         Me.Home.Name = "Home"
         Me.Home.Size = New System.Drawing.Size(56, 27)
@@ -228,37 +208,34 @@ Partial Class PendingDocument
         Me.Home.Text = "Home"
         Me.Home.UseVisualStyleBackColor = False
         '
-        'PendingDocument
+        'IncomingDocument
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(999, 630)
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.Panel1)
-        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
-        Me.Name = "PendingDocument"
-        Me.Text = "PendingPage"
+        Me.Name = "IncomingDocument"
+        Me.Text = "IncomingDocument"
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel2.ResumeLayout(False)
         Me.Panel2.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
 
-    Friend WithEvents Panel1 As Panel
     Friend WithEvents DataGridView1 As DataGridView
+    Friend WithEvents CTS As DataGridViewTextBoxColumn
+    Friend WithEvents Type As DataGridViewTextBoxColumn
+    Friend WithEvents From As DataGridViewTextBoxColumn
+    Friend WithEvents Remarks As DataGridViewTextBoxColumn
+    Friend WithEvents Receive As DataGridViewButtonColumn
+    Friend WithEvents Panel1 As Panel
     Friend WithEvents Label2 As Label
     Friend WithEvents Label1 As Label
     Friend WithEvents Panel2 As Panel
-    Friend WithEvents CTS As DataGridViewTextBoxColumn
-    Friend WithEvents Type As DataGridViewTextBoxColumn
-    Friend WithEvents DateReceived As DataGridViewTextBoxColumn
-    Friend WithEvents SourceOffice As DataGridViewTextBoxColumn
-    Friend WithEvents Description As DataGridViewTextBoxColumn
-    Friend WithEvents Forward As DataGridViewButtonColumn
-    Friend WithEvents Release As DataGridViewButtonColumn
     Friend WithEvents Button4 As Button
     Friend WithEvents Button3 As Button
     Friend WithEvents Home As Button

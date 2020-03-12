@@ -59,10 +59,10 @@ Partial Class ForwardDocument
         Me.Panel1.Controls.Add(Me.tracking)
         Me.Panel1.Controls.Add(Me.DataGridView1)
         Me.Panel1.Controls.Add(Me.Label2)
-        Me.Panel1.Location = New System.Drawing.Point(12, 12)
-        Me.Panel1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.Panel1.Location = New System.Drawing.Point(9, 10)
+        Me.Panel1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(1308, 752)
+        Me.Panel1.Size = New System.Drawing.Size(981, 611)
         Me.Panel1.TabIndex = 6
         '
         'Label4
@@ -70,7 +70,8 @@ Partial Class ForwardDocument
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label4.ForeColor = System.Drawing.Color.White
-        Me.Label4.Location = New System.Drawing.Point(443, 396)
+        Me.Label4.Location = New System.Drawing.Point(332, 322)
+        Me.Label4.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(109, 29)
         Me.Label4.TabIndex = 9
@@ -78,11 +79,10 @@ Partial Class ForwardDocument
         '
         'Remarks
         '
-        Me.Remarks.Location = New System.Drawing.Point(449, 436)
-        Me.Remarks.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Remarks.Location = New System.Drawing.Point(337, 354)
         Me.Remarks.Multiline = True
         Me.Remarks.Name = "Remarks"
-        Me.Remarks.Size = New System.Drawing.Size(369, 146)
+        Me.Remarks.Size = New System.Drawing.Size(278, 119)
         Me.Remarks.TabIndex = 8
         '
         'Cancel
@@ -91,10 +91,10 @@ Partial Class ForwardDocument
         Me.Cancel.FlatAppearance.BorderColor = System.Drawing.Color.Firebrick
         Me.Cancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Cancel.ForeColor = System.Drawing.Color.Gold
-        Me.Cancel.Location = New System.Drawing.Point(637, 610)
-        Me.Cancel.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.Cancel.Location = New System.Drawing.Point(478, 496)
+        Me.Cancel.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Cancel.Name = "Cancel"
-        Me.Cancel.Size = New System.Drawing.Size(147, 39)
+        Me.Cancel.Size = New System.Drawing.Size(110, 32)
         Me.Cancel.TabIndex = 7
         Me.Cancel.Text = "Cancel"
         Me.Cancel.UseVisualStyleBackColor = False
@@ -104,7 +104,8 @@ Partial Class ForwardDocument
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.ForeColor = System.Drawing.Color.White
-        Me.Label3.Location = New System.Drawing.Point(443, 304)
+        Me.Label3.Location = New System.Drawing.Point(332, 247)
+        Me.Label3.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(202, 29)
         Me.Label3.TabIndex = 6
@@ -113,10 +114,10 @@ Partial Class ForwardDocument
         'DestOffice
         '
         Me.DestOffice.FormattingEnabled = True
-        Me.DestOffice.Location = New System.Drawing.Point(449, 343)
-        Me.DestOffice.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.DestOffice.Location = New System.Drawing.Point(337, 279)
+        Me.DestOffice.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.DestOffice.Name = "DestOffice"
-        Me.DestOffice.Size = New System.Drawing.Size(369, 24)
+        Me.DestOffice.Size = New System.Drawing.Size(278, 21)
         Me.DestOffice.TabIndex = 5
         '
         'Forward
@@ -125,10 +126,10 @@ Partial Class ForwardDocument
         Me.Forward.FlatAppearance.BorderColor = System.Drawing.Color.Firebrick
         Me.Forward.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Forward.ForeColor = System.Drawing.Color.Gold
-        Me.Forward.Location = New System.Drawing.Point(485, 610)
-        Me.Forward.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.Forward.Location = New System.Drawing.Point(364, 496)
+        Me.Forward.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Forward.Name = "Forward"
-        Me.Forward.Size = New System.Drawing.Size(147, 39)
+        Me.Forward.Size = New System.Drawing.Size(110, 32)
         Me.Forward.TabIndex = 4
         Me.Forward.Text = "Forward"
         Me.Forward.UseVisualStyleBackColor = False
@@ -136,9 +137,10 @@ Partial Class ForwardDocument
         'tracking
         '
         Me.tracking.AutoSize = True
-        Me.tracking.Location = New System.Drawing.Point(1136, 124)
+        Me.tracking.Location = New System.Drawing.Point(852, 101)
+        Me.tracking.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.tracking.Name = "tracking"
-        Me.tracking.Size = New System.Drawing.Size(63, 16)
+        Me.tracking.Size = New System.Drawing.Size(50, 13)
         Me.tracking.TabIndex = 3
         Me.tracking.Text = "hidden id"
         Me.tracking.Visible = False
@@ -154,14 +156,14 @@ Partial Class ForwardDocument
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.CTS, Me.Type, Me.DateReceived, Me.SourceOffice, Me.Description, Me.Email})
         Me.DataGridView1.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically
-        Me.DataGridView1.Location = New System.Drawing.Point(23, 208)
-        Me.DataGridView1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.DataGridView1.Location = New System.Drawing.Point(17, 169)
+        Me.DataGridView1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.ReadOnly = True
         Me.DataGridView1.RowHeadersVisible = False
         Me.DataGridView1.RowHeadersWidth = 51
         Me.DataGridView1.RowTemplate.Height = 24
-        Me.DataGridView1.Size = New System.Drawing.Size(1283, 84)
+        Me.DataGridView1.Size = New System.Drawing.Size(962, 68)
         Me.DataGridView1.TabIndex = 2
         '
         'CTS
@@ -218,7 +220,8 @@ Partial Class ForwardDocument
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 24.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.Color.White
-        Me.Label2.Location = New System.Drawing.Point(12, 124)
+        Me.Label2.Location = New System.Drawing.Point(9, 101)
+        Me.Label2.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(334, 37)
         Me.Label2.TabIndex = 1
@@ -229,7 +232,8 @@ Partial Class ForwardDocument
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.Gold
-        Me.Label1.Location = New System.Drawing.Point(4, 28)
+        Me.Label1.Location = New System.Drawing.Point(3, 23)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(431, 29)
         Me.Label1.TabIndex = 0
@@ -239,30 +243,31 @@ Partial Class ForwardDocument
         '
         Me.Panel2.BackColor = System.Drawing.Color.Firebrick
         Me.Panel2.Controls.Add(Me.Label1)
-        Me.Panel2.Location = New System.Drawing.Point(11, 12)
-        Me.Panel2.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.Panel2.Location = New System.Drawing.Point(8, 10)
+        Me.Panel2.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(1309, 100)
+        Me.Panel2.Size = New System.Drawing.Size(982, 81)
         Me.Panel2.TabIndex = 7
         '
         'OfficeBox
         '
         Me.OfficeBox.AutoSize = True
-        Me.OfficeBox.Location = New System.Drawing.Point(1048, 124)
+        Me.OfficeBox.Location = New System.Drawing.Point(786, 101)
+        Me.OfficeBox.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.OfficeBox.Name = "OfficeBox"
-        Me.OfficeBox.Size = New System.Drawing.Size(84, 16)
+        Me.OfficeBox.Size = New System.Drawing.Size(68, 13)
         Me.OfficeBox.TabIndex = 10
         Me.OfficeBox.Text = "hidden office"
         Me.OfficeBox.Visible = False
         '
         'ForwardDocument
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1332, 775)
+        Me.ClientSize = New System.Drawing.Size(999, 630)
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.Panel1)
-        Me.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Name = "ForwardDocument"
         Me.Text = "ForwardDocument"
         Me.Panel1.ResumeLayout(False)

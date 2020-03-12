@@ -2,7 +2,7 @@
 Imports System.Net.Mail
 
 Public Class ForwardDocument
-    Public Property tracknum As String
+
 
     Dim connection As New MySqlConnection("datasource=localhost;port=3306;username=root;password=;database=iods")
     Dim cmd As MySqlCommand
@@ -17,7 +17,7 @@ Public Class ForwardDocument
     End Sub
 
     Private Sub ForwardDocument_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        OfficeBox.Text = X
+
 
         Dim adapter As New MySqlDataAdapter
         Dim table As New DataTable
@@ -26,7 +26,7 @@ Public Class ForwardDocument
         Try
             connection.Open()
             Dim Query As String
-            Query = "select trackingnum, doctype, date_received, description, source_office, email_address from document WHERE trackingnum ='" & tracknum & "'"
+            Query = "select trackingnum, doctype, date_received, description, source_office, email_address from document WHERE trackingnum ='" & trackingnum & "'"
             cmd = New MySqlCommand(Query, connection)
             adapter.SelectCommand = cmd
             adapter.Fill(table)
@@ -50,7 +50,7 @@ Public Class ForwardDocument
 
 
 
-        Dim command As New MySqlCommand("SELECT * FROM `office` WHERE `officecode` NOT IN ('" & OfficeBox.Text & "')", connection)
+        Dim command As New MySqlCommand("SELECT * FROM `office` WHERE `officecode` NOT IN ('" & Office & "')", connection)
 
 
 
@@ -77,8 +77,9 @@ Public Class ForwardDocument
                 Dim Addpage As New AddDocument
 
 
-                Dim command As New MySqlCommand("UPDATE `document` SET  forwarded_office = @office, status = @status , remark = @remark", connection)
+                Dim command As New MySqlCommand("UPDATE `document` SET  forwarded_office = @office, status = @status , remark = @remark WHERE `trackingnum` = @trackingnum", connection)
 
+                command.Parameters.AddWithValue("@trackingnum", trackingnum)
                 command.Parameters.AddWithValue("@office", DestOffice.Text)
                 command.Parameters.AddWithValue("@status", "FORWARDED")
                 command.Parameters.AddWithValue("@remark", Remarks.Text)
@@ -101,7 +102,7 @@ Public Class ForwardDocument
                 Dim Smtp_server As New SmtpClient
                 Dim e_mail As New MailMessage
                 Smtp_server.UseDefaultCredentials = False
-                Smtp_server.Credentials = New Net.NetworkCredential("ocliasomavon@gmail.com", "Kiritetsuya1011")
+                Smtp_server.Credentials = New Net.NetworkCredential("IODFSelecs3@gmail.com", "IODFStest123")
                 Smtp_server.Port = 587
                 Smtp_server.EnableSsl = True
                 Smtp_server.Host = "smtp.gmail.com"
@@ -114,7 +115,8 @@ Public Class ForwardDocument
                 MessageBox.Show("Document has been Forwarded")
 
                 'Yo Mavon, if nabasa mo ito, ginawa ko lang na comment muna yung email na part. highlight mo yung buong code sa email. CTRL + K then CTRL + U para mawala yung comment tag
-
+                PendingDocument.Show()
+                Me.Close()
 
             Catch ex As Exception
                 MessageBox.Show(ex.Message)
@@ -134,7 +136,14 @@ Public Class ForwardDocument
 
 
     Private Sub Cancel_Click(sender As Object, e As EventArgs) Handles Cancel.Click
-        Dim Pendingpage As New PendingDocument
+        Dim result As DialogResult = MessageBox.Show("Cancel Forwarding?",
+                             "Cancel",
+                             MessageBoxButtons.YesNo)
+        If (result = DialogResult.Yes) Then
+
+            PendingDocument.Show()
+            Me.Close()
+        End If
 
 
     End Sub

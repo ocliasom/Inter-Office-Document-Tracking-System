@@ -42,9 +42,10 @@ Partial Class Login
         Me.Panel1.Controls.Add(Me.Label1)
         Me.Panel1.Controls.Add(Me.Password)
         Me.Panel1.Controls.Add(Me.Username)
-        Me.Panel1.Location = New System.Drawing.Point(12, 12)
+        Me.Panel1.Location = New System.Drawing.Point(9, 10)
+        Me.Panel1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(525, 317)
+        Me.Panel1.Size = New System.Drawing.Size(394, 258)
         Me.Panel1.TabIndex = 4
         '
         'Sign_in
@@ -53,9 +54,10 @@ Partial Class Login
         Me.Sign_in.FlatAppearance.BorderColor = System.Drawing.Color.Firebrick
         Me.Sign_in.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Sign_in.ForeColor = System.Drawing.Color.Gold
-        Me.Sign_in.Location = New System.Drawing.Point(208, 258)
+        Me.Sign_in.Location = New System.Drawing.Point(156, 210)
+        Me.Sign_in.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Sign_in.Name = "Sign_in"
-        Me.Sign_in.Size = New System.Drawing.Size(94, 41)
+        Me.Sign_in.Size = New System.Drawing.Size(70, 33)
         Me.Sign_in.TabIndex = 8
         Me.Sign_in.Text = "Sign in"
         Me.Sign_in.UseVisualStyleBackColor = False
@@ -65,9 +67,10 @@ Partial Class Login
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.Color.White
-        Me.Label2.Location = New System.Drawing.Point(153, 162)
+        Me.Label2.Location = New System.Drawing.Point(115, 132)
+        Me.Label2.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(98, 25)
+        Me.Label2.Size = New System.Drawing.Size(78, 20)
         Me.Label2.TabIndex = 7
         Me.Label2.Text = "Password"
         '
@@ -76,9 +79,10 @@ Partial Class Login
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.White
-        Me.Label1.Location = New System.Drawing.Point(153, 91)
+        Me.Label1.Location = New System.Drawing.Point(115, 74)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(102, 25)
+        Me.Label1.Size = New System.Drawing.Size(83, 20)
         Me.Label1.TabIndex = 6
         Me.Label1.Text = "Username"
         '
@@ -87,9 +91,10 @@ Partial Class Login
         Me.Password.BackColor = System.Drawing.Color.Gray
         Me.Password.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Password.ForeColor = System.Drawing.Color.White
-        Me.Password.Location = New System.Drawing.Point(158, 190)
+        Me.Password.Location = New System.Drawing.Point(118, 154)
+        Me.Password.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Password.Name = "Password"
-        Me.Password.Size = New System.Drawing.Size(198, 22)
+        Me.Password.Size = New System.Drawing.Size(149, 20)
         Me.Password.TabIndex = 5
         Me.Password.Text = "$2a$10$rguqKi7Bnq416OIcZCJuA.YafJxUHNdJcBDX7fuQhiSsZ5UVlA/NS"
         '
@@ -98,9 +103,10 @@ Partial Class Login
         Me.Username.BackColor = System.Drawing.Color.Gray
         Me.Username.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Username.ForeColor = System.Drawing.SystemColors.InactiveBorder
-        Me.Username.Location = New System.Drawing.Point(158, 119)
+        Me.Username.Location = New System.Drawing.Point(118, 97)
+        Me.Username.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Username.Name = "Username"
-        Me.Username.Size = New System.Drawing.Size(198, 22)
+        Me.Username.Size = New System.Drawing.Size(149, 20)
         Me.Username.TabIndex = 4
         Me.Username.Text = "cpedept"
         '
@@ -108,9 +114,10 @@ Partial Class Login
         '
         Me.Panel2.BackColor = System.Drawing.Color.Firebrick
         Me.Panel2.Controls.Add(Me.Label3)
-        Me.Panel2.Location = New System.Drawing.Point(12, 12)
+        Me.Panel2.Location = New System.Drawing.Point(9, 10)
+        Me.Panel2.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(525, 63)
+        Me.Panel2.Size = New System.Drawing.Size(394, 51)
         Me.Panel2.TabIndex = 8
         '
         'Label3
@@ -118,19 +125,21 @@ Partial Class Login
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.ForeColor = System.Drawing.Color.Gold
-        Me.Label3.Location = New System.Drawing.Point(38, 18)
+        Me.Label3.Location = New System.Drawing.Point(28, 15)
+        Me.Label3.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(456, 29)
+        Me.Label3.Size = New System.Drawing.Size(354, 25)
         Me.Label3.TabIndex = 8
         Me.Label3.Text = "Inter-Office Document Tracking System"
         '
         'Login
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(549, 341)
+        Me.ClientSize = New System.Drawing.Size(412, 277)
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.Panel1)
+        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Name = "Login"
         Me.Text = "Login"
         Me.Panel1.ResumeLayout(False)

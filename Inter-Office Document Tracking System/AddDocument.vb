@@ -17,7 +17,7 @@ Public Class AddDocument
 
     Private Sub AddDocument_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Timer1.Enabled = True
-        Officebox.Text = X
+        Officebox.Text = Office
 
 
         Dim command As New MySqlCommand("SELECT * FROM `type` ", connection)
@@ -92,7 +92,7 @@ Public Class AddDocument
                 Dim Smtp_server As New SmtpClient
                 Dim e_mail As New MailMessage
                 Smtp_server.UseDefaultCredentials = False
-                Smtp_server.Credentials = New Net.NetworkCredential("ocliasomavon@gmail.com", "Kiritetsuya1011")
+                Smtp_server.Credentials = New Net.NetworkCredential("IODFSelecs3@gmail.com", "IODFStest123")
                 Smtp_server.Port = 587
                 Smtp_server.EnableSsl = True
                 Smtp_server.Host = "smtp.gmail.com"
@@ -116,7 +116,7 @@ Public Class AddDocument
 
 
 
-    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+    Private Sub CancelButton_Click(sender As Object, e As EventArgs) Handles CancelButton.Click
         Dim result As DialogResult = MessageBox.Show("Cancel update?",
                              "Cancel",
                              MessageBoxButtons.YesNo)
@@ -124,7 +124,14 @@ Public Class AddDocument
 
             Dashboard.Show()
             'Dashboard.Label2.Text = Office
-            Me.Hide()
+            Me.Close()
         End If
     End Sub
+
+    Private Sub Home_Click(sender As Object, e As EventArgs) Handles Home.Click
+        Dashboard.Show()
+        Me.Close()
+    End Sub
+
+
 End Class
