@@ -32,10 +32,10 @@ Partial Class IncomingDocument
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Panel2 = New System.Windows.Forms.Panel()
-        Me.Button4 = New System.Windows.Forms.Button()
+        Me.PendingDocument = New System.Windows.Forms.Button()
         Me.Button3 = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
         Me.Home = New System.Windows.Forms.Button()
+        Me.AddDocument = New System.Windows.Forms.Button()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
@@ -144,29 +144,29 @@ Partial Class IncomingDocument
         'Panel2
         '
         Me.Panel2.BackColor = System.Drawing.Color.Firebrick
-        Me.Panel2.Controls.Add(Me.Button4)
+        Me.Panel2.Controls.Add(Me.PendingDocument)
         Me.Panel2.Controls.Add(Me.Label1)
         Me.Panel2.Controls.Add(Me.Button3)
         Me.Panel2.Controls.Add(Me.Home)
-        Me.Panel2.Controls.Add(Me.Button2)
+        Me.Panel2.Controls.Add(Me.AddDocument)
         Me.Panel2.Location = New System.Drawing.Point(12, 12)
         Me.Panel2.Margin = New System.Windows.Forms.Padding(2)
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(975, 81)
         Me.Panel2.TabIndex = 7
         '
-        'Button4
+        'PendingDocument
         '
-        Me.Button4.FlatAppearance.BorderColor = System.Drawing.Color.Firebrick
-        Me.Button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button4.ForeColor = System.Drawing.Color.Gold
-        Me.Button4.Location = New System.Drawing.Point(748, 30)
-        Me.Button4.Margin = New System.Windows.Forms.Padding(2)
-        Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(125, 27)
-        Me.Button4.TabIndex = 8
-        Me.Button4.Text = "Pending Documents"
-        Me.Button4.UseVisualStyleBackColor = True
+        Me.PendingDocument.FlatAppearance.BorderColor = System.Drawing.Color.Firebrick
+        Me.PendingDocument.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.PendingDocument.ForeColor = System.Drawing.Color.Gold
+        Me.PendingDocument.Location = New System.Drawing.Point(748, 30)
+        Me.PendingDocument.Margin = New System.Windows.Forms.Padding(2)
+        Me.PendingDocument.Name = "PendingDocument"
+        Me.PendingDocument.Size = New System.Drawing.Size(125, 27)
+        Me.PendingDocument.TabIndex = 8
+        Me.PendingDocument.Text = "Pending Documents"
+        Me.PendingDocument.UseVisualStyleBackColor = True
         '
         'Button3
         '
@@ -181,19 +181,6 @@ Partial Class IncomingDocument
         Me.Button3.Text = "Incoming Documents"
         Me.Button3.UseVisualStyleBackColor = True
         '
-        'Button2
-        '
-        Me.Button2.FlatAppearance.BorderColor = System.Drawing.Color.Firebrick
-        Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button2.ForeColor = System.Drawing.Color.Gold
-        Me.Button2.Location = New System.Drawing.Point(525, 32)
-        Me.Button2.Margin = New System.Windows.Forms.Padding(2)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(83, 27)
-        Me.Button2.TabIndex = 6
-        Me.Button2.Text = "Add Document"
-        Me.Button2.UseVisualStyleBackColor = True
-        '
         'Home
         '
         Me.Home.BackColor = System.Drawing.Color.Firebrick
@@ -207,6 +194,19 @@ Partial Class IncomingDocument
         Me.Home.TabIndex = 5
         Me.Home.Text = "Home"
         Me.Home.UseVisualStyleBackColor = False
+        '
+        'AddDocument
+        '
+        Me.AddDocument.FlatAppearance.BorderColor = System.Drawing.Color.Firebrick
+        Me.AddDocument.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.AddDocument.ForeColor = System.Drawing.Color.Gold
+        Me.AddDocument.Location = New System.Drawing.Point(525, 32)
+        Me.AddDocument.Margin = New System.Windows.Forms.Padding(2)
+        Me.AddDocument.Name = "AddDocument"
+        Me.AddDocument.Size = New System.Drawing.Size(95, 27)
+        Me.AddDocument.TabIndex = 6
+        Me.AddDocument.Text = "Add Document"
+        Me.AddDocument.UseVisualStyleBackColor = True
         '
         'IncomingDocument
         '
@@ -236,8 +236,8 @@ Partial Class IncomingDocument
     Friend WithEvents Label2 As Label
     Friend WithEvents Label1 As Label
     Friend WithEvents Panel2 As Panel
-    Friend WithEvents Button4 As Button
+    Friend WithEvents PendingDocument As Button
     Friend WithEvents Button3 As Button
     Friend WithEvents Home As Button
-    Friend WithEvents Button2 As Button
+    Friend WithEvents AddDocument As Button
 End Class

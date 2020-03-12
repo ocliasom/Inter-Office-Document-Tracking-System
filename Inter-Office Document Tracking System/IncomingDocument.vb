@@ -106,4 +106,19 @@ Public Class IncomingDocument
         End Try
 
     End Sub
+
+    Private Sub Home_Click(sender As Object, e As EventArgs) Handles Home.Click
+        Dashboard.Show()
+        Me.Close()
+    End Sub
+
+    Private Sub AddDocument_Click(sender As Object, e As EventArgs) Handles AddDocument.Click
+        AddDocument.Show()
+        Me.Close()
+    End Sub
+
+    Private Sub PendingDocument_Click(sender As Object, e As EventArgs) Handles PendingDocument.Click
+        PendingDocument.Show()
+        Me.Close()
+    End Sub
 End Class

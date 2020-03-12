@@ -34,9 +34,9 @@ Partial Class PendingDocument
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Panel2 = New System.Windows.Forms.Panel()
-        Me.Button4 = New System.Windows.Forms.Button()
-        Me.Button3 = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.IncomingDocument = New System.Windows.Forms.Button()
+        Me.AddDocButton = New System.Windows.Forms.Button()
         Me.Home = New System.Windows.Forms.Button()
         Me.Panel1.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -49,7 +49,7 @@ Partial Class PendingDocument
         Me.Panel1.Controls.Add(Me.DataGridView1)
         Me.Panel1.Controls.Add(Me.Label2)
         Me.Panel1.Location = New System.Drawing.Point(13, 12)
-        Me.Panel1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Panel1.Margin = New System.Windows.Forms.Padding(2)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(975, 607)
         Me.Panel1.TabIndex = 4
@@ -68,7 +68,7 @@ Partial Class PendingDocument
         Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.CTS, Me.Type, Me.DateReceived, Me.SourceOffice, Me.Description, Me.Forward, Me.Release})
         Me.DataGridView1.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically
         Me.DataGridView1.Location = New System.Drawing.Point(17, 169)
-        Me.DataGridView1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.DataGridView1.Margin = New System.Windows.Forms.Padding(2)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.ReadOnly = True
         Me.DataGridView1.RowHeadersVisible = False
@@ -164,55 +164,55 @@ Partial Class PendingDocument
         'Panel2
         '
         Me.Panel2.BackColor = System.Drawing.Color.Firebrick
-        Me.Panel2.Controls.Add(Me.Button4)
-        Me.Panel2.Controls.Add(Me.Label1)
-        Me.Panel2.Controls.Add(Me.Button3)
+        Me.Panel2.Controls.Add(Me.Button1)
+        Me.Panel2.Controls.Add(Me.IncomingDocument)
+        Me.Panel2.Controls.Add(Me.AddDocButton)
         Me.Panel2.Controls.Add(Me.Home)
-        Me.Panel2.Controls.Add(Me.Button2)
+        Me.Panel2.Controls.Add(Me.Label1)
         Me.Panel2.Location = New System.Drawing.Point(13, 12)
-        Me.Panel2.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Panel2.Margin = New System.Windows.Forms.Padding(2)
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(975, 81)
         Me.Panel2.TabIndex = 5
         '
-        'Button4
+        'Button1
         '
-        Me.Button4.FlatAppearance.BorderColor = System.Drawing.Color.Firebrick
-        Me.Button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button4.ForeColor = System.Drawing.Color.Gold
-        Me.Button4.Location = New System.Drawing.Point(747, 30)
-        Me.Button4.Margin = New System.Windows.Forms.Padding(2)
-        Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(125, 27)
-        Me.Button4.TabIndex = 8
-        Me.Button4.Text = "Pending Documents"
-        Me.Button4.UseVisualStyleBackColor = True
+        Me.Button1.FlatAppearance.BorderColor = System.Drawing.Color.Firebrick
+        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button1.ForeColor = System.Drawing.Color.Gold
+        Me.Button1.Location = New System.Drawing.Point(746, 30)
+        Me.Button1.Margin = New System.Windows.Forms.Padding(2)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(125, 27)
+        Me.Button1.TabIndex = 12
+        Me.Button1.Text = "Pending Documents"
+        Me.Button1.UseVisualStyleBackColor = True
         '
-        'Button3
+        'IncomingDocument
         '
-        Me.Button3.FlatAppearance.BorderColor = System.Drawing.Color.Firebrick
-        Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button3.ForeColor = System.Drawing.Color.Gold
-        Me.Button3.Location = New System.Drawing.Point(623, 30)
-        Me.Button3.Margin = New System.Windows.Forms.Padding(2)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(119, 27)
-        Me.Button3.TabIndex = 7
-        Me.Button3.Text = "Incoming Documents"
-        Me.Button3.UseVisualStyleBackColor = True
+        Me.IncomingDocument.FlatAppearance.BorderColor = System.Drawing.Color.Firebrick
+        Me.IncomingDocument.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.IncomingDocument.ForeColor = System.Drawing.Color.Gold
+        Me.IncomingDocument.Location = New System.Drawing.Point(622, 30)
+        Me.IncomingDocument.Margin = New System.Windows.Forms.Padding(2)
+        Me.IncomingDocument.Name = "IncomingDocument"
+        Me.IncomingDocument.Size = New System.Drawing.Size(119, 27)
+        Me.IncomingDocument.TabIndex = 11
+        Me.IncomingDocument.Text = "Incoming Documents"
+        Me.IncomingDocument.UseVisualStyleBackColor = True
         '
-        'Button2
+        'AddDocButton
         '
-        Me.Button2.FlatAppearance.BorderColor = System.Drawing.Color.Firebrick
-        Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button2.ForeColor = System.Drawing.Color.Gold
-        Me.Button2.Location = New System.Drawing.Point(524, 32)
-        Me.Button2.Margin = New System.Windows.Forms.Padding(2)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(83, 27)
-        Me.Button2.TabIndex = 6
-        Me.Button2.Text = "Add Document"
-        Me.Button2.UseVisualStyleBackColor = True
+        Me.AddDocButton.FlatAppearance.BorderColor = System.Drawing.Color.Firebrick
+        Me.AddDocButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.AddDocButton.ForeColor = System.Drawing.Color.Gold
+        Me.AddDocButton.Location = New System.Drawing.Point(523, 32)
+        Me.AddDocButton.Margin = New System.Windows.Forms.Padding(2)
+        Me.AddDocButton.Name = "AddDocButton"
+        Me.AddDocButton.Size = New System.Drawing.Size(95, 27)
+        Me.AddDocButton.TabIndex = 10
+        Me.AddDocButton.Text = "Add Document"
+        Me.AddDocButton.UseVisualStyleBackColor = True
         '
         'Home
         '
@@ -220,11 +220,11 @@ Partial Class PendingDocument
         Me.Home.FlatAppearance.BorderColor = System.Drawing.Color.Firebrick
         Me.Home.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Home.ForeColor = System.Drawing.Color.Gold
-        Me.Home.Location = New System.Drawing.Point(455, 30)
+        Me.Home.Location = New System.Drawing.Point(454, 30)
         Me.Home.Margin = New System.Windows.Forms.Padding(2)
         Me.Home.Name = "Home"
         Me.Home.Size = New System.Drawing.Size(56, 27)
-        Me.Home.TabIndex = 5
+        Me.Home.TabIndex = 9
         Me.Home.Text = "Home"
         Me.Home.UseVisualStyleBackColor = False
         '
@@ -235,7 +235,7 @@ Partial Class PendingDocument
         Me.ClientSize = New System.Drawing.Size(999, 630)
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.Panel1)
-        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Margin = New System.Windows.Forms.Padding(2)
         Me.Name = "PendingDocument"
         Me.Text = "PendingPage"
         Me.Panel1.ResumeLayout(False)
@@ -259,8 +259,8 @@ Partial Class PendingDocument
     Friend WithEvents Description As DataGridViewTextBoxColumn
     Friend WithEvents Forward As DataGridViewButtonColumn
     Friend WithEvents Release As DataGridViewButtonColumn
-    Friend WithEvents Button4 As Button
-    Friend WithEvents Button3 As Button
+    Friend WithEvents Button1 As Button
+    Friend WithEvents IncomingDocument As Button
+    Friend WithEvents AddDocButton As Button
     Friend WithEvents Home As Button
-    Friend WithEvents Button2 As Button
 End Class

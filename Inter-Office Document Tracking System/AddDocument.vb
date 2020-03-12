@@ -134,5 +134,17 @@ Public Class AddDocument
         Me.Close()
     End Sub
 
+    Private Sub AddDocButton_Click(sender As Object, e As EventArgs) Handles AddDocButton.Click
 
+    End Sub
+
+    Private Sub IncomingDocument_Click(sender As Object, e As EventArgs) Handles IncomingDocument.Click
+        IncomingDocument.Show()
+        Me.Close()
+    End Sub
+
+    Private Sub PendingDocument_Click(sender As Object, e As EventArgs) Handles PendingDocument.Click
+        PendingDocument.Show()
+        Me.Close()
+    End Sub
 End Class
