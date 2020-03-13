@@ -4,14 +4,13 @@ Public Class PendingDocument
     'Public Property Offices As String
     Dim connection As New MySqlConnection("datasource=localhost;port=3306;username=root;password=;database=iods")
     Dim cmd As MySqlCommand
-    Dim Homepage As New Dashboard
     Dim ForwardPage As New ForwardDocument
     Dim ReleasePage As New ReleaseDocument
     Private Sub PendingPage_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         If (usertype <> "USER") Then
 
             DataGridView1.Columns(6).Visible = False
-
+            AddDocButton.Visible = False
 
         End If
 
@@ -61,21 +60,43 @@ Public Class PendingDocument
 
     End Sub
 
-    Private Sub OfficeBox_Click(sender As Object, e As EventArgs)
-
-    End Sub
 
     Private Sub Home_Click(sender As Object, e As EventArgs) Handles Home.Click
-        Dashboard.Show()
-        Me.Close()
+        If usertype = "OFFICE" Then
+
+            Dim OfficeDashboard As New OfficeDashboard
+
+            OfficeDashboard.Show()
+            Me.Close()
+
+        Else
+            Dim Dashboard As New Dashboard
+
+            Dashboard.Show()
+            Me.Close()
+
+        End If
     End Sub
 
     Private Sub AddDocButton_Click(sender As Object, e As EventArgs) Handles AddDocButton.Click
+        Dim AddDocument As New AddDocument
+
         AddDocument.Show()
         Me.Close()
     End Sub
 
+
+
+    Private Sub TrackDocument_Click(sender As Object, e As EventArgs) Handles TrackDocument.Click
+        Dim TrackDocument As New TrackDocument
+
+        TrackDocument.Show()
+        Me.Close()
+    End Sub
+
     Private Sub IncomingDocument_Click(sender As Object, e As EventArgs) Handles IncomingDocument.Click
+        Dim IncomingDocument As New IncomingDocument
+
         IncomingDocument.Show()
         Me.Close()
     End Sub

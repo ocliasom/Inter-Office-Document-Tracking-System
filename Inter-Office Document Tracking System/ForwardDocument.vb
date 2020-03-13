@@ -61,7 +61,7 @@ Public Class ForwardDocument
 
         DestOffice.DataSource = table1
 
-        DestOffice.DisplayMember = "officename"
+        DestOffice.DisplayMember = "officecode"
         DestOffice.ValueMember = "officecode"
 
 
@@ -97,7 +97,6 @@ Public Class ForwardDocument
             Try
                 Dim Addpage As New AddDocument
 
-
                 Dim command As New MySqlCommand("UPDATE `document` SET  forwarded_office = @office, status = @status , remark = @remark WHERE `trackingnum` = @trackingnum", connection)
 
                 command.Parameters.AddWithValue("@trackingnum", trackingnum)
@@ -111,7 +110,7 @@ Public Class ForwardDocument
 
 
 
-                Dim results = itexmo(DataGridView1.Rows(0).Cells(6).Value, "Document has been forwarded to " & DestOffice.Text, "TR-INTER334992_FE7KH") 'NUMBER COLUMN
+                Dim results = itexmo(DataGridView1.Rows(0).Cells(6).Value, "Document has been forwarded to " & DestOffice.Text, "TR-MAVON636050_KG6XN") 'NUMBER COLUMN
                 If results = 0 Then
                     MsgBox("Message Sent!")
                 Else
@@ -130,7 +129,7 @@ Public Class ForwardDocument
                 e_mail.From = New MailAddress("PUP@gmail.com")
                 e_mail.To.Add(DataGridView1.Rows(0).Cells(5).Value) 'email address
                 e_mail.Subject = "Document Update"
-                e_mail.Body = "Your document has been Forwarded"
+                e_mail.Body = "Your document " & DataGridView1.Rows(0).Cells(0).Value & " has been Forwarded"
                 Smtp_server.Send(e_mail)
                 MessageBox.Show("Document has been Forwarded")
 

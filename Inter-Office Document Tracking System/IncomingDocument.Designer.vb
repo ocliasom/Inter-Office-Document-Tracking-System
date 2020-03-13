@@ -28,14 +28,17 @@ Partial Class IncomingDocument
         Me.From = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Remarks = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Receive = New System.Windows.Forms.DataGridViewButtonColumn()
+        Me.Email = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Number = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.TrackDocument = New System.Windows.Forms.Button()
         Me.PendingDocument = New System.Windows.Forms.Button()
-        Me.Button3 = New System.Windows.Forms.Button()
         Me.Home = New System.Windows.Forms.Button()
         Me.AddDocument = New System.Windows.Forms.Button()
+        Me.Label3 = New System.Windows.Forms.Label()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
@@ -49,10 +52,10 @@ Partial Class IncomingDocument
         Me.DataGridView1.AllowUserToResizeRows = False
         Me.DataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.DataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells
-        Me.DataGridView1.BackgroundColor = System.Drawing.Color.DimGray
+        Me.DataGridView1.BackgroundColor = System.Drawing.SystemColors.ControlLight
         Me.DataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.CTS, Me.Type, Me.From, Me.Remarks, Me.Receive})
+        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.CTS, Me.Type, Me.From, Me.Remarks, Me.Receive, Me.Email, Me.Number})
         Me.DataGridView1.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically
         Me.DataGridView1.Location = New System.Drawing.Point(17, 169)
         Me.DataGridView1.Margin = New System.Windows.Forms.Padding(2)
@@ -66,6 +69,7 @@ Partial Class IncomingDocument
         '
         'CTS
         '
+        Me.CTS.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
         Me.CTS.DataPropertyName = "trackingnum"
         Me.CTS.HeaderText = "CTS"
         Me.CTS.MinimumWidth = 6
@@ -74,6 +78,7 @@ Partial Class IncomingDocument
         '
         'Type
         '
+        Me.Type.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
         Me.Type.DataPropertyName = "doctype"
         Me.Type.HeaderText = "Type"
         Me.Type.MinimumWidth = 6
@@ -82,6 +87,7 @@ Partial Class IncomingDocument
         '
         'From
         '
+        Me.From.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
         Me.From.DataPropertyName = "current_office"
         Me.From.HeaderText = "From"
         Me.From.MinimumWidth = 6
@@ -90,6 +96,7 @@ Partial Class IncomingDocument
         '
         'Remarks
         '
+        Me.Remarks.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
         Me.Remarks.DataPropertyName = "remark"
         Me.Remarks.HeaderText = "Remarks"
         Me.Remarks.MinimumWidth = 6
@@ -98,6 +105,7 @@ Partial Class IncomingDocument
         '
         'Receive
         '
+        Me.Receive.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
         Me.Receive.DataPropertyName = "trackingnum"
         Me.Receive.HeaderText = "Receive"
         Me.Receive.MinimumWidth = 6
@@ -106,9 +114,26 @@ Partial Class IncomingDocument
         Me.Receive.Text = "Receive"
         Me.Receive.UseColumnTextForButtonValue = True
         '
+        'Email
+        '
+        Me.Email.DataPropertyName = "email_address"
+        Me.Email.HeaderText = "Email"
+        Me.Email.Name = "Email"
+        Me.Email.ReadOnly = True
+        Me.Email.Visible = False
+        '
+        'Number
+        '
+        Me.Number.DataPropertyName = "Number"
+        Me.Number.HeaderText = "Number"
+        Me.Number.Name = "Number"
+        Me.Number.ReadOnly = True
+        Me.Number.Visible = False
+        '
         'Panel1
         '
-        Me.Panel1.BackColor = System.Drawing.Color.DimGray
+        Me.Panel1.BackColor = System.Drawing.SystemColors.ControlLight
+        Me.Panel1.Controls.Add(Me.Label3)
         Me.Panel1.Controls.Add(Me.DataGridView1)
         Me.Panel1.Controls.Add(Me.Label2)
         Me.Panel1.Location = New System.Drawing.Point(12, 12)
@@ -121,7 +146,7 @@ Partial Class IncomingDocument
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 24.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.ForeColor = System.Drawing.Color.White
+        Me.Label2.ForeColor = System.Drawing.Color.Black
         Me.Label2.Location = New System.Drawing.Point(9, 101)
         Me.Label2.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label2.Name = "Label2"
@@ -144,9 +169,9 @@ Partial Class IncomingDocument
         'Panel2
         '
         Me.Panel2.BackColor = System.Drawing.Color.Firebrick
+        Me.Panel2.Controls.Add(Me.TrackDocument)
         Me.Panel2.Controls.Add(Me.PendingDocument)
         Me.Panel2.Controls.Add(Me.Label1)
-        Me.Panel2.Controls.Add(Me.Button3)
         Me.Panel2.Controls.Add(Me.Home)
         Me.Panel2.Controls.Add(Me.AddDocument)
         Me.Panel2.Location = New System.Drawing.Point(12, 12)
@@ -155,12 +180,25 @@ Partial Class IncomingDocument
         Me.Panel2.Size = New System.Drawing.Size(975, 81)
         Me.Panel2.TabIndex = 7
         '
+        'TrackDocument
+        '
+        Me.TrackDocument.FlatAppearance.BorderColor = System.Drawing.Color.Firebrick
+        Me.TrackDocument.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.TrackDocument.ForeColor = System.Drawing.Color.Gold
+        Me.TrackDocument.Location = New System.Drawing.Point(643, 32)
+        Me.TrackDocument.Margin = New System.Windows.Forms.Padding(2)
+        Me.TrackDocument.Name = "TrackDocument"
+        Me.TrackDocument.Size = New System.Drawing.Size(125, 27)
+        Me.TrackDocument.TabIndex = 10
+        Me.TrackDocument.Text = "Track Documents"
+        Me.TrackDocument.UseVisualStyleBackColor = True
+        '
         'PendingDocument
         '
         Me.PendingDocument.FlatAppearance.BorderColor = System.Drawing.Color.Firebrick
         Me.PendingDocument.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.PendingDocument.ForeColor = System.Drawing.Color.Gold
-        Me.PendingDocument.Location = New System.Drawing.Point(748, 30)
+        Me.PendingDocument.Location = New System.Drawing.Point(514, 32)
         Me.PendingDocument.Margin = New System.Windows.Forms.Padding(2)
         Me.PendingDocument.Name = "PendingDocument"
         Me.PendingDocument.Size = New System.Drawing.Size(125, 27)
@@ -168,26 +206,13 @@ Partial Class IncomingDocument
         Me.PendingDocument.Text = "Pending Documents"
         Me.PendingDocument.UseVisualStyleBackColor = True
         '
-        'Button3
-        '
-        Me.Button3.FlatAppearance.BorderColor = System.Drawing.Color.Firebrick
-        Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button3.ForeColor = System.Drawing.Color.Gold
-        Me.Button3.Location = New System.Drawing.Point(624, 30)
-        Me.Button3.Margin = New System.Windows.Forms.Padding(2)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(119, 27)
-        Me.Button3.TabIndex = 7
-        Me.Button3.Text = "Incoming Documents"
-        Me.Button3.UseVisualStyleBackColor = True
-        '
         'Home
         '
         Me.Home.BackColor = System.Drawing.Color.Firebrick
         Me.Home.FlatAppearance.BorderColor = System.Drawing.Color.Firebrick
         Me.Home.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Home.ForeColor = System.Drawing.Color.Gold
-        Me.Home.Location = New System.Drawing.Point(456, 30)
+        Me.Home.Location = New System.Drawing.Point(454, 32)
         Me.Home.Margin = New System.Windows.Forms.Padding(2)
         Me.Home.Name = "Home"
         Me.Home.Size = New System.Drawing.Size(56, 27)
@@ -200,13 +225,22 @@ Partial Class IncomingDocument
         Me.AddDocument.FlatAppearance.BorderColor = System.Drawing.Color.Firebrick
         Me.AddDocument.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.AddDocument.ForeColor = System.Drawing.Color.Gold
-        Me.AddDocument.Location = New System.Drawing.Point(525, 32)
+        Me.AddDocument.Location = New System.Drawing.Point(772, 32)
         Me.AddDocument.Margin = New System.Windows.Forms.Padding(2)
         Me.AddDocument.Name = "AddDocument"
         Me.AddDocument.Size = New System.Drawing.Size(95, 27)
         Me.AddDocument.TabIndex = 6
         Me.AddDocument.Text = "Add Document"
         Me.AddDocument.UseVisualStyleBackColor = True
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Location = New System.Drawing.Point(562, 124)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(39, 13)
+        Me.Label3.TabIndex = 3
+        Me.Label3.Text = "Label3"
         '
         'IncomingDocument
         '
@@ -227,17 +261,20 @@ Partial Class IncomingDocument
     End Sub
 
     Friend WithEvents DataGridView1 As DataGridView
-    Friend WithEvents CTS As DataGridViewTextBoxColumn
-    Friend WithEvents Type As DataGridViewTextBoxColumn
-    Friend WithEvents From As DataGridViewTextBoxColumn
-    Friend WithEvents Remarks As DataGridViewTextBoxColumn
-    Friend WithEvents Receive As DataGridViewButtonColumn
     Friend WithEvents Panel1 As Panel
     Friend WithEvents Label2 As Label
     Friend WithEvents Label1 As Label
     Friend WithEvents Panel2 As Panel
     Friend WithEvents PendingDocument As Button
-    Friend WithEvents Button3 As Button
     Friend WithEvents Home As Button
     Friend WithEvents AddDocument As Button
+    Friend WithEvents TrackDocument As Button
+    Friend WithEvents CTS As DataGridViewTextBoxColumn
+    Friend WithEvents Type As DataGridViewTextBoxColumn
+    Friend WithEvents From As DataGridViewTextBoxColumn
+    Friend WithEvents Remarks As DataGridViewTextBoxColumn
+    Friend WithEvents Receive As DataGridViewButtonColumn
+    Friend WithEvents Email As DataGridViewTextBoxColumn
+    Friend WithEvents Number As DataGridViewTextBoxColumn
+    Friend WithEvents Label3 As Label
 End Class

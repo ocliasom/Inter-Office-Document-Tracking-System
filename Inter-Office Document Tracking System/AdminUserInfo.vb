@@ -34,6 +34,11 @@ Public Class AdminUserInfo
         Me.Close()
     End Sub
 
+    Private Sub Home_Click(sender As Object, e As EventArgs) Handles Home.Click
+        AdminDashboard.Show()
+        Me.Close()
+    End Sub
+
     Private Sub DocumentType_Click(sender As Object, e As EventArgs) Handles DocumentType.Click
         AdminDocumentType.Show()
         Me.Close()
@@ -44,7 +49,6 @@ Public Class AdminUserInfo
         Me.Close()
     End Sub
 
-
     Private Sub UserLogs_Click(sender As Object, e As EventArgs) Handles UserLogs.Click
         AdminUserLogs.Show()
         Me.Close()
@@ -54,6 +58,7 @@ Public Class AdminUserInfo
         AdminDocumentHistory.Show()
         Me.Close()
     End Sub
+
 
     Dim X As Integer = 0
     Private Sub Logs_Click(sender As Object, e As EventArgs) Handles Logs.Click
@@ -70,11 +75,6 @@ Public Class AdminUserInfo
         End If
 
 
-    End Sub
-
-    Private Sub Home_Click(sender As Object, e As EventArgs) Handles Home.Click
-        AdminDashboard.Show()
-        Me.Close()
     End Sub
 
 End Class

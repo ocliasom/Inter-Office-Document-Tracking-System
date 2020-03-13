@@ -28,7 +28,6 @@ Partial Class Dashboard
         Me.AddButton = New System.Windows.Forms.Button()
         Me.TrackButton = New System.Windows.Forms.Button()
         Me.LogoutButton = New System.Windows.Forms.Button()
-        Me.Label2 = New System.Windows.Forms.Label()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Panel1.SuspendLayout()
@@ -43,7 +42,6 @@ Partial Class Dashboard
         Me.Panel1.Controls.Add(Me.AddButton)
         Me.Panel1.Controls.Add(Me.TrackButton)
         Me.Panel1.Controls.Add(Me.LogoutButton)
-        Me.Panel1.Controls.Add(Me.Label2)
         Me.Panel1.Location = New System.Drawing.Point(9, 10)
         Me.Panel1.Margin = New System.Windows.Forms.Padding(2)
         Me.Panel1.Name = "Panel1"
@@ -124,16 +122,6 @@ Partial Class Dashboard
         Me.LogoutButton.Text = "Logout"
         Me.LogoutButton.UseVisualStyleBackColor = False
         '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(446, 121)
-        Me.Label2.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(39, 13)
-        Me.Label2.TabIndex = 4
-        Me.Label2.Text = "Label2"
-        '
         'Panel2
         '
         Me.Panel2.BackColor = System.Drawing.Color.Firebrick
@@ -167,7 +155,6 @@ Partial Class Dashboard
         Me.Name = "Dashboard"
         Me.Text = "Form2"
         Me.Panel1.ResumeLayout(False)
-        Me.Panel1.PerformLayout()
         Me.Panel2.ResumeLayout(False)
         Me.Panel2.PerformLayout()
         Me.ResumeLayout(False)
@@ -177,7 +164,6 @@ Partial Class Dashboard
     Friend WithEvents Panel1 As Panel
     Friend WithEvents Panel2 As Panel
     Friend WithEvents Label1 As Label
-    Friend WithEvents Label2 As Label
     Friend WithEvents LogoutButton As Button
     Friend WithEvents PendingButton As Button
     Friend WithEvents IncomingButton As Button

@@ -36,7 +36,7 @@ Partial Class Login
         '
         'Panel1
         '
-        Me.Panel1.BackColor = System.Drawing.Color.DimGray
+        Me.Panel1.BackColor = System.Drawing.SystemColors.ControlLight
         Me.Panel1.Controls.Add(Me.Sign_in)
         Me.Panel1.Controls.Add(Me.Label2)
         Me.Panel1.Controls.Add(Me.Label1)
@@ -66,7 +66,7 @@ Partial Class Login
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.ForeColor = System.Drawing.Color.White
+        Me.Label2.ForeColor = System.Drawing.Color.Black
         Me.Label2.Location = New System.Drawing.Point(115, 132)
         Me.Label2.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label2.Name = "Label2"
@@ -78,7 +78,7 @@ Partial Class Login
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.ForeColor = System.Drawing.Color.White
+        Me.Label1.ForeColor = System.Drawing.Color.Black
         Me.Label1.Location = New System.Drawing.Point(115, 74)
         Me.Label1.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label1.Name = "Label1"
@@ -88,21 +88,22 @@ Partial Class Login
         '
         'Password
         '
-        Me.Password.BackColor = System.Drawing.Color.Gray
+        Me.Password.BackColor = System.Drawing.Color.WhiteSmoke
         Me.Password.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Password.ForeColor = System.Drawing.Color.White
+        Me.Password.ForeColor = System.Drawing.Color.Black
         Me.Password.Location = New System.Drawing.Point(118, 154)
         Me.Password.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Password.Name = "Password"
         Me.Password.Size = New System.Drawing.Size(149, 20)
         Me.Password.TabIndex = 5
         Me.Password.Text = "$2a$10$rguqKi7Bnq416OIcZCJuA.YafJxUHNdJcBDX7fuQhiSsZ5UVlA/NS"
+        Me.Password.UseSystemPasswordChar = True
         '
         'Username
         '
-        Me.Username.BackColor = System.Drawing.Color.Gray
+        Me.Username.BackColor = System.Drawing.Color.WhiteSmoke
         Me.Username.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Username.ForeColor = System.Drawing.SystemColors.InactiveBorder
+        Me.Username.ForeColor = System.Drawing.Color.Black
         Me.Username.Location = New System.Drawing.Point(118, 97)
         Me.Username.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Username.Name = "Username"
@@ -139,6 +140,7 @@ Partial Class Login
         Me.ClientSize = New System.Drawing.Size(412, 277)
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.Panel1)
+        Me.Location = New System.Drawing.Point(150, 150)
         Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Name = "Login"
         Me.Text = "Login"

@@ -87,6 +87,11 @@ Public Class AdminUserInfoAdd
     End Sub
 
 
+    Private Sub Home_Click(sender As Object, e As EventArgs)
+        AdminDashboard.Show()
+        Me.Close()
+    End Sub
+
     Private Sub DocumentType_Click(sender As Object, e As EventArgs) Handles DocumentType.Click
         AdminDocumentType.Show()
         Me.Close()
@@ -112,6 +117,7 @@ Public Class AdminUserInfoAdd
         Me.Close()
     End Sub
 
+
     Dim X As Integer = 0
     Private Sub Logs_Click(sender As Object, e As EventArgs) Handles Logs.Click
 
@@ -129,10 +135,6 @@ Public Class AdminUserInfoAdd
 
     End Sub
 
-    Private Sub Home_Click(sender As Object, e As EventArgs) Handles Home.Click
-        AdminDashboard.Show()
-        Me.Close()
-    End Sub
 
     Private Sub AdminUserInfoAdd_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Dim command As New MySqlCommand("SELECT `officecode`,`officename` FROM `office` ", connection)

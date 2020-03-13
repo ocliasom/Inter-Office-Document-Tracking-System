@@ -13,7 +13,7 @@ Public Class AdminDocumentHistory
         Try
             connection.Open()
             Dim Query As String
-            Query = "SELECT `Date`,`cts`,`office`,`doctype`,`status`,`remark` FROM `user_logs`"
+            Query = "SELECT `Date`,`cts`,`office`,`doctype`,`status`,`remark` FROM `history`"
             cmd = New MySqlCommand(Query, connection)
             adapter.SelectCommand = cmd
             adapter.Fill(table)
@@ -28,6 +28,13 @@ Public Class AdminDocumentHistory
         Finally
             connection.Dispose()
         End Try
+    End Sub
+
+
+
+    Private Sub Home_Click(sender As Object, e As EventArgs) Handles Home.Click
+        AdminDashboard.Show()
+        Me.Close()
     End Sub
 
     Private Sub DocumentType_Click(sender As Object, e As EventArgs) Handles DocumentType.Click
@@ -50,6 +57,7 @@ Public Class AdminDocumentHistory
         Me.Close()
     End Sub
 
+
     Dim X As Integer = 0
     Private Sub Logs_Click(sender As Object, e As EventArgs) Handles Logs.Click
 
@@ -67,8 +75,4 @@ Public Class AdminDocumentHistory
 
     End Sub
 
-    Private Sub Home_Click(sender As Object, e As EventArgs) Handles Home.Click
-        AdminDashboard.Show()
-        Me.Close()
-    End Sub
 End Class

@@ -29,7 +29,7 @@ Public Class AdminDocumentType
         End Try
     End Sub
 
-    Private Sub DocumentType_Click(sender As Object, e As EventArgs) Handles DocumentType.Click
+    Private Sub DocumentType_Click(sender As Object, e As EventArgs)
 
 
 
@@ -41,6 +41,12 @@ Public Class AdminDocumentType
 
     Private Sub TypeAdd_Click(sender As Object, e As EventArgs) Handles TypeAdd.Click
         AdminDocumentTypeAdd.Show()
+        Me.Close()
+    End Sub
+
+
+    Private Sub Home_Click(sender As Object, e As EventArgs) Handles Home.Click
+        AdminDashboard.Show()
         Me.Close()
     End Sub
 
@@ -65,6 +71,7 @@ Public Class AdminDocumentType
         Me.Close()
     End Sub
 
+
     Dim X As Integer = 0
     Private Sub Logs_Click(sender As Object, e As EventArgs) Handles Logs.Click
 
@@ -82,9 +89,5 @@ Public Class AdminDocumentType
 
     End Sub
 
-    Private Sub Home_Click(sender As Object, e As EventArgs) Handles Home.Click
-        AdminDashboard.Show()
-        Me.Close()
-    End Sub
 
 End Class

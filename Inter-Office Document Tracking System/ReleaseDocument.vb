@@ -85,7 +85,7 @@ Public Class ReleaseDocument
 
 
 
-                Dim results = itexmo(DataGridView1.Rows(0).Cells(3).Value, "Document has been released. Please claim it on your Department Office", "TR-INTER334992_FE7KH")
+                Dim results = itexmo(DataGridView1.Rows(0).Cells(3).Value, "Document has been released. Please claim it on your Department Office", "TR-MAVON636050_KG6XN")
                 If results = 0 Then
                     MsgBox("Message Sent!")
                 Else

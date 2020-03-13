@@ -25,7 +25,6 @@ Partial Class AddDocument
         Me.components = New System.ComponentModel.Container()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.HiddenDate = New System.Windows.Forms.Label()
-        Me.Sidebar = New System.Windows.Forms.Panel()
         Me.Number = New System.Windows.Forms.TextBox()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
@@ -45,19 +44,18 @@ Partial Class AddDocument
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.PendingDocument = New System.Windows.Forms.Button()
         Me.IncomingDocument = New System.Windows.Forms.Button()
-        Me.AddDocButton = New System.Windows.Forms.Button()
         Me.Home = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
+        Me.TrackDocument = New System.Windows.Forms.Button()
         Me.Panel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
         Me.SuspendLayout()
         '
         'Panel1
         '
-        Me.Panel1.BackColor = System.Drawing.Color.DimGray
+        Me.Panel1.BackColor = System.Drawing.SystemColors.ControlLight
         Me.Panel1.Controls.Add(Me.HiddenDate)
-        Me.Panel1.Controls.Add(Me.Sidebar)
         Me.Panel1.Controls.Add(Me.Number)
         Me.Panel1.Controls.Add(Me.Label9)
         Me.Panel1.Controls.Add(Me.TextBox1)
@@ -74,7 +72,7 @@ Partial Class AddDocument
         Me.Panel1.Controls.Add(Me.Label4)
         Me.Panel1.Controls.Add(Me.Label3)
         Me.Panel1.Controls.Add(Me.Label2)
-        Me.Panel1.ForeColor = System.Drawing.Color.White
+        Me.Panel1.ForeColor = System.Drawing.Color.Black
         Me.Panel1.Location = New System.Drawing.Point(9, 10)
         Me.Panel1.Margin = New System.Windows.Forms.Padding(2)
         Me.Panel1.Name = "Panel1"
@@ -85,25 +83,17 @@ Partial Class AddDocument
         '
         Me.HiddenDate.AutoSize = True
         Me.HiddenDate.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.HiddenDate.Location = New System.Drawing.Point(272, 251)
+        Me.HiddenDate.Location = New System.Drawing.Point(203, 249)
         Me.HiddenDate.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.HiddenDate.Name = "HiddenDate"
         Me.HiddenDate.Size = New System.Drawing.Size(99, 20)
         Me.HiddenDate.TabIndex = 19
         Me.HiddenDate.Text = "Date Hidden"
         '
-        'Sidebar
-        '
-        Me.Sidebar.BackColor = System.Drawing.SystemColors.ActiveCaption
-        Me.Sidebar.Location = New System.Drawing.Point(0, 79)
-        Me.Sidebar.Margin = New System.Windows.Forms.Padding(2)
-        Me.Sidebar.Name = "Sidebar"
-        Me.Sidebar.Size = New System.Drawing.Size(236, 532)
-        Me.Sidebar.TabIndex = 18
-        '
         'Number
         '
-        Me.Number.Location = New System.Drawing.Point(632, 407)
+        Me.Number.BackColor = System.Drawing.Color.WhiteSmoke
+        Me.Number.Location = New System.Drawing.Point(563, 405)
         Me.Number.Margin = New System.Windows.Forms.Padding(2)
         Me.Number.Name = "Number"
         Me.Number.Size = New System.Drawing.Size(187, 20)
@@ -113,7 +103,7 @@ Partial Class AddDocument
         '
         Me.Label9.AutoSize = True
         Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label9.Location = New System.Drawing.Point(628, 375)
+        Me.Label9.Location = New System.Drawing.Point(559, 373)
         Me.Label9.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(115, 20)
@@ -122,7 +112,8 @@ Partial Class AddDocument
         '
         'TextBox1
         '
-        Me.TextBox1.Location = New System.Drawing.Point(275, 479)
+        Me.TextBox1.BackColor = System.Drawing.Color.WhiteSmoke
+        Me.TextBox1.Location = New System.Drawing.Point(206, 477)
         Me.TextBox1.Margin = New System.Windows.Forms.Padding(2)
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.Size = New System.Drawing.Size(543, 20)
@@ -132,7 +123,7 @@ Partial Class AddDocument
         '
         Me.Label8.AutoSize = True
         Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label8.Location = New System.Drawing.Point(272, 448)
+        Me.Label8.Location = New System.Drawing.Point(203, 446)
         Me.Label8.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(89, 20)
@@ -145,7 +136,7 @@ Partial Class AddDocument
         Me.CancelButton.FlatAppearance.BorderColor = System.Drawing.Color.Firebrick
         Me.CancelButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.CancelButton.ForeColor = System.Drawing.Color.Gold
-        Me.CancelButton.Location = New System.Drawing.Point(892, 553)
+        Me.CancelButton.Location = New System.Drawing.Point(471, 538)
         Me.CancelButton.Margin = New System.Windows.Forms.Padding(2)
         Me.CancelButton.Name = "CancelButton"
         Me.CancelButton.Size = New System.Drawing.Size(86, 33)
@@ -159,7 +150,7 @@ Partial Class AddDocument
         Me.Button1.FlatAppearance.BorderColor = System.Drawing.Color.Firebrick
         Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button1.ForeColor = System.Drawing.Color.Gold
-        Me.Button1.Location = New System.Drawing.Point(802, 553)
+        Me.Button1.Location = New System.Drawing.Point(381, 538)
         Me.Button1.Margin = New System.Windows.Forms.Padding(2)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(86, 33)
@@ -171,7 +162,7 @@ Partial Class AddDocument
         '
         Me.Officebox.AutoSize = True
         Me.Officebox.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Officebox.Location = New System.Drawing.Point(628, 235)
+        Me.Officebox.Location = New System.Drawing.Point(559, 233)
         Me.Officebox.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Officebox.Name = "Officebox"
         Me.Officebox.Size = New System.Drawing.Size(59, 20)
@@ -182,7 +173,7 @@ Partial Class AddDocument
         '
         Me.Datebox.AutoSize = True
         Me.Datebox.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Datebox.Location = New System.Drawing.Point(272, 235)
+        Me.Datebox.Location = New System.Drawing.Point(203, 233)
         Me.Datebox.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Datebox.Name = "Datebox"
         Me.Datebox.Size = New System.Drawing.Size(44, 20)
@@ -191,9 +182,9 @@ Partial Class AddDocument
         '
         'TextBox3
         '
-        Me.TextBox3.BackColor = System.Drawing.Color.White
+        Me.TextBox3.BackColor = System.Drawing.Color.WhiteSmoke
         Me.TextBox3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.TextBox3.Location = New System.Drawing.Point(275, 407)
+        Me.TextBox3.Location = New System.Drawing.Point(206, 405)
         Me.TextBox3.Margin = New System.Windows.Forms.Padding(2)
         Me.TextBox3.Name = "TextBox3"
         Me.TextBox3.Size = New System.Drawing.Size(188, 20)
@@ -203,7 +194,7 @@ Partial Class AddDocument
         '
         Me.Label7.AutoSize = True
         Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.Location = New System.Drawing.Point(272, 375)
+        Me.Label7.Location = New System.Drawing.Point(203, 373)
         Me.Label7.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(116, 20)
@@ -212,10 +203,10 @@ Partial Class AddDocument
         '
         'ComboBox1
         '
-        Me.ComboBox1.BackColor = System.Drawing.Color.White
+        Me.ComboBox1.BackColor = System.Drawing.Color.WhiteSmoke
         Me.ComboBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(275, 318)
+        Me.ComboBox1.Location = New System.Drawing.Point(206, 316)
         Me.ComboBox1.Margin = New System.Windows.Forms.Padding(2)
         Me.ComboBox1.Name = "ComboBox1"
         Me.ComboBox1.Size = New System.Drawing.Size(543, 21)
@@ -225,7 +216,7 @@ Partial Class AddDocument
         '
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.Location = New System.Drawing.Point(272, 295)
+        Me.Label6.Location = New System.Drawing.Point(203, 293)
         Me.Label6.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(121, 20)
@@ -236,7 +227,7 @@ Partial Class AddDocument
         '
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(628, 214)
+        Me.Label5.Location = New System.Drawing.Point(559, 212)
         Me.Label5.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(51, 20)
@@ -247,7 +238,7 @@ Partial Class AddDocument
         '
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(272, 214)
+        Me.Label4.Location = New System.Drawing.Point(203, 212)
         Me.Label4.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(44, 20)
@@ -257,7 +248,7 @@ Partial Class AddDocument
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(273, 166)
+        Me.Label3.Location = New System.Drawing.Point(204, 164)
         Me.Label3.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(182, 13)
@@ -268,7 +259,7 @@ Partial Class AddDocument
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(272, 142)
+        Me.Label2.Location = New System.Drawing.Point(203, 140)
         Me.Label2.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(137, 24)
@@ -278,9 +269,9 @@ Partial Class AddDocument
         'Panel2
         '
         Me.Panel2.BackColor = System.Drawing.Color.Firebrick
+        Me.Panel2.Controls.Add(Me.TrackDocument)
         Me.Panel2.Controls.Add(Me.PendingDocument)
         Me.Panel2.Controls.Add(Me.IncomingDocument)
-        Me.Panel2.Controls.Add(Me.AddDocButton)
         Me.Panel2.Controls.Add(Me.Home)
         Me.Panel2.Controls.Add(Me.Label1)
         Me.Panel2.ForeColor = System.Drawing.Color.Gold
@@ -295,7 +286,7 @@ Partial Class AddDocument
         Me.PendingDocument.FlatAppearance.BorderColor = System.Drawing.Color.Firebrick
         Me.PendingDocument.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.PendingDocument.ForeColor = System.Drawing.Color.Gold
-        Me.PendingDocument.Location = New System.Drawing.Point(742, 27)
+        Me.PendingDocument.Location = New System.Drawing.Point(633, 27)
         Me.PendingDocument.Margin = New System.Windows.Forms.Padding(2)
         Me.PendingDocument.Name = "PendingDocument"
         Me.PendingDocument.Size = New System.Drawing.Size(125, 27)
@@ -308,7 +299,7 @@ Partial Class AddDocument
         Me.IncomingDocument.FlatAppearance.BorderColor = System.Drawing.Color.Firebrick
         Me.IncomingDocument.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.IncomingDocument.ForeColor = System.Drawing.Color.Gold
-        Me.IncomingDocument.Location = New System.Drawing.Point(618, 27)
+        Me.IncomingDocument.Location = New System.Drawing.Point(510, 27)
         Me.IncomingDocument.Margin = New System.Windows.Forms.Padding(2)
         Me.IncomingDocument.Name = "IncomingDocument"
         Me.IncomingDocument.Size = New System.Drawing.Size(119, 27)
@@ -316,26 +307,13 @@ Partial Class AddDocument
         Me.IncomingDocument.Text = "Incoming Documents"
         Me.IncomingDocument.UseVisualStyleBackColor = True
         '
-        'AddDocButton
-        '
-        Me.AddDocButton.FlatAppearance.BorderColor = System.Drawing.Color.Firebrick
-        Me.AddDocButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.AddDocButton.ForeColor = System.Drawing.Color.Gold
-        Me.AddDocButton.Location = New System.Drawing.Point(519, 29)
-        Me.AddDocButton.Margin = New System.Windows.Forms.Padding(2)
-        Me.AddDocButton.Name = "AddDocButton"
-        Me.AddDocButton.Size = New System.Drawing.Size(95, 27)
-        Me.AddDocButton.TabIndex = 6
-        Me.AddDocButton.Text = "Add Document"
-        Me.AddDocButton.UseVisualStyleBackColor = True
-        '
         'Home
         '
         Me.Home.BackColor = System.Drawing.Color.Firebrick
         Me.Home.FlatAppearance.BorderColor = System.Drawing.Color.Firebrick
         Me.Home.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Home.ForeColor = System.Drawing.Color.Gold
-        Me.Home.Location = New System.Drawing.Point(450, 27)
+        Me.Home.Location = New System.Drawing.Point(450, 29)
         Me.Home.Margin = New System.Windows.Forms.Padding(2)
         Me.Home.Name = "Home"
         Me.Home.Size = New System.Drawing.Size(56, 27)
@@ -356,6 +334,19 @@ Partial Class AddDocument
         '
         'Timer1
         '
+        '
+        'TrackDocument
+        '
+        Me.TrackDocument.FlatAppearance.BorderColor = System.Drawing.Color.Firebrick
+        Me.TrackDocument.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.TrackDocument.ForeColor = System.Drawing.Color.Gold
+        Me.TrackDocument.Location = New System.Drawing.Point(748, 27)
+        Me.TrackDocument.Margin = New System.Windows.Forms.Padding(2)
+        Me.TrackDocument.Name = "TrackDocument"
+        Me.TrackDocument.Size = New System.Drawing.Size(125, 27)
+        Me.TrackDocument.TabIndex = 9
+        Me.TrackDocument.Text = "Track Documents"
+        Me.TrackDocument.UseVisualStyleBackColor = True
         '
         'AddDocument
         '
@@ -395,10 +386,9 @@ Partial Class AddDocument
     Friend WithEvents Label9 As Label
     Friend WithEvents TextBox1 As TextBox
     Friend WithEvents Label8 As Label
-    Friend WithEvents Sidebar As Panel
     Friend WithEvents HiddenDate As Label
     Friend WithEvents PendingDocument As Button
     Friend WithEvents IncomingDocument As Button
-    Friend WithEvents AddDocButton As Button
     Friend WithEvents Home As Button
+    Friend WithEvents TrackDocument As Button
 End Class

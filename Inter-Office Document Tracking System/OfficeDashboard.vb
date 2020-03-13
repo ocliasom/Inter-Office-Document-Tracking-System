@@ -1,18 +1,24 @@
 ﻿Public Class OfficeDashboard
     Private Sub TrackButton_Click(sender As Object, e As EventArgs) Handles TrackButton.Click
+        Dim TrackDocument As New TrackDocument
 
-        TrackPage.Show()
+        TrackDocument.Show()
         Me.Close()
     End Sub
 
     Private Sub PendingButton_Click(sender As Object, e As EventArgs) Handles PendingButton.Click
+        Dim PendingDocument As New PendingDocument
 
-        PendingPage.Show()
+
+        PendingDocument.Show()
         Me.Close()
     End Sub
 
     Private Sub IncomingButton_Click(sender As Object, e As EventArgs) Handles IncomingButton.Click
-        IncomingPage.Show()
+        Dim IncomingDocument As New IncomingDocument
+
+
+        IncomingDocument.Show()
         Me.Close()
     End Sub
 End Class

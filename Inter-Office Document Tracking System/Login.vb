@@ -80,6 +80,9 @@ Public Class Login
 
             Catch ex As Exception
                 MessageBox.Show(ex.Message)
+
+            Finally
+                connection.Dispose()
             End Try
         End If
 

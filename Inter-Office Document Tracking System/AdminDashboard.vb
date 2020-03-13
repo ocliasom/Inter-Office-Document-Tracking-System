@@ -17,9 +17,6 @@
 
     End Sub
 
-    Private Sub AdminDashboard_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
-    End Sub
 
     Private Sub DocumentType_Click(sender As Object, e As EventArgs) Handles DocumentType.Click
         AdminDocumentType.Show()
@@ -45,6 +42,10 @@
         AdminDocumentHistory.Show()
         Me.Close()
     End Sub
+
+
+
+
 
     Private Sub LogoutButton_Click(sender As Object, e As EventArgs) Handles LogoutButton.Click
         Dim result As DialogResult = MessageBox.Show("Do you want to logout??",

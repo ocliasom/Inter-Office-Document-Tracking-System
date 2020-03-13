@@ -83,12 +83,6 @@
     <Compile Include="AddDocument.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AddedDetails.Designer.vb">
-      <DependentUpon>AddedDetails.vb</DependentUpon>
-    </Compile>
-    <Compile Include="AddedDetails.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="AdminDashboard.Designer.vb">
       <DependentUpon>AdminDashboard.vb</DependentUpon>
     </Compile>
@@ -213,9 +207,6 @@
     <EmbeddedResource Include="AddDocument.resx">
       <DependentUpon>AddDocument.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AddedDetails.resx">
-      <DependentUpon>AddedDetails.vb</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="AdminDashboard.resx">
       <DependentUpon>AdminDashboard.vb</DependentUpon>
     </EmbeddedResource>
@@ -286,6 +277,12 @@
     </None>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\person-male.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\img_415067.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

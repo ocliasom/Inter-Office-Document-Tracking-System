@@ -34,7 +34,7 @@ Partial Class PendingDocument
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Panel2 = New System.Windows.Forms.Panel()
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.TrackDocument = New System.Windows.Forms.Button()
         Me.IncomingDocument = New System.Windows.Forms.Button()
         Me.AddDocButton = New System.Windows.Forms.Button()
         Me.Home = New System.Windows.Forms.Button()
@@ -45,7 +45,7 @@ Partial Class PendingDocument
         '
         'Panel1
         '
-        Me.Panel1.BackColor = System.Drawing.Color.DimGray
+        Me.Panel1.BackColor = System.Drawing.SystemColors.ControlLight
         Me.Panel1.Controls.Add(Me.DataGridView1)
         Me.Panel1.Controls.Add(Me.Label2)
         Me.Panel1.Location = New System.Drawing.Point(13, 12)
@@ -62,7 +62,7 @@ Partial Class PendingDocument
         Me.DataGridView1.AllowUserToResizeRows = False
         Me.DataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.DataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells
-        Me.DataGridView1.BackgroundColor = System.Drawing.Color.DimGray
+        Me.DataGridView1.BackgroundColor = System.Drawing.SystemColors.ControlLight
         Me.DataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.CTS, Me.Type, Me.DateReceived, Me.SourceOffice, Me.Description, Me.Forward, Me.Release})
@@ -141,7 +141,7 @@ Partial Class PendingDocument
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 24.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.ForeColor = System.Drawing.Color.White
+        Me.Label2.ForeColor = System.Drawing.Color.Black
         Me.Label2.Location = New System.Drawing.Point(9, 101)
         Me.Label2.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label2.Name = "Label2"
@@ -164,7 +164,7 @@ Partial Class PendingDocument
         'Panel2
         '
         Me.Panel2.BackColor = System.Drawing.Color.Firebrick
-        Me.Panel2.Controls.Add(Me.Button1)
+        Me.Panel2.Controls.Add(Me.TrackDocument)
         Me.Panel2.Controls.Add(Me.IncomingDocument)
         Me.Panel2.Controls.Add(Me.AddDocButton)
         Me.Panel2.Controls.Add(Me.Home)
@@ -175,25 +175,25 @@ Partial Class PendingDocument
         Me.Panel2.Size = New System.Drawing.Size(975, 81)
         Me.Panel2.TabIndex = 5
         '
-        'Button1
+        'TrackDocument
         '
-        Me.Button1.FlatAppearance.BorderColor = System.Drawing.Color.Firebrick
-        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button1.ForeColor = System.Drawing.Color.Gold
-        Me.Button1.Location = New System.Drawing.Point(746, 30)
-        Me.Button1.Margin = New System.Windows.Forms.Padding(2)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(125, 27)
-        Me.Button1.TabIndex = 12
-        Me.Button1.Text = "Pending Documents"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.TrackDocument.FlatAppearance.BorderColor = System.Drawing.Color.Firebrick
+        Me.TrackDocument.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.TrackDocument.ForeColor = System.Drawing.Color.Gold
+        Me.TrackDocument.Location = New System.Drawing.Point(635, 32)
+        Me.TrackDocument.Margin = New System.Windows.Forms.Padding(2)
+        Me.TrackDocument.Name = "TrackDocument"
+        Me.TrackDocument.Size = New System.Drawing.Size(125, 27)
+        Me.TrackDocument.TabIndex = 12
+        Me.TrackDocument.Text = "Track Documents"
+        Me.TrackDocument.UseVisualStyleBackColor = True
         '
         'IncomingDocument
         '
         Me.IncomingDocument.FlatAppearance.BorderColor = System.Drawing.Color.Firebrick
         Me.IncomingDocument.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.IncomingDocument.ForeColor = System.Drawing.Color.Gold
-        Me.IncomingDocument.Location = New System.Drawing.Point(622, 30)
+        Me.IncomingDocument.Location = New System.Drawing.Point(512, 32)
         Me.IncomingDocument.Margin = New System.Windows.Forms.Padding(2)
         Me.IncomingDocument.Name = "IncomingDocument"
         Me.IncomingDocument.Size = New System.Drawing.Size(119, 27)
@@ -206,7 +206,7 @@ Partial Class PendingDocument
         Me.AddDocButton.FlatAppearance.BorderColor = System.Drawing.Color.Firebrick
         Me.AddDocButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.AddDocButton.ForeColor = System.Drawing.Color.Gold
-        Me.AddDocButton.Location = New System.Drawing.Point(523, 32)
+        Me.AddDocButton.Location = New System.Drawing.Point(764, 32)
         Me.AddDocButton.Margin = New System.Windows.Forms.Padding(2)
         Me.AddDocButton.Name = "AddDocButton"
         Me.AddDocButton.Size = New System.Drawing.Size(95, 27)
@@ -220,7 +220,7 @@ Partial Class PendingDocument
         Me.Home.FlatAppearance.BorderColor = System.Drawing.Color.Firebrick
         Me.Home.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Home.ForeColor = System.Drawing.Color.Gold
-        Me.Home.Location = New System.Drawing.Point(454, 30)
+        Me.Home.Location = New System.Drawing.Point(452, 32)
         Me.Home.Margin = New System.Windows.Forms.Padding(2)
         Me.Home.Name = "Home"
         Me.Home.Size = New System.Drawing.Size(56, 27)
@@ -259,8 +259,8 @@ Partial Class PendingDocument
     Friend WithEvents Description As DataGridViewTextBoxColumn
     Friend WithEvents Forward As DataGridViewButtonColumn
     Friend WithEvents Release As DataGridViewButtonColumn
-    Friend WithEvents Button1 As Button
     Friend WithEvents IncomingDocument As Button
     Friend WithEvents AddDocButton As Button
     Friend WithEvents Home As Button
+    Friend WithEvents TrackDocument As Button
 End Class

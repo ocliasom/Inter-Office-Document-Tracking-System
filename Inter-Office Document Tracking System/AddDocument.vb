@@ -130,21 +130,35 @@ Public Class AddDocument
     End Sub
 
     Private Sub Home_Click(sender As Object, e As EventArgs) Handles Home.Click
+        Dim Dashboard As New Dashboard
+
         Dashboard.Show()
         Me.Close()
     End Sub
 
-    Private Sub AddDocButton_Click(sender As Object, e As EventArgs) Handles AddDocButton.Click
-
-    End Sub
-
     Private Sub IncomingDocument_Click(sender As Object, e As EventArgs) Handles IncomingDocument.Click
+        Dim IncomingDocument As New IncomingDocument
+
+
         IncomingDocument.Show()
         Me.Close()
     End Sub
 
     Private Sub PendingDocument_Click(sender As Object, e As EventArgs) Handles PendingDocument.Click
+        Dim PendingDocument As New PendingDocument
+
         PendingDocument.Show()
+        Me.Close()
+    End Sub
+
+    Private Sub ComboBox1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboBox1.SelectedIndexChanged
+
+    End Sub
+
+    Private Sub TrackDocument_Click(sender As Object, e As EventArgs) Handles TrackDocument.Click
+        Dim TrackDocument As New TrackDocument
+
+        TrackDocument.Show()
         Me.Close()
     End Sub
 End Class

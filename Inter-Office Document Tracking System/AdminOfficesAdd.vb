@@ -75,6 +75,11 @@ Public Class AdminOfficesAdd
         End If
     End Sub
 
+    Private Sub Home_Click(sender As Object, e As EventArgs) Handles Home.Click
+        AdminDashboard.Show()
+        Me.Close()
+    End Sub
+
     Private Sub DocumentType_Click(sender As Object, e As EventArgs) Handles DocumentType.Click
         AdminDocumentType.Show()
         Me.Close()
@@ -100,6 +105,7 @@ Public Class AdminOfficesAdd
         Me.Close()
     End Sub
 
+
     Dim X As Integer = 0
     Private Sub Logs_Click(sender As Object, e As EventArgs) Handles Logs.Click
 
@@ -117,9 +123,5 @@ Public Class AdminOfficesAdd
 
     End Sub
 
-    Private Sub Home_Click(sender As Object, e As EventArgs) Handles Home.Click
-        AdminDashboard.Show()
-        Me.Close()
-    End Sub
 
 End Class
