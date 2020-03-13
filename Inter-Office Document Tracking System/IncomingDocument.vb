@@ -130,13 +130,15 @@ Public Class IncomingDocument
                     connection.Close()
 
 
-                    Dim results = itexmo(DataGridView1.Rows(e.RowIndex).Cells(5).Value, "Document " & DataGridView1.Rows(e.RowIndex).Cells(0).Value & "Received Successfully by " & Office, "TR-MAVON636050_KG6XN")
-                    If results = 0 Then
-                        'MsgBox("Message Sent!")
-                    Else
-                        MsgBox("Error num " & results & " was encountered")
-                    End If
+                    If DataGridView1.Rows(e.RowIndex).Cells(5).Value.Length = 11 Then
 
+                        Dim results = itexmo(DataGridView1.Rows(e.RowIndex).Cells(5).Value, "Document " & DataGridView1.Rows(e.RowIndex).Cells(0).Value & "Received Successfully by " & Office, "TR-MAVON636050_KG6XN")
+                        If results = 0 Then
+                            'MsgBox("Message Sent!")
+                        Else
+                            MsgBox("Error num " & results & " was encountered")
+                        End If
+                    End If
 
                     Dim Smtp_server As New SmtpClient
                     Dim e_mail As New MailMessage
@@ -164,6 +166,12 @@ Public Class IncomingDocument
 
         End If
 
+
+        Dim Refresher As New Refresh
+
+        Previous = "INCOMING"
+        Refresher.Show()
+        Me.Close()
 
 
 

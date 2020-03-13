@@ -190,6 +190,12 @@
     <Compile Include="PendingDocument.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Refresh.Designer.vb">
+      <DependentUpon>Refresh.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Refresh.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="ReleaseDocument.Designer.vb">
       <DependentUpon>ReleaseDocument.vb</DependentUpon>
     </Compile>
@@ -257,6 +263,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PendingDocument.resx">
       <DependentUpon>PendingDocument.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Refresh.resx">
+      <DependentUpon>Refresh.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ReleaseDocument.resx">
       <DependentUpon>ReleaseDocument.vb</DependentUpon>

@@ -84,14 +84,14 @@ Public Class ReleaseDocument
                 connection.Close()
 
 
-
-                Dim results = itexmo(DataGridView1.Rows(0).Cells(3).Value, "Document has been released. Please claim it on your Department Office", "TR-MAVON636050_KG6XN")
-                If results = 0 Then
-                    MsgBox("Message Sent!")
-                Else
-                    MsgBox("Error num " & results & " was encountered")
+                If DataGridView1.Rows(0).Cells(3).Value.Length = 11 Then
+                    Dim results = itexmo(DataGridView1.Rows(0).Cells(3).Value, "Document has been released. Please claim it on your Department Office", "TR-MAVON636050_KG6XN")
+                    If results = 0 Then
+                        MsgBox("Message Sent!")
+                    Else
+                        MsgBox("Error num " & results & " was encountered")
+                    End If
                 End If
-
 
                 Dim Smtp_server As New SmtpClient
                 Dim e_mail As New MailMessage
@@ -117,6 +117,10 @@ Public Class ReleaseDocument
             End Try
 
         End If
+
+
+
+
 
     End Sub
 
