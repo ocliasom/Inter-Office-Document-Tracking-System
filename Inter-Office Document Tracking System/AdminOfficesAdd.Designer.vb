@@ -262,6 +262,7 @@ Partial Class AdminOfficesAdd
         Me.Home.Text = "Home"
         Me.Home.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.Home.UseVisualStyleBackColor = True
+        Me.Home.Visible = False
         '
         'DocHistory
         '

@@ -42,12 +42,12 @@ Partial Class AddDocument
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.TrackDocument = New System.Windows.Forms.Button()
         Me.PendingDocument = New System.Windows.Forms.Button()
         Me.IncomingDocument = New System.Windows.Forms.Button()
         Me.Home = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
-        Me.TrackDocument = New System.Windows.Forms.Button()
         Me.Panel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
         Me.SuspendLayout()
@@ -89,6 +89,7 @@ Partial Class AddDocument
         Me.HiddenDate.Size = New System.Drawing.Size(99, 20)
         Me.HiddenDate.TabIndex = 19
         Me.HiddenDate.Text = "Date Hidden"
+        Me.HiddenDate.Visible = False
         '
         'Number
         '
@@ -281,6 +282,19 @@ Partial Class AddDocument
         Me.Panel2.Size = New System.Drawing.Size(981, 81)
         Me.Panel2.TabIndex = 2
         '
+        'TrackDocument
+        '
+        Me.TrackDocument.FlatAppearance.BorderColor = System.Drawing.Color.Firebrick
+        Me.TrackDocument.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.TrackDocument.ForeColor = System.Drawing.Color.Gold
+        Me.TrackDocument.Location = New System.Drawing.Point(748, 27)
+        Me.TrackDocument.Margin = New System.Windows.Forms.Padding(2)
+        Me.TrackDocument.Name = "TrackDocument"
+        Me.TrackDocument.Size = New System.Drawing.Size(125, 27)
+        Me.TrackDocument.TabIndex = 9
+        Me.TrackDocument.Text = "Track Documents"
+        Me.TrackDocument.UseVisualStyleBackColor = True
+        '
         'PendingDocument
         '
         Me.PendingDocument.FlatAppearance.BorderColor = System.Drawing.Color.Firebrick
@@ -334,19 +348,6 @@ Partial Class AddDocument
         '
         'Timer1
         '
-        '
-        'TrackDocument
-        '
-        Me.TrackDocument.FlatAppearance.BorderColor = System.Drawing.Color.Firebrick
-        Me.TrackDocument.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.TrackDocument.ForeColor = System.Drawing.Color.Gold
-        Me.TrackDocument.Location = New System.Drawing.Point(748, 27)
-        Me.TrackDocument.Margin = New System.Windows.Forms.Padding(2)
-        Me.TrackDocument.Name = "TrackDocument"
-        Me.TrackDocument.Size = New System.Drawing.Size(125, 27)
-        Me.TrackDocument.TabIndex = 9
-        Me.TrackDocument.Text = "Track Documents"
-        Me.TrackDocument.UseVisualStyleBackColor = True
         '
         'AddDocument
         '

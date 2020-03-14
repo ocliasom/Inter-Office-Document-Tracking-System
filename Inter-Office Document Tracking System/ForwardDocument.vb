@@ -42,7 +42,6 @@ Public Class ForwardDocument
             connection.Dispose()
         End Try
 
-        tracking.Text = DataGridView1.Rows(0).Cells(5).Value
 
 
 
@@ -112,7 +111,7 @@ Public Class ForwardDocument
                 If DataGridView1.Rows(0).Cells(6).Value.Length = 11 Then
                     Dim results = itexmo(DataGridView1.Rows(0).Cells(6).Value, "Document has been forwarded to " & DestOffice.Text, "TR-MAVON636050_KG6XN") 'NUMBER COLUMN
                     If results = 0 Then
-                        MsgBox("Message Sent!")
+                        'MsgBox("Message Sent!")
                     Else
                         MsgBox("Error num " & results & " was encountered")
                     End If

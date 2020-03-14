@@ -93,7 +93,7 @@ Public Class AddDocument
                         command.Parameters.AddWithValue("@tracking", HiddenDate.Text)
                         command.Parameters.AddWithValue("@office", Officebox.Text)
                         command.Parameters.AddWithValue("@date", Datebox.Text)
-                        command.Parameters.AddWithValue("@description", TextBox3.Text)
+                        command.Parameters.AddWithValue("@description", TextBox1.Text)
                         command.Parameters.AddWithValue("@doctype", ComboBox1.SelectedValue)
                         command.Parameters.AddWithValue("@source", Officebox.Text)
                         command.Parameters.AddWithValue("@status", "PENDING")
@@ -185,6 +185,8 @@ Public Class AddDocument
                     'Yo Mavon, if nabasa mo ito, ginawa ko lang na comment muna yung email na part. highlight mo yung buong code sa email. CTRL + K then CTRL + U para mawala yung comment tag
 
 
+
+
                 Catch ex As Exception
                     MessageBox.Show(ex.Message)
                 End Try
@@ -192,11 +194,9 @@ Public Class AddDocument
             End If
 
         End If
+        Dim AddDocumentDetails As New AddDocumentDetails
 
-        Dim Refresher As New Refresh
-        Previous = "ADD"
-
-        Refresher.Show()
+        AddDocumentDetails.Show()
         Me.Close()
     End Sub
 

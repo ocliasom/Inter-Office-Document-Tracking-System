@@ -28,7 +28,8 @@ Public Class Login
                 If count = 1 Then
                     usertype = rolereader.GetString("role")
                     If usertype = "admin" Then
-                        AdminDashboard.Show()
+                        Dim AdminDocumentType As New AdminDocumentType
+                        AdminDocumentType.Show()
                         Me.Close()
                         connection.Close()
 

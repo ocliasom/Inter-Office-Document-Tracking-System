@@ -89,5 +89,15 @@ Public Class AdminDocumentType
 
     End Sub
 
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        Dim result As DialogResult = MessageBox.Show("Do you want to logout??",
+                     "Cancel",
+                     MessageBoxButtons.YesNo)
+        If (result = DialogResult.Yes) Then
 
+            Login.Show()
+            'Dashboard.Label2.Text = Office
+            Me.Close()
+        End If
+    End Sub
 End Class

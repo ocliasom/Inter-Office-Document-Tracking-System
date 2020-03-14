@@ -68,8 +68,8 @@ Public Class AdminUserInfoAdd
 
 
 
-                    MessageBox.Show("Office has been added.")
-                    AdminOffices.Show()
+                    MessageBox.Show("User has been added.")
+                    AdminUserInfo.Show()
                     Me.Close()
 
                 End If

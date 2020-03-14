@@ -22,8 +22,8 @@ Partial Class AdminDocumentHistory
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
@@ -34,7 +34,6 @@ Partial Class AdminDocumentHistory
         Me.Status = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Remarks = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.LogoutButton = New System.Windows.Forms.Button()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Panel3 = New System.Windows.Forms.Panel()
         Me.Home = New System.Windows.Forms.Button()
@@ -47,6 +46,9 @@ Partial Class AdminDocumentHistory
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Panel4 = New System.Windows.Forms.Panel()
+        Me.CSVExport = New System.Windows.Forms.Button()
+        Me.ExcelButton = New System.Windows.Forms.Button()
+        Me.Button1 = New System.Windows.Forms.Button()
         Me.Panel2.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
@@ -58,6 +60,7 @@ Partial Class AdminDocumentHistory
         'Panel2
         '
         Me.Panel2.BackColor = System.Drawing.Color.Firebrick
+        Me.Panel2.Controls.Add(Me.Button1)
         Me.Panel2.Controls.Add(Me.Label1)
         Me.Panel2.Location = New System.Drawing.Point(9, 10)
         Me.Panel2.Margin = New System.Windows.Forms.Padding(2)
@@ -87,14 +90,14 @@ Partial Class AdminDocumentHistory
         Me.DataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells
         Me.DataGridView1.BackgroundColor = System.Drawing.SystemColors.ControlLight
         Me.DataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None
-        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle1.BackColor = System.Drawing.Color.DimGray
-        DataGridViewCellStyle1.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle1.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGridView1.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
+        DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle5.BackColor = System.Drawing.Color.DimGray
+        DataGridViewCellStyle5.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle5.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridView1.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle5
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Dates, Me.CTS, Me.DocType, Me.Office, Me.Status, Me.Remarks})
         Me.DataGridView1.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically
@@ -103,14 +106,14 @@ Partial Class AdminDocumentHistory
         Me.DataGridView1.Margin = New System.Windows.Forms.Padding(2)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.ReadOnly = True
-        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle2.BackColor = System.Drawing.Color.DimGray
-        DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGridView1.RowHeadersDefaultCellStyle = DataGridViewCellStyle2
+        DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle6.BackColor = System.Drawing.Color.DimGray
+        DataGridViewCellStyle6.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle6.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridView1.RowHeadersDefaultCellStyle = DataGridViewCellStyle6
         Me.DataGridView1.RowHeadersVisible = False
         Me.DataGridView1.RowHeadersWidth = 51
         Me.DataGridView1.RowTemplate.Height = 24
@@ -171,30 +174,19 @@ Partial Class AdminDocumentHistory
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(263, 119)
+        Me.Label2.Location = New System.Drawing.Point(263, 115)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(186, 26)
         Me.Label2.TabIndex = 10
         Me.Label2.Text = "Document History"
         '
-        'LogoutButton
-        '
-        Me.LogoutButton.BackColor = System.Drawing.Color.Firebrick
-        Me.LogoutButton.ForeColor = System.Drawing.Color.Gold
-        Me.LogoutButton.Location = New System.Drawing.Point(837, 536)
-        Me.LogoutButton.Margin = New System.Windows.Forms.Padding(2)
-        Me.LogoutButton.Name = "LogoutButton"
-        Me.LogoutButton.Size = New System.Drawing.Size(123, 49)
-        Me.LogoutButton.TabIndex = 7
-        Me.LogoutButton.Text = "Logout"
-        Me.LogoutButton.UseVisualStyleBackColor = False
-        '
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.SystemColors.ControlLight
+        Me.Panel1.Controls.Add(Me.ExcelButton)
+        Me.Panel1.Controls.Add(Me.CSVExport)
         Me.Panel1.Controls.Add(Me.DataGridView1)
         Me.Panel1.Controls.Add(Me.Label2)
-        Me.Panel1.Controls.Add(Me.LogoutButton)
         Me.Panel1.Location = New System.Drawing.Point(9, 10)
         Me.Panel1.Margin = New System.Windows.Forms.Padding(2)
         Me.Panel1.Name = "Panel1"
@@ -228,6 +220,7 @@ Partial Class AdminDocumentHistory
         Me.Home.Text = "Home"
         Me.Home.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.Home.UseVisualStyleBackColor = True
+        Me.Home.Visible = False
         '
         'DocHistory
         '
@@ -339,6 +332,44 @@ Partial Class AdminDocumentHistory
         Me.Panel4.Size = New System.Drawing.Size(257, 136)
         Me.Panel4.TabIndex = 12
         '
+        'CSVExport
+        '
+        Me.CSVExport.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.CSVExport.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.CSVExport.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.CSVExport.ForeColor = System.Drawing.Color.White
+        Me.CSVExport.Location = New System.Drawing.Point(268, 152)
+        Me.CSVExport.Name = "CSVExport"
+        Me.CSVExport.Size = New System.Drawing.Size(75, 23)
+        Me.CSVExport.TabIndex = 12
+        Me.CSVExport.Text = "CSV"
+        Me.CSVExport.UseVisualStyleBackColor = False
+        '
+        'ExcelButton
+        '
+        Me.ExcelButton.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.ExcelButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.ExcelButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.ExcelButton.ForeColor = System.Drawing.Color.White
+        Me.ExcelButton.Location = New System.Drawing.Point(350, 152)
+        Me.ExcelButton.Name = "ExcelButton"
+        Me.ExcelButton.Size = New System.Drawing.Size(75, 23)
+        Me.ExcelButton.TabIndex = 13
+        Me.ExcelButton.Text = "Excel"
+        Me.ExcelButton.UseVisualStyleBackColor = False
+        '
+        'Button1
+        '
+        Me.Button1.FlatAppearance.BorderColor = System.Drawing.Color.Firebrick
+        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button1.ForeColor = System.Drawing.Color.Gold
+        Me.Button1.Location = New System.Drawing.Point(903, 30)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(75, 23)
+        Me.Button1.TabIndex = 7
+        Me.Button1.Text = "Logout"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
         'AdminDocumentHistory
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -366,7 +397,6 @@ Partial Class AdminDocumentHistory
     Friend WithEvents Label1 As Label
     Friend WithEvents DataGridView1 As DataGridView
     Friend WithEvents Label2 As Label
-    Friend WithEvents LogoutButton As Button
     Friend WithEvents Panel1 As Panel
     Friend WithEvents Dates As DataGridViewTextBoxColumn
     Friend WithEvents CTS As DataGridViewTextBoxColumn
@@ -385,4 +415,7 @@ Partial Class AdminDocumentHistory
     Friend WithEvents UserInfo As Button
     Friend WithEvents Offices As Button
     Friend WithEvents DocumentType As Button
+    Friend WithEvents CSVExport As Button
+    Friend WithEvents ExcelButton As Button
+    Friend WithEvents Button1 As Button
 End Class
